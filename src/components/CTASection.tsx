@@ -21,8 +21,8 @@ export default function CTASection({
     >
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <h2 className="text-3xl font-black leading-tight sm:text-5xl">{title}</h2>
-          <p className="mt-3 text-3xl font-black leading-tight sm:text-5xl">{subtitle}</p>
+          <h2 className="text-2xl font-black leading-tight sm:text-3xl md:text-5xl">{title}</h2>
+          <p className="mt-3 text-2xl font-black leading-tight sm:text-3xl md:text-5xl">{subtitle}</p>
         </div>
 
         <div className="flex flex-col gap-4 sm:flex-row">

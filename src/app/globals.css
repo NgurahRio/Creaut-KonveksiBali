@@ -35,3 +35,13 @@ a,
 input {
   font: inherit;
 }
+
+/* Hide scrollbar for overflow-x-auto nav pills */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

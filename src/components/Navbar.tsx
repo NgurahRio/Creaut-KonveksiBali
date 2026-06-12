@@ -47,7 +47,7 @@ export default function Navbar() {
           <LanguageSwitcher />
         </nav>
 
-        <div className="flex gap-2 overflow-x-auto pb-4 lg:hidden">
+        <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide lg:hidden">
           {navLinks.map((link) => {
             const active = isActiveRoute(pathname, link.href);
 

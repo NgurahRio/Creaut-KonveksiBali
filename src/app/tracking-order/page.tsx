@@ -16,7 +16,7 @@ export default function TrackingOrderPage() {
         </p>
       </section>
 
-      <section className="mt-12 grid gap-6 lg:grid-cols-[0.7fr_1.5fr]">
+      <section className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-[0.7fr_1.5fr]">
         <div className="grid gap-6">
           <form className="rounded-lg border border-[#333] bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.06)]">
             <label className="text-lg font-black text-black" htmlFor="invoice">

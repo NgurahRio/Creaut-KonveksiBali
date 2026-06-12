@@ -22,7 +22,8 @@ export default function TrackingTimeline({
 }: TrackingTimelineProps) {
   return (
     <div className={`relative ${className}`}>
-      <div className="absolute left-7 top-0 hidden h-full w-px bg-[#d6c5b5] md:left-0 md:right-0 md:top-7 md:block md:h-px md:w-full" />
+      <div className="absolute left-7 top-0 h-full w-px bg-[#d6c5b5] md:hidden" />
+      <div className="absolute left-0 right-0 top-7 hidden h-px w-full bg-[#d6c5b5] lg:block" />
       <ol className="relative grid gap-6 md:grid-cols-6">
         {steps.map((step) => (
           <li className="flex items-start gap-4 md:flex-col md:items-center md:text-center" key={step.title}>

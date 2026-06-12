@@ -37,7 +37,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
   return (
     <Container className="pt-10 lg:pt-20">
-      <section className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+      <section className="grid gap-12 md:grid-cols-2 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <div className="grid gap-5 sm:grid-cols-[150px_1fr]">
           <div className="grid grid-cols-3 gap-4 sm:grid-cols-1">
             {product.detailImages.slice(1, 4).map((image) => (

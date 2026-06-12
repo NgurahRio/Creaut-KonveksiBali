@@ -14,9 +14,9 @@ export default function StatsStrip({ className = "", compact = false }: StatsStr
       {stats.map((item, index) => (
         <div
           className={`flex min-h-28 items-center justify-center gap-4 px-4 py-6 ${
-            index > 0 ? "lg:border-l lg:border-[#d5c5b4]" : ""
-          } ${index % 2 === 1 ? "border-l border-[#d5c5b4] lg:border-l" : ""} ${
-            index > 1 ? "border-t border-[#d5c5b4] lg:border-t-0" : ""
+            index % 2 === 1 ? "border-l border-[#d5c5b4] md:border-l-0" : ""
+          } ${index > 1 ? "border-t border-[#d5c5b4] md:border-t-0" : ""} ${
+            index > 0 ? "md:border-l md:border-[#d5c5b4]" : ""
           }`}
           key={item.label}
         >

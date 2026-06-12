@@ -8,7 +8,7 @@ import { galleryImages, journey, values } from "@/data/site";
 export default function TentangKamiPage() {
   return (
     <Container className="pt-8 lg:pt-14">
-      <section className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+      <section className="grid gap-12 md:grid-cols-2 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
         <div>
           <p className="mb-6 text-base font-black uppercase text-[#a17140]">Konveksi Ampuh!</p>
           <h1 className="text-5xl font-black leading-tight text-black sm:text-7xl">

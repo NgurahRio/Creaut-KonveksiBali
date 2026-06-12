@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <Container className="pt-6 lg:pt-10">
-        <section className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <section className="grid items-center gap-12 md:grid-cols-2 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="mb-6 text-base font-black uppercase text-[#6f6f6f]">
               Konveksi Apparel Custom
