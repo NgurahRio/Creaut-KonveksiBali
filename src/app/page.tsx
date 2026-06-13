@@ -3,10 +3,8 @@ import Link from "next/link";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
 import { Icon } from "@/components/Icons";
-import TrackingTimeline from "@/components/TrackingTimeline";
 import {
   clientLogos,
-  compactTrackingSteps,
   galleryImages,
   products,
 } from "@/data/site";
@@ -116,30 +114,22 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-16 rounded-lg bg-[#dac8b6] p-6 shadow-[0_8px_24px_rgba(0,0,0,0.10)] lg:p-10">
-          <div className="grid gap-8 lg:grid-cols-[0.45fr_1.55fr]">
-            <div>
-              <h2 className="text-2xl font-black uppercase text-[#a17140]">Tracking Order</h2>
-              <p className="mt-6 max-w-xs text-xl font-bold leading-8 text-black">
-                Pantau setiap tahap produksi pesananmu dengan mudah.
-              </p>
-            </div>
-            <div>
-              <form className="mb-10 grid gap-4 sm:grid-cols-[1fr_auto]">
-                <input
-                  aria-label="Nomor invoice"
-                  className="h-16 rounded-lg border border-transparent bg-white px-7 text-lg font-semibold outline-none placeholder:text-[#c8c8c8] focus:border-[#a17140]"
-                  placeholder="Contoh: INV-2026-0001"
-                  type="text"
-                />
-                <button
-                  className="h-16 rounded-lg bg-[#a17140] px-9 text-base font-black uppercase text-white transition hover:bg-[#875d33]"
-                  type="button"
-                >
-                  Lacak Order
-                </button>
-              </form>
-              <TrackingTimeline steps={compactTrackingSteps} />
+        <section className="mt-16 rounded-lg bg-[#dac8b6] p-8 text-center shadow-[0_8px_24px_rgba(0,0,0,0.10)] lg:mt-20 lg:p-16">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-3xl font-black uppercase text-[#a17140] sm:text-4xl">
+              Sudah Punya Pesanan?
+            </h2>
+            <p className="mt-6 text-xl font-bold leading-9 text-black">
+              Jangan biarkan rasa penasaran mengganggumu! Pantau setiap tahap produksi pesananmu secara real-time, mulai dari verifikasi bahan hingga siap dikirim.
+            </p>
+            <div className="mt-10 flex justify-center">
+              <Link
+                className="inline-flex h-16 items-center justify-center gap-3 rounded-full bg-[#a17140] px-10 text-lg font-black uppercase text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#875d33] hover:shadow-lg active:scale-95"
+                href="/tracking-order"
+              >
+                Cek Status Pesanan
+                <Icon className="h-6 w-6" name="arrowRight" />
+              </Link>
             </div>
           </div>
         </section>
@@ -186,31 +176,33 @@ export default function Home() {
           <p className="mb-8 text-base font-black uppercase text-[#a17140]">
             Client & Partner Kami
           </p>
-          <div className="flex items-center gap-5 overflow-hidden">
-            <button
-              aria-label="Client sebelumnya"
-              className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e7d9cc] text-[#a17140] sm:flex"
-              type="button"
-            >
-              <Icon className="h-5 w-5 rotate-180" name="arrowRight" />
-            </button>
-            <div className="grid flex-1 grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5">
-              {clientLogos.map((client, index) => (
-                <div
-                  className="flex h-16 items-center justify-center rounded-lg bg-white text-2xl font-black text-[#00539f]"
-                  key={`${client}-${index}`}
-                >
-                  {client}
-                </div>
-              ))}
-            </div>
-            <button
-              aria-label="Client berikutnya"
-              className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#e7d9cc] text-[#a17140] sm:flex"
-              type="button"
-            >
-              <Icon className="h-5 w-5" name="arrowRight" />
-            </button>
+          
+          <style dangerouslySetInnerHTML={{ __html: `
+            @keyframes marquee {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(calc(-100% - 1.5rem)); }
+            }
+            .animate-marquee {
+              animation: marquee 20s linear infinite;
+            }
+            .group:hover .animate-marquee {
+              animation-play-state: paused;
+            }
+          `}} />
+
+          <div className="group flex gap-6 overflow-hidden py-2">
+            {[0, 1].map((i) => (
+              <div className="animate-marquee flex shrink-0 gap-6" key={i}>
+                {[...clientLogos, ...clientLogos].map((client, index) => (
+                  <div
+                    className="flex h-16 w-48 shrink-0 items-center justify-center text-2xl font-black text-[#00539f] opacity-60 transition-all hover:scale-110 hover:opacity-100"
+                    key={`${client}-${index}`}
+                  >
+                    {client}
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </section>
 
