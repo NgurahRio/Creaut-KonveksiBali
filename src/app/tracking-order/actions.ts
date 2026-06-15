@@ -18,7 +18,15 @@ export async function trackOrderAPI(orderId: string) {
       cache: "no-store",
     });
 
-    const data = await response.json();
+    // Ambil respons sebagai text dulu untuk mencegah crash jika isinya HTML
+    const text = await response.text();
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch (parseError) {
+      console.error("API tidak mengembalikan JSON. Respons asli:", text.substring(0, 500));
+      throw new Error(`Server API mengembalikan format yang tidak valid (Status: ${response.status}). Coba lagi nanti.`);
+    }
 
     if (!response.ok || data.status === "error") {
       if (response.status === 404 || data.code === 404) {
