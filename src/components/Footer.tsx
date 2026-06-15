@@ -9,7 +9,8 @@ const infoLinks = ["Cara Order", "Size Chart", "Pengiriman", "Ketentuan", "FAQ"]
 
 export default function Footer() {
   return (
-    <footer className="mt-20 bg-[#f1f2f3] py-12 text-[#4d4d4d] lg:mt-28 lg:py-16">
+    <>
+      <footer className="mt-20 bg-[#f1f2f3] py-12 text-[#4d4d4d] lg:mt-28 lg:py-16">
       <Container>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.7fr_0.8fr_0.8fr_1.2fr_1.5fr]">
           <div>
@@ -106,5 +107,23 @@ export default function Footer() {
         </div>
       </Container>
     </footer>
+
+      {/* Tombol WhatsApp Mengambang (Floating) */}
+      <a
+        href="https://wa.me/6281345677890"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-6 right-6 z-50 transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-lg lg:bottom-10 lg:right-10"
+        aria-label="Chat WhatsApp"
+      >
+        <Image
+          src="/assets/whatsapp.png"
+          alt="Chat WhatsApp"
+          width={60}
+          height={60}
+          className="h-14 w-14 object-contain drop-shadow-md sm:h-16 sm:w-16"
+        />
+      </a>
+    </>
   );
 }
