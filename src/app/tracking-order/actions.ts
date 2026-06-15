@@ -11,6 +11,7 @@ export async function trackOrderAPI(orderId: string) {
     const response = await fetch(`https://simadvishkonveksi.com/api/v1/orders/detail?number=${orderId}`, {
       method: "GET",
       headers: {
+        "Accept": "application/json",
         "Content-Type": "application/json",
         "Authorization": `Bearer ${token}`,
       },
@@ -24,8 +25,8 @@ export async function trackOrderAPI(orderId: string) {
     try {
       data = JSON.parse(text);
     } catch (parseError) {
-      console.error("API tidak mengembalikan JSON. Respons asli:", text.substring(0, 500));
-      throw new Error(`Server API mengembalikan format yang tidak valid (Status: ${response.status}). Coba lagi nanti.`);
+      console.error(`API tidak mengembalikan JSON (Status: ${response.status}). Respons asli:`, text.substring(0, 500));
+      throw new Error(`Akses ditolak oleh server (Status: ${response.status}). Pastikan API token valid.`);
     }
 
     if (!response.ok || data.status === "error") {
