@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import LanguageProvider from "@/components/LanguageProvider";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Konveksi Bali",
@@ -20,10 +21,11 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col ">
         <LanguageProvider>
           <div className=" mb-30 lg:mb-17 md:mb-20">
-          <Navbar />
+            <Navbar />
           </div>
           <main className="">{children}</main>
           <Footer />
+          <Analytics />
         </LanguageProvider>
       </body>
     </html>
