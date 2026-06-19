@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 "use client"
-=======
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
-<<<<<<< HEAD
 import { motion } from "framer-motion";
-=======
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
 import { Icon } from "@/components/Icons";
 import {
   clientLogos,
   galleryImages,
   products,
 } from "@/data/site";
-<<<<<<< HEAD
 import { ColorsScema } from "../../utils/color";
 import Scene from "../../Models/Scene";
 import HeroTitle from "@/components/TextHero";
@@ -51,10 +44,6 @@ export default function Home() {
     },
   };
 
-=======
-
-export default function Home() {
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
   const categoryProducts = [
     { label: "Kaos", product: products[0] },
     { label: "Jersey", product: products[1] },
@@ -66,7 +55,6 @@ export default function Home() {
 
   return (
     <>
-<<<<<<< HEAD
 
       <Container className="pt-6 lg:pt-10">
         <section className="grid items-center gap-12 md:grid-cols-2 lg:grid-cols-[0.9fr_1.1fr]">
@@ -108,77 +96,13 @@ export default function Home() {
               {/* <img src="/assets/hero-products.png" alt=""  className=" drop-shadow-[20px_0_20px] drop-shadow-black rounded-2xl h-[400px] w-auto"/> */}
             </div>
           </motion.div>
-=======
-      <Container className="pt-6 lg:pt-10">
-        <section className="grid items-center gap-12 md:grid-cols-2 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="mb-6 text-base font-black uppercase text-[#6f6f6f]">
-              Konveksi Apparel Custom
-            </p>
-            <h1 className="max-w-3xl text-5xl font-black leading-tight text-black sm:text-7xl lg:text-8xl">
-              Wujudkan <span className="text-[#a17140]">Ide</span>, Kita Produksi!
-            </h1>
-            <p className="mt-7 max-w-2xl text-xl font-semibold leading-9 text-[#4f4f4f] sm:text-2xl">
-              Kami membantu brand, komunitas dan bisnis mewujudkan apparel berkualitas
-              dengan desain bebas dan hasil maksimal.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
-                className="flex h-16 items-center justify-center gap-3 rounded-lg bg-[#a17140] px-8 text-base font-black uppercase text-white transition hover:bg-[#875d33]"
-                href="https://wa.me/6281345677890"
-                rel="noreferrer"
-                target="_blank"
-              >
-                <Icon className="h-6 w-6" name="whatsapp" />
-                Konsultasi Sekarang
-              </a>
-              <Link
-                className="flex h-16 items-center justify-center rounded-lg border border-[#a17140] px-8 text-base font-black uppercase text-[#a17140] transition hover:bg-[#f4ede6]"
-                href="/produk"
-              >
-                Lihat Katalog
-              </Link>
-            </div>
-            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-4">
-              {[
-                ["briefcase", "8+", "Tahun Pengalaman"],
-                ["shirt", "500+", "Project Selesai"],
-                ["user", "200+", "Klien Puas"],
-                ["clock", "99%", "On Time Pengiriman"],
-              ].map(([icon, value, label]) => (
-                <div className="flex items-start gap-3" key={label}>
-                  <Icon className="mt-1 h-7 w-7 shrink-0 text-[#a17140]" name={icon} />
-                  <div>
-                    <p className="text-2xl font-black">{value}</p>
-                    <p className="text-sm font-black leading-5">{label}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative min-h-[360px] lg:min-h-[720px]">
-            <Image
-              alt="Produk apparel custom Konveksi Bali"
-              className="object-contain"
-              fill
-              priority
-              sizes="(min-width: 1024px) 55vw, 100vw"
-              src="/assets/hero-products.png"
-            />
-          </div>
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
         </section>
 
         <section className="mt-16 rounded-lg bg-white p-6 shadow-[0_8px_28px_rgba(0,0,0,0.08)] lg:mt-20 lg:p-10">
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <h2 className="text-2xl font-black uppercase text-black">Kategori Produk</h2>
             <Link
-<<<<<<< HEAD
               className="flex items-center gap-2 text-base font-bold text-[#4d4d4d] hover:text-[#a171400]"
-=======
-              className="flex items-center gap-2 text-base font-bold text-[#4d4d4d] hover:text-[#a17140]"
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
               href="/produk"
             >
               Lihat Semua Katalog
@@ -269,14 +193,9 @@ export default function Home() {
           <p className="mb-8 text-base font-black uppercase text-[#a17140]">
             Client & Partner Kami
           </p>
-<<<<<<< HEAD
 
           <style dangerouslySetInnerHTML={{
             __html: `
-=======
-          
-          <style dangerouslySetInnerHTML={{ __html: `
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
             @keyframes marquee {
               0% { transform: translateX(0); }
               100% { transform: translateX(calc(-100% - 1.5rem)); }
@@ -307,10 +226,6 @@ export default function Home() {
 
         <CTASection className="mt-20" />
       </Container>
-<<<<<<< HEAD
-
-=======
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
     </>
   );
 }
