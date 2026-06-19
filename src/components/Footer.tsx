@@ -90,14 +90,7 @@ export default function Footer() {
 
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31555.0768408631!2d115.22809073476563!3d-8.654922499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2419d065b4ca9%3A0xb64a7f5077eb3476!2sAdvish%20Konveksi!5e0!3m2!1sid!2sid!4v1781751214859!5m2!1sid!2sid" width="100%" height="250" loading="lazy" ></iframe>
               </div>
-              <a
-                className="flex h-16 items-center justify-center rounded-lg border border-black bg-white px-6 text-lg font-bold text-black transition hover:bg-black hover:text-white"
-                href="https://maps.google.com"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Lihat di Google Maps
-              </a>
+             
             </div>
           </div>
 
