@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "framer-motion": "^12.40.0",
@@ -16,6 +17,10 @@
     "next": "16.2.7",
     "react": "19.2.4",
     "react-countup": "^6.5.3",
+=======
+    "next": "16.2.7",
+    "react": "19.2.4",
+>>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
     "react-dom": "19.2.4"
   },
   "devDependencies": {

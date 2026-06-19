@@ -61,7 +61,11 @@ function getMenuIcon(href: string) {
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+<<<<<<< HEAD
   const [isPlaying, setIsPlaying] = useState(true);
+=======
+  const [isPlaying, setIsPlaying] = useState(false);
+>>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { language } = useLanguage(); // Dapatkan bahasa aktif
@@ -140,6 +144,7 @@ export default function Navbar() {
     <>
       {/* HEADER: Memperbaiki space 'border-b ' dan warna conditional */}
       <header
+<<<<<<< HEAD
         className={`fixed top-0 left-0 w-full z-40 transition-all  rounded-b-3xl duration-300 border-b ${
           isScrolled
             ? "bg-white/95 text-black border-gray-100 shadow-sm backdrop-blur"
@@ -153,6 +158,15 @@ export default function Navbar() {
   autoPlay
   preload="auto"
 />
+=======
+        className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 border-b ${
+          isScrolled
+            ? "bg-white/95 text-black border-gray-100 shadow-sm backdrop-blur"
+            : "bg-[#0b0f19] text-white border-transparent"
+        }`}
+      >
+        <audio ref={audioRef} src="/assets/lagukonveksi.mp3" loop preload="auto" />
+>>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
 
         <Container>
           <nav className="flex h-20 items-center justify-between gap-6 lg:h-24">

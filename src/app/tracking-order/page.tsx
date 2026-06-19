@@ -8,19 +8,29 @@ import { orderDetails, trackingSteps } from "@/data/site";
 import React, { useState } from "react";
 import { trackOrderAPI } from "./actions";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
 function getDynamicTrackingSteps(apiData: any) {
   const statusFlow = [
     ["created", "approved", "down_payment"], // Step 1
     ["production"], // Step 2
     ["finish_production"], // Step 3
     ["paid_off"], // Step 4
+<<<<<<< HEAD
     [""], // Step 5
     ["order_complete"], // Step 6
   ];
 
   const currentApiStatus = apiData.status;
   console.log("ini data substatus",apiData.sub_status)
+=======
+    ["order_complete"], // Step 5
+  ];
+
+  const currentApiStatus = apiData.status;
+>>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
   let stepIndex = 0;
   statusFlow.forEach((group, index) => {
     if (group.includes(currentApiStatus)) stepIndex = index;
@@ -39,6 +49,7 @@ function getDynamicTrackingSteps(apiData: any) {
   };
 
   return [
+<<<<<<< HEAD
     { title: "Verifikasi Pesanan", subtitle: "Pesanan masuk", date: "", icon: "check", status: stepIndex > 0 ? "done" : stepIndex === 0 ? "active" : "pending" },
 
     { title: "Tahap Potong", subtitle: stepIndex === 1 ? getSubStatusLabel(apiData.sub_status) : "Sedang diproduksi", date: "", icon: "factory", status: stepIndex > 1 ? "done" : stepIndex === 1 ? "active" : "pending" },
@@ -52,6 +63,13 @@ function getDynamicTrackingSteps(apiData: any) {
     { title: "Tahap Quality Control & Pengemasan", subtitle: "Pesanan selesai", date: "", icon: "shirt", status: stepIndex === 4 ? "done" : "pending" },
 
     { title: "Tqwqw", subtitle: "Pesanan selqwqwesai", date: "", icon: "shirt", status: stepIndex === 5 ? "done" : "pending" },
+=======
+    { title: "Order Diterima", subtitle: "Pesanan masuk", date: "", icon: "check", status: stepIndex > 0 ? "done" : stepIndex === 0 ? "active" : "pending" },
+    { title: "Produksi", subtitle: stepIndex === 1 ? getSubStatusLabel(apiData.sub_status) : "Sedang diproduksi", date: "", icon: "factory", status: stepIndex > 1 ? "done" : stepIndex === 1 ? "active" : "pending" },
+    { title: "Finishing", subtitle: "Proses finishing", date: "", icon: "package", status: stepIndex > 2 ? "done" : stepIndex === 2 ? "active" : "pending" },
+    { title: "Siap Kirim", subtitle: "Siap dikirim", date: "", icon: "truck", status: stepIndex > 3 ? "done" : stepIndex === 3 ? "active" : "pending" },
+    { title: "Selesai", subtitle: "Pesanan selesai", date: "", icon: "shirt", status: stepIndex === 4 ? "done" : "pending" },
+>>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
   ] as any;
 }
 

@@ -17,7 +17,11 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <section
+<<<<<<< HEAD
       className={`rounded- bg-linear-to-r from-cyan-500 from-10% via-cyan-600 via-30% to-cyan-700 to-90% px-6 py-9 text-white shadow-[0_8px_22px_rgba(0,0,0,0.12)] sm:px-12 lg:px-20 ${className}`}
+=======
+      className={`rounded-lg bg-[#a17140] px-6 py-9 text-white shadow-[0_8px_22px_rgba(0,0,0,0.12)] sm:px-12 lg:px-20 ${className}`}
+>>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
     >
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div>
