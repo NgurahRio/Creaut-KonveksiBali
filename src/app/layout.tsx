@@ -17,19 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className="h-full antialiased">
-<<<<<<< HEAD
       <body className="flex min-h-full flex-col ">
         <LanguageProvider>
           <div className=" mb-30 lg:mb-17 md:mb-20">
           <Navbar />
           </div>
           <main className="">{children}</main>
-=======
-      <body className="flex min-h-full flex-col">
-        <LanguageProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
           <Footer />
         </LanguageProvider>
       </body>
