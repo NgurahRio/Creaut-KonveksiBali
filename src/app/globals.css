@@ -8,22 +8,16 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-<<<<<<< HEAD
  --color-primary: #90E0EF;
   --color-secondary: #ADE8F4;
   --color-tertiary: #CAF0F8;
-=======
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
 }
 
 html {
   max-width: 100%;
   overflow-x: hidden;
-<<<<<<< HEAD
   padding: 0;
   margin: 0;
-=======
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
   scroll-behavior: smooth;
 }
 
@@ -39,10 +33,6 @@ body {
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   max-width: 100%;
   overflow-x: hidden;
-<<<<<<< HEAD
-
-=======
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
 }
 
 button,
@@ -51,7 +41,6 @@ input {
   font: inherit;
 }
 
-<<<<<<< HEAD
 
 
 
@@ -133,14 +122,3 @@ body::-webkit-scrollbar-thumb:hover {
 .motion {
   margin:  0 0 0 20px;
 }
-=======
-/* Hide scrollbar for overflow-x-auto nav pills */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
