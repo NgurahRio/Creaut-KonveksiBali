@@ -10,8 +10,6 @@ import {
   galleryImages,
   products,
 } from "@/data/site";
-import { ColorsScema } from "../../utils/color";
-import Scene from "../../Models/Scene";
 import HeroTitle from "@/components/TextHero";
 
 export default function Home() {
