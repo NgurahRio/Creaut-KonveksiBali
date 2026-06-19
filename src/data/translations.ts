@@ -9,11 +9,7 @@ export const translationEntries = [
   ["Konveksi Apparel Custom", "Custom Apparel Manufacturer"],
   ["Wujudkan", "Bring"],
   ["Ide", "Ideas"],
-<<<<<<< HEAD
   [",Kita Produksi!", ", We Produce!"],
-=======
-  [", Kita Produksi!", ", We Produce!"],
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
   [
     "Kami membantu brand, komunitas dan bisnis mewujudkan apparel berkualitas dengan desain bebas dan hasil maksimal.",
     "We help brands, communities, and businesses create quality apparel with flexible designs and excellent results.",
