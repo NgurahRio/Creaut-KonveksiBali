@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+ --color-primary: #90E0EF;
+  --color-secondary: #ADE8F4;
+  --color-tertiary: #CAF0F8;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+
+}
+
+button,
+a,
+input {
+  font: inherit;
+}
+
+
+
+
+/* webkit  */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #e0f7fa;
+  border-radius: 999px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #67e8f9,
+    #22d3ee,
+    #0891b2
+  );
+
+  border-radius: 999px;
+  border: 2px solid #e0f7fa;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #a5f3fc,
+    #06b6d4,
+    #0e7490
+  );
+}
+/* Hide scrollbar for overflow-x-auto nav pills */
+
+
+@keyframes glow {
+  0% {
+    box-shadow:
+      0 0 5px #06b6d4,
+      0 0 10px #06b6d4,
+      0 0 20px #06b6d4;
+  }
+
+  50% {
+    box-shadow:
+      0 0 15px #06b6d4,
+      0 0 30px #06b6d4,
+      0 0 60px #06b6d4;
+  }
+
+  100% {
+    box-shadow:
+      0 0 5px #06b6d4,
+      0 0 10px #06b6d4,
+      0 0 20px #06b6d4;
+  }
+}
+
+.glow-border {
+  animation: glow 0.4s ease-in-out infinite;
+}
+
+
+@keyframes shine {
+  from {
+    transform: translateX(0) rotate(12deg);
+  }
+
+  to {
+    transform: translateX(400px) rotate(12deg);
+  }
+}
+
+.animate-shine {
+  animation: shine 0.8s ease-out;
+}
+
+.motion {
+  margin:  0 0 0 20px;
+}
