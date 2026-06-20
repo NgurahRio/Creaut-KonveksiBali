@@ -3,6 +3,12 @@ import Footer from "@/components/Footer";
 import LanguageProvider from "@/components/LanguageProvider";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import { Noto_Sans, Playfair_Display } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const playfairDisplayHeading = Playfair_Display({subsets:['latin'],variable:'--font-heading'});
+
+const notoSans = Noto_Sans({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Konveksi Bali",
@@ -16,20 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className="h-full antialiased">
-<<<<<<< HEAD
+    <html lang="id" className={cn("h-full antialiased", "font-sans", notoSans.variable, playfairDisplayHeading.variable)}>
       <body className="flex min-h-full flex-col ">
         <LanguageProvider>
           <div className=" mb-30 lg:mb-17 md:mb-20">
           <Navbar />
           </div>
           <main className="">{children}</main>
-=======
-      <body className="flex min-h-full flex-col">
-        <LanguageProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
           <Footer />
         </LanguageProvider>
       </body>

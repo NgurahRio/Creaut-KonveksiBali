@@ -129,11 +129,7 @@ export default function TrackingTimeline({
                   hasReached || isNextStep ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                 }`}
               >
-<<<<<<< HEAD
                 <h3 className={`text-sm font-black leading-6 ${hasReached ? "text-black" : isNextStep ? "text-[#a17140]" : "text-[#cfcfcf]"}`}>
-=======
-                <h3 className={`text-lg font-black leading-6 ${hasReached ? "text-black" : isNextStep ? "text-[#a17140]" : "text-[#cfcfcf]"}`}>
->>>>>>> 43d64230efb2783a109a75ac4627895e6501f006
                   {step.title}
                 </h3>
                 {showDates && step.date ? (

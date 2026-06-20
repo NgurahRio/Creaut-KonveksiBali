@@ -205,7 +205,7 @@ export default function Navbar() {
               </button>
 
               {/* Tema (Hanya Desktop) */}
-              <button
+              {/* <button
                 onClick={toggleTheme}
                 className={`hidden lg:flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 active:scale-95 ${
                   isScrolled 
@@ -224,7 +224,7 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                   </svg>
                 )}
-              </button>
+              </button> */}
 
               {/* Hamburger Button Mobile */}
               <button
@@ -293,14 +293,14 @@ export default function Navbar() {
 
               <hr className="my-2 border-gray-800/60" />
 
-              <button
+              {/* <button
                 type="button"
                 onClick={toggleTheme}
                 className="mt-2 w-full flex items-center justify-between rounded-2xl bg-gray-800/40 hover:bg-gray-800/60 border border-gray-700/30 px-5 py-4 text-gray-200 shadow-inner transition-colors duration-200 active:scale-[0.98]"
                 aria-label="Ubah Tema"
               >
                 <span className="text-[16px] tracking-wide font-medium select-none">
-                  {getThemeLabel(isDarkMode)} {/* Gunakan fungsi getThemeLabel */}
+                  {getThemeLabel(isDarkMode)} 
                 </span>
 
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg text-gray-300">
@@ -314,7 +314,7 @@ export default function Navbar() {
                     </svg>
                   )}
                 </div>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

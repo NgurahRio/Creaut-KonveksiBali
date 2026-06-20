@@ -10,8 +10,7 @@ import {
   galleryImages,
   products,
 } from "@/data/site";
-import { ColorsScema } from "../../utils/color";
-import Scene from "../../Models/Scene";
+
 import HeroTitle from "@/components/TextHero";
 
 export default function Home() {
@@ -94,6 +93,7 @@ export default function Home() {
           >
             <div className="relative min-h-[360px] lg:min-h-[420px]">
               {/* <img src="/assets/hero-products.png" alt=""  className=" drop-shadow-[20px_0_20px] drop-shadow-black rounded-2xl h-[400px] w-auto"/> */}
+     
             </div>
           </motion.div>
         </section>
