@@ -59,7 +59,7 @@ export default function HeroTitle({
   return (
     <h1 className="max-w-3xl text-4xl font-black leading-tight text-black sm:text-3xl lg:text-5xl whitespace-pre-line">
       {beforeText}
-      <span className="text-primary">
+      <span className="text-gradient-cyan">
         {highlightText}
       </span>
       {afterText}

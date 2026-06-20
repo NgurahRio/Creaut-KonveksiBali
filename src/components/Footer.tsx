@@ -23,17 +23,17 @@ const infoLinks = [
 const socialLinks = [
   {
     name: "Instagram",
-    href: "https://instagram.com/konveksibali",
+    href: "https://www.instagram.com/konveksi.advish",
     icon: "instagram" as const,
   },
   {
     name: "WhatsApp",
-    href: "https://wa.me/6281345677890",
+    href: "https://wa.me/6285738814898",
     icon: "whatsapp" as const,
   },
   {
     name: "Email",
-    href: "mailto:konveksibali@gmail.com",
+    href: "mailto:advishkonveksi@gmail.com",
     icon: "mail" as const,
   },
 ];
@@ -86,7 +86,7 @@ export default function Footer() {
                 </p>
               </div>
               <a
-                href="https://wa.me/6281345677890"
+                href="https://wa.me/6285738814898"
                 target="_blank"
                 rel="noreferrer"
                 className="group inline-flex shrink-0 items-center gap-3 rounded-xl bg-gradient-to-r from-cyan-500 to-teal-500 px-8 py-4 font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-cyan-500/30"
@@ -110,15 +110,15 @@ export default function Footer() {
             <div className="flex flex-col gap-6">
               <img
                 src="/assets/logo.png"
-                alt="Konveksi Bali Logo"
+                alt="Advish Konveksi Logo"
                 width={180}
                 height={180}
                 className="brightness-110"
               />
               <p className="max-w-xs text-sm leading-relaxed text-gray-400">
-                Konveksi profesional di Bali menyediakan kebutuhan apparel
-                custom Anda. Kreativitas, kualitas, dan ketepatan waktu adalah
-                komitmen kami.
+                Advish Konveksi hadir untuk bantu menciptakan apparel dan
+                merchandise custom berkualitas. Masalah baju? Advish siap
+                bantu!
               </p>
 
               {/* Social Icons */}
@@ -193,9 +193,9 @@ export default function Footer() {
                     <Icon className="h-4 w-4" name="mapPin" />
                   </div>
                   <span className="text-sm leading-relaxed text-gray-400 transition-colors duration-200 group-hover:text-gray-200">
-                    Jl. Mahendradatta No. 123
+                    Jl. Sedap Malam, Gg. Alamanda, No.23
                     <br />
-                    Denpasar, Bali
+                    Denpasar Timur, Bali
                   </span>
                 </li>
                 <li className="group flex items-center gap-4">
@@ -203,7 +203,7 @@ export default function Footer() {
                     <Icon className="h-4 w-4" name="phone" />
                   </div>
                   <span className="text-sm text-gray-400 transition-colors duration-200 group-hover:text-gray-200">
-                    +62 813 4567 7890
+                    +62 857 3881 4898
                   </span>
                 </li>
                 <li className="group flex items-center gap-4">
@@ -211,7 +211,7 @@ export default function Footer() {
                     <Icon className="h-4 w-4" name="mail" />
                   </div>
                   <span className="text-sm text-gray-400 transition-colors duration-200 group-hover:text-gray-200">
-                    konveksibali@gmail.com
+                    advishkonveksi@gmail.com
                   </span>
                 </li>
                 <li className="group flex items-start gap-4">
@@ -221,7 +221,7 @@ export default function Footer() {
                   <span className="text-sm leading-relaxed text-gray-400 transition-colors duration-200 group-hover:text-gray-200">
                     Senin - Sabtu
                     <br />
-                    09.00 - 17.00 WITA
+                    10.00 - 18.00 WITA
                   </span>
                 </li>
               </ul>
@@ -239,7 +239,7 @@ export default function Footer() {
                   height="220"
                   loading="lazy"
                   className="rounded-xl"
-                  title="Lokasi Konveksi Bali"
+                  title="Lokasi Advish Konveksi"
                 />
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function Footer() {
           <div className="mt-16 border-t border-white/10 pt-8 lg:mt-20">
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
               <p className="text-sm text-gray-500">
-                © 2026 Konveksi Bali. All rights reserved.
+                © 2025 Advish Konveksi. All rights reserved.
               </p>
               <p className="flex items-center gap-2 text-sm text-gray-500">
                 Designed with{" "}
@@ -266,7 +266,7 @@ export default function Footer() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/6281345677890"
+        href="https://wa.me/6285738814898"
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-6 right-6 z-50 transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:drop-shadow-lg lg:bottom-10 lg:right-10"

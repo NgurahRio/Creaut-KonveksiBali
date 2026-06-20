@@ -8,8 +8,8 @@ export default function ProdukPage() {
   return (
     <Container className="pt-10 lg:pt-20">
       <section>
-        <h1 className="text-5xl font-black leading-tight text-black sm:text-7xl">Produk Kami</h1>
-        <p className="mt-8 max-w-2xl text-lg font-semibold leading-8 text-[#4f4f4f] sm:text-2xl sm:leading-9">
+        <h1 className="text-5xl font-black leading-tight text-gray-900 sm:text-7xl">Produk Kami</h1>
+        <p className="mt-8 max-w-2xl text-lg font-semibold leading-8 text-gray-600 sm:text-2xl sm:leading-9">
           Berbagai pilihan apparel custom berkualitas tinggi untuk kebutuhan Anda.
         </p>
       </section>
@@ -18,10 +18,10 @@ export default function ProdukPage() {
         <div className="flex gap-4 overflow-x-auto pb-2">
           {categories.map((category, index) => (
             <button
-              className={`h-16 shrink-0 rounded-full border px-10 text-xl font-black transition ${
+              className={`h-16 shrink-0 rounded-full border px-10 text-xl font-black transition-all duration-300 ${
                 index === 0
-                  ? "border-[#a17140] bg-[#a17140] text-white"
-                  : "border-[#777] bg-white text-black hover:border-[#a17140] hover:text-[#a17140]"
+                  ? "border-primary-dark bg-primary-dark text-white shadow-lg shadow-primary-light/20"
+                  : "border-gray-200 bg-gray-50 text-gray-600 hover:border-primary-light hover:text-primary-dark hover:bg-white"
               }`}
               key={category}
               type="button"

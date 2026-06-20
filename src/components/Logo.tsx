@@ -9,7 +9,7 @@ interface LogoProps {
 export default function Logo({ href = "/", className = "", isScrolled = false }: LogoProps) {
   return (
     <Link
-      aria-label="Konveksi Bali"
+      aria-label="Advish Konveksi"
       // 2. Ganti 'text-black' dengan kondisi dinamis berdasarkan isScrolled
       className={`flex items-center gap-3 transition-colors duration-300 ${
         isScrolled ? "text-black" : "text-white"

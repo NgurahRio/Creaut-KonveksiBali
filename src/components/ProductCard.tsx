@@ -9,10 +9,10 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
-      className="group block overflow-hidden rounded-lg bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition hover:-translate-y-1 hover:shadow-[0_14px_34px_rgba(0,0,0,0.12)]"
+      className="group block overflow-hidden rounded-2xl bg-white border border-gray-100 p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-light/30 hover:border-primary-light"
       href={`/produk/${product.slug}`}
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-white">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-50 rounded-xl">
         <Image
           alt={product.imageAlt}
           className="object-contain transition duration-300 group-hover:scale-105"
@@ -22,8 +22,8 @@ export default function ProductCard({ product }: ProductCardProps) {
         />
       </div>
       <div className="mt-5">
-        <h3 className="text-xl font-black leading-7 text-[#4a4a4a]">{product.name}</h3>
-        <p className="mt-1 text-lg font-bold text-[#555]">{product.price}</p>
+        <h3 className="text-xl font-black leading-7 text-gray-900 group-hover:text-primary-dark transition-colors duration-200">{product.name}</h3>
+        <p className="mt-1 text-lg font-bold text-primary-dark">{product.price}</p>
       </div>
     </Link>
   );

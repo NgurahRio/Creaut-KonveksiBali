@@ -61,7 +61,7 @@ function getMenuIcon(href: string) {
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { language } = useLanguage(); // Dapatkan bahasa aktif
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -105,19 +105,18 @@ export default function Navbar() {
     <>
       {/* HEADER: Memperbaiki space 'border-b ' dan warna conditional */}
       <header
-        className={`fixed top-0 left-0 w-full z-40 transition-all  rounded-b-3xl duration-300 border-b ${
-          isScrolled
+        className={`fixed top-0 left-0 w-full z-40 transition-all  rounded-b-3xl duration-300 border-b ${isScrolled
             ? "bg-white/95 text-black border-gray-100 shadow-sm backdrop-blur"
             : "bg-linear-to-r from-cyan-500 from-10% via-cyan-600 via-30% to-cyan-700 to-90% text-white border-transparent"
-        }`}
+          }`}
       >
-     <audio
-  ref={audioRef}
-  src="/assets/lagukonveksi.mp3"
-  loop
-  autoPlay
-  preload="auto"
-/>
+        <audio
+          ref={audioRef}
+          src="/assets/lagukonveksi.mp3"
+          loop
+          autoPlay
+          preload="auto"
+        />
 
         <Container>
           <nav className="flex h-20 items-center justify-between gap-6 lg:h-24">
@@ -131,11 +130,10 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`transition-colors duration-300 ${
-                      active
+                    className={`transition-colors duration-300 ${active
                         ? isScrolled ? "text-black font-semibold" : "text-white font-semibold"
                         : isScrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </Link>
@@ -150,11 +148,10 @@ export default function Navbar() {
               {/* Musik */}
               <button
                 onClick={toggleMusic}
-                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 active:scale-95 ${
-                  isScrolled 
-                    ? "text-gray-600 hover:bg-gray-50 hover:text-black" 
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 active:scale-95 ${isScrolled
+                    ? "text-gray-600 hover:bg-gray-50 hover:text-black"
                     : "text-gray-300 hover:bg-white/10 hover:text-white"
-                }`}
+                  }`}
                 aria-label="Toggle Background Music"
                 title={isPlaying ? "Matikan Musik" : "Putar Musik"}
               >
@@ -195,9 +192,8 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setIsOpen(true)}
-                className={`p-2 transition duration-300 lg:hidden ${
-                  isScrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
-                }`}
+                className={`p-2 transition duration-300 lg:hidden ${isScrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
+                  }`}
                 aria-label="Open Menu"
               >
                 <svg xmlns="http://www.w3.org/2000/xl" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="h-6 w-6">
@@ -239,9 +235,8 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`flex items-center justify-between rounded-xl px-4 py-3.5 transition-all duration-200 ${
-                      active ? "bg-gray-800/70 text-white font-medium" : "text-gray-300 hover:bg-gray-800/30 hover:text-white"
-                    }`}
+                    className={`flex items-center justify-between rounded-xl px-4 py-3.5 transition-all duration-200 ${active ? "bg-gray-800/70 text-white font-medium" : "text-gray-300 hover:bg-gray-800/30 hover:text-white"
+                      }`}
                   >
                     <div className="flex items-center gap-4">
                       <div className={`flex h-10 w-10 items-center justify-center rounded-xl transition-colors ${active ? "bg-[#1e293b] text-blue-400" : "bg-gray-800/60 text-gray-400"}`}>

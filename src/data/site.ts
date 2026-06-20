@@ -14,9 +14,9 @@ export const products: Product[] = [
     category: "Kaos",
     price: "Mulai dari 34K",
     image: "/assets/product-kaos.png",
-    imageAlt: "Kaos putih Cotton Combed 30s Konveksi Bali",
+    imageAlt: "Kaos putih Cotton Combed 30s Advish Konveksi",
     description:
-      "Kaos Cotton Combed 30s dari Konveksi Bali merupakan pilihan apparel terbaik untuk kebutuhan seragam komunitas, merchandise event, hingga pakaian kasual harian Anda. Terbuat dari serat kapas alami pilihan, kain ini terasa halus, ringan, dan nyaman digunakan sepanjang hari di iklim tropis.",
+      "Kaos Cotton Combed 30s dari Advish Konveksi merupakan pilihan apparel terbaik untuk kebutuhan seragam komunitas, merchandise event, hingga pakaian kasual harian Anda. Terbuat dari serat kapas alami pilihan, kain ini terasa halus, ringan, dan nyaman digunakan sepanjang hari di iklim tropis.",
     specs: [
       { label: "Gramasi", value: "200 Kg" },
       { label: "Tekstur", value: "Cestur" },
@@ -37,7 +37,7 @@ export const products: Product[] = [
     category: "Jersey",
     price: "Mulai dari 85K",
     image: "/assets/product-jersey.png",
-    imageAlt: "Jersey biru dryfit premium Konveksi Bali",
+    imageAlt: "Jersey biru dryfit premium Advish Konveksi",
     description:
       "Jersey dryfit premium untuk tim olahraga, komunitas, dan event dengan bahan ringan, cepat kering, serta nyaman untuk aktivitas intens.",
     specs: [
@@ -59,7 +59,7 @@ export const products: Product[] = [
     category: "Jaket",
     price: "Mulai dari 120K",
     image: "/assets/product-jaket-sporty.png",
-    imageAlt: "Jaket sporty hitam merah Konveksi Bali",
+    imageAlt: "Jaket sporty hitam merah Advish Konveksi",
     description:
       "Jaket sporty custom dengan karakter desain tegas untuk kebutuhan komunitas, club, event, dan brand apparel.",
     specs: [
@@ -81,7 +81,7 @@ export const products: Product[] = [
     category: "Jaket",
     price: "Mulai dari 150K",
     image: "/assets/product-jaket-formal.png",
-    imageAlt: "Jaket formal hitam Konveksi Bali",
+    imageAlt: "Jaket formal hitam Advish Konveksi",
     description:
       "Jaket formal untuk kebutuhan perusahaan, organisasi, dan team dengan tampilan rapi serta pilihan detail yang dapat disesuaikan.",
     specs: [
@@ -103,7 +103,7 @@ export const products: Product[] = [
     category: "PDH",
     price: "Mulai dari 100K",
     image: "/assets/product-pdh.png",
-    imageAlt: "PDH abu-abu American Drill Konveksi Bali",
+    imageAlt: "PDH abu-abu American Drill Advish Konveksi",
     description:
       "PDH American Drill dengan potongan rapi untuk instansi, organisasi, dan komunitas profesional.",
     specs: [
@@ -125,7 +125,7 @@ export const products: Product[] = [
     category: "Jaket",
     price: "Mulai dari 130K",
     image: "/assets/product-hoodie.png",
-    imageAlt: "Jaket hoodie hitam merah Konveksi Bali",
+    imageAlt: "Jaket hoodie hitam merah Advish Konveksi",
     description:
       "Hoodie custom untuk merchandise, komunitas, dan brand dengan detail warna serta logo yang dapat disesuaikan.",
     specs: [
@@ -147,7 +147,7 @@ export const products: Product[] = [
     category: "Workshop Wear",
     price: "Mulai dari 110K",
     image: "/assets/product-workshop.png",
-    imageAlt: "Workshop wear hitam Konveksi Bali",
+    imageAlt: "Workshop wear hitam Advish Konveksi",
     description:
       "Workshop wear yang kuat dan nyaman untuk kebutuhan operasional lapangan, mekanik, dan tim produksi.",
     specs: [
@@ -169,7 +169,7 @@ export const products: Product[] = [
     category: "Topi",
     price: "Mulai dari 25K",
     image: "/assets/product-topi.png",
-    imageAlt: "Topi custom hitam Konveksi Bali",
+    imageAlt: "Topi custom hitam Advish Konveksi",
     description:
       "Topi custom untuk merchandise, event, dan seragam komunitas dengan pilihan bordir atau patch.",
     specs: [
@@ -190,9 +190,9 @@ export const products: Product[] = [
 export const categories = ["Semua", "Kaos", "Jersey", "Jaket", "PDH", "Workshop Wear"];
 
 export const stats: StatItem[] = [
-  { value: "8+", label: "Tahun Pengalaman", icon: "briefcase" },
-  { value: "500+", label: "Project Selesai", icon: "shirt" },
-  { value: "200+", label: "Klien Puas", icon: "user" },
+  { value: "2+", label: "Tahun Pengalaman", icon: "briefcase" },
+  { value: "100+", label: "Project Selesai", icon: "shirt" },
+  { value: "50+", label: "Klien Puas", icon: "user" },
   { value: "99%", label: "On Time Pengiriman", icon: "clock" },
 ];
 
@@ -259,11 +259,9 @@ export const orderDetails: OrderDetail[] = [
 ];
 
 export const journey = [
-  { year: "2016", text: "Awal berdiri dengan skala kecil dan fokus pada kualitas." },
-  { year: "2018", text: "Mulai berkembang dan menangani project komunitas." },
-  { year: "2020", text: "Investasi mesin dan teknologi produksi lebih modern." },
-  { year: "2022", text: "Bermitra dengan brand dan perusahaan skala besar." },
-  { year: "2024", text: "Terus berinovasi dan menjadi partner terpercaya Anda." },
+  { year: "2023", text: "Advish Konveksi resmi berdiri di Denpasar, Bali dengan visi menghadirkan apparel custom berkualitas." },
+  { year: "2024", text: "Berkembang pesat dan dipercaya oleh berbagai komunitas, event, dan brand lokal di Bali." },
+  { year: "2025", text: "Terus berinovasi dalam desain dan produksi, memperluas layanan ke seluruh Indonesia." },
 ];
 
 export const values = [
@@ -297,7 +295,7 @@ export const galleryImages = [
   { src: "/assets/gallery-5.png", alt: "Mesin produksi apparel custom" },
   { src: "/assets/gallery-6.png", alt: "Tim menyiapkan kain produksi" },
   { src: "/assets/gallery-7.png", alt: "Proses printing apparel" },
-  { src: "/assets/gallery-8.png", alt: "Tim workshop Konveksi Bali" },
+  { src: "/assets/gallery-8.png", alt: "Tim workshop Advish Konveksi" },
 ];
 
 export const clientLogos = ["BANK BRI", "BANK BRI", "BANK BRI", "BANK BRI", "BANK BRI"];

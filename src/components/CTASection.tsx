@@ -17,9 +17,15 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <section
-      className={`rounded- bg-linear-to-r from-cyan-500 from-10% via-cyan-600 via-30% to-cyan-700 to-90% px-6 py-9 text-white shadow-[0_8px_22px_rgba(0,0,0,0.12)] sm:px-12 lg:px-20 ${className}`}
+      className={`overflow-hidden relative rounded-2xl bg-gradient-to-r from-primary-dark via-accent to-primary px-6 py-9 text-white shadow-[0_8px_22px_rgba(8,145,178,0.18)] sm:px-12 lg:px-20 ${className}`}
     >
-      <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+      {/* Decorative elements */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
+        <div className="absolute -left-10 bottom-0 h-36 w-36 rounded-full bg-primary-lightest/10 blur-2xl" />
+      </div>
+
+      <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div>
           <h2 className="text-2xl font-black leading-tight sm:text-3xl md:text-5xl">{title}</h2>
           <p className="mt-3 text-2xl font-black leading-tight sm:text-3xl md:text-5xl">{subtitle}</p>
@@ -27,8 +33,8 @@ export default function CTASection({
 
         <div className="flex flex-col gap-4 sm:flex-row">
           <a
-            className="flex h-16 items-center justify-center gap-3 rounded-lg bg-black px-8 text-lg font-black uppercase text-white transition hover:bg-[#1f1f1f]"
-            href="https://wa.me/6281345677890"
+            className="flex h-16 items-center justify-center gap-3 rounded-xl bg-black/80 px-8 text-lg font-black uppercase text-white transition-all duration-300 hover:bg-black hover:-translate-y-0.5 hover:shadow-lg"
+            href="https://wa.me/6285738814898"
             rel="noreferrer"
             target="_blank"
           >
@@ -37,8 +43,8 @@ export default function CTASection({
           </a>
           {secondaryLabel ? (
             <a
-              className="flex h-16 items-center justify-center gap-3 rounded-lg bg-white px-8 text-lg font-black uppercase text-[#a17140] transition hover:bg-[#f5efe8]"
-              href="https://instagram.com"
+              className="flex h-16 items-center justify-center gap-3 rounded-xl bg-white px-8 text-lg font-black uppercase text-primary-dark transition-all duration-300 hover:bg-primary-lightest hover:-translate-y-0.5 hover:shadow-lg"
+              href="https://www.instagram.com/konveksi.advish"
               rel="noreferrer"
               target="_blank"
             >

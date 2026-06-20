@@ -104,8 +104,8 @@ export const translationEntries = [
   ["Punya kebutuhan khusus?", "Have special requirements?"],
   ["Konsultasikan kebutuhan apparel Anda sekarang!", "Discuss your apparel needs now!"],
   [
-    "Kaos Cotton Combed 30s dari Konveksi Bali merupakan pilihan apparel terbaik untuk kebutuhan seragam komunitas, merchandise event, hingga pakaian kasual harian Anda. Terbuat dari serat kapas alami pilihan, kain ini terasa halus, ringan, dan nyaman digunakan sepanjang hari di iklim tropis.",
-    "Cotton Combed 30s T-Shirt from Konveksi Bali is an excellent apparel choice for community uniforms, event merchandise, and daily casual wear. Made from selected natural cotton fibers, this fabric feels smooth, light, and comfortable throughout the day in tropical climates.",
+    "Kaos Cotton Combed 30s dari Advish Konveksi merupakan pilihan apparel terbaik untuk kebutuhan seragam komunitas, merchandise event, hingga pakaian kasual harian Anda. Terbuat dari serat kapas alami pilihan, kain ini terasa halus, ringan, dan nyaman digunakan sepanjang hari di iklim tropis.",
+    "Cotton Combed 30s T-Shirt from Advish Konveksi is an excellent apparel choice for community uniforms, event merchandise, and daily casual wear. Made from selected natural cotton fibers, this fabric feels smooth, light, and comfortable throughout the day in tropical climates.",
   ],
   [
     "Jersey dryfit premium untuk tim olahraga, komunitas, dan event dengan bahan ringan, cepat kering, serta nyaman untuk aktivitas intens.",
@@ -200,7 +200,7 @@ export const translationEntries = [
   ["Senin - Sabtu", "Monday - Saturday"],
   ["KONTAK", "CONTACT"],
   ["LOKASI KAMI", "OUR LOCATION"],
-  ["Peta lokasi Konveksi Bali", "Konveksi Bali location map"],
+  ["Peta lokasi Advish Konveksi", "Advish Konveksi location map"],
   ["Lihat di Google Maps", "View on Google Maps"],
   ["Designed with", "Designed with"],
   ["in Bali", "in Bali"],
