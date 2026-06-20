@@ -10,10 +10,6 @@ import {
   galleryImages,
   products,
 } from "@/data/site";
-<<<<<<< HEAD
-
-=======
->>>>>>> a28d3165c9f8479ab43cf71c0d708eaa57ac5135
 import HeroTitle from "@/components/TextHero";
 
 export default function Home() {

@@ -6,9 +6,9 @@ import "./globals.css";
 import { Noto_Sans, Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-const playfairDisplayHeading = Playfair_Display({subsets:['latin'],variable:'--font-heading'});
+const playfairDisplayHeading = Playfair_Display({ subsets: ['latin'], variable: '--font-heading' });
 
-const notoSans = Noto_Sans({subsets:['latin'],variable:'--font-sans'});
+const notoSans = Noto_Sans({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   title: "Konveksi Bali",
@@ -30,7 +30,7 @@ export default function RootLayout({
           </div>
           <main className="">{children}</main>
           <Footer />
-          <Analytics />
+
         </LanguageProvider>
       </body>
     </html>
