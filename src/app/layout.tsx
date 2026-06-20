@@ -26,10 +26,11 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col ">
         <LanguageProvider>
           <div className=" mb-30 lg:mb-17 md:mb-20">
-          <Navbar />
+            <Navbar />
           </div>
           <main className="">{children}</main>
           <Footer />
+          <Analytics />
         </LanguageProvider>
       </body>
     </html>

@@ -62,7 +62,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { language } = useLanguage(); // Dapatkan bahasa aktif
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -88,42 +87,8 @@ export default function Navbar() {
   }, [isOpen]);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
-    }
+    document.documentElement.classList.remove("dark");
   }, []);
-
-  const toggleTheme = () => {
-    if (isDarkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
-    setIsDarkMode(!isDarkMode);
-  };
-
-  // Objek terjemahan untuk label mode gelap/terang
-  const themeLabels = {
-    id: {
-      darkMode: "Mode Gelap",
-      lightMode: "Mode Terang",
-    },
-    en: { // Asumsi Anda juga memiliki terjemahan bahasa Inggris
-      darkMode: "Dark Mode",
-      lightMode: "Light Mode",
-    },
-    // Tambahkan bahasa lain jika ada
-  };
-
-  // Fungsi helper untuk mendapatkan label yang benar berdasarkan bahasa aktif
-  const getThemeLabel = (isDark: boolean) => {
-    const currentLangLabels = themeLabels[language as keyof typeof themeLabels] || themeLabels.id; // Fallback ke ID jika bahasa tidak ditemukan
-    return isDark ? currentLangLabels.lightMode : currentLangLabels.darkMode;
-  };
   const toggleMusic = () => {
     if (audioRef.current) {
       if (isPlaying) {
@@ -205,7 +170,7 @@ export default function Navbar() {
               </button>
 
               {/* Tema (Hanya Desktop) */}
-              {/* <button
+              <button
                 onClick={toggleTheme}
                 className={`hidden lg:flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition duration-300 active:scale-95 ${
                   isScrolled 
@@ -224,7 +189,7 @@ export default function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                   </svg>
                 )}
-              </button> */}
+              </button>
 
               {/* Hamburger Button Mobile */}
               <button
@@ -293,14 +258,14 @@ export default function Navbar() {
 
               <hr className="my-2 border-gray-800/60" />
 
-              {/* <button
+              <button
                 type="button"
                 onClick={toggleTheme}
                 className="mt-2 w-full flex items-center justify-between rounded-2xl bg-gray-800/40 hover:bg-gray-800/60 border border-gray-700/30 px-5 py-4 text-gray-200 shadow-inner transition-colors duration-200 active:scale-[0.98]"
                 aria-label="Ubah Tema"
               >
                 <span className="text-[16px] tracking-wide font-medium select-none">
-                  {getThemeLabel(isDarkMode)} 
+                  {getThemeLabel(isDarkMode)} {/* Gunakan fungsi getThemeLabel */}
                 </span>
 
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg text-gray-300">
@@ -314,7 +279,7 @@ export default function Navbar() {
                     </svg>
                   )}
                 </div>
-              </button> */}
+              </button>
             </div>
           </div>
         </div>
