@@ -39,3 +39,25 @@ export interface OrderDetail {
   label: string;
   value: string;
 }
+
+export interface Testimonial {
+  name: string;
+  role: string;
+  text: string;
+  rating: number;
+  image?: string;
+}
+
+export interface WorkStep {
+  step: number;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface PortfolioItem {
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+}

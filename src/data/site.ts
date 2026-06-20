@@ -298,4 +298,114 @@ export const galleryImages = [
   { src: "/assets/gallery-8.png", alt: "Tim workshop Advish Konveksi" },
 ];
 
-export const clientLogos = ["BANK BRI", "BANK BRI", "BANK BRI", "BANK BRI", "BANK BRI"];
+export const clientLogos = ["PT Bali Kreasi", "Komunitas Riders", "Bank BRI", "Hotel Sanur", "Bali United FC", "SMK Negeri 1", "PT Maju Jaya", "Dinas Pariwisata"];
+
+export const portfolioItems = [
+  {
+    title: "Jersey Bali Riders",
+    description: "Jersey full print custom untuk komunitas Bali Riders dengan desain racing dinamis dan bahan dryfit premium.",
+    image: "/assets/gallery-1.png",
+    imageAlt: "Jersey custom Bali Riders Community",
+  },
+  {
+    title: "Kaos Event Festival",
+    description: "Produksi 500 pcs kaos event Bali Festival dengan sablon plastisol 4 warna dan finishing rapi.",
+    image: "/assets/gallery-2.png",
+    imageAlt: "Kaos event Bali Festival",
+  },
+  {
+    title: "Seragam PT Maju Jaya",
+    description: "Seragam kerja American Drill untuk 200 karyawan PT Maju Jaya dengan bordir logo dan nama.",
+    image: "/assets/gallery-3.png",
+    imageAlt: "Seragam kerja PT Maju Jaya",
+  },
+  {
+    title: "Jaket Angkatan SMK",
+    description: "Jaket hoodie custom angkatan 2025 SMK Negeri 1 dengan desain premium dan bahan fleece tebal.",
+    image: "/assets/gallery-4.png",
+    imageAlt: "Jaket angkatan SMK Negeri 1",
+  },
+  {
+    title: "Workshop Wear Hotel",
+    description: "Wearpack custom untuk tim engineering Hotel Sanur dengan bahan drill premium dan banyak kantong.",
+    image: "/assets/gallery-5.png",
+    imageAlt: "Workshop wear Hotel Sanur",
+  },
+  {
+    title: "PDH Dinas Pariwisata",
+    description: "PDH formal untuk Dinas Pariwisata Bali dengan bordir logo dan potongan rapi profesional.",
+    image: "/assets/gallery-6.png",
+    imageAlt: "PDH Dinas Pariwisata Bali",
+  },
+];
+
+export const testimonials = [
+  { name: "exsos XII 9", role: "2 bulan lalu", text: "Konveksi Advish benar-benar memberikan pengalaman yang sangat memuaskan. Kualitas jahitannya rapi dan detail, bahan yang digunakan juga terasa nyaman dan tidak murahan. Pelayanan mereka sangat ramah dan responsif, sehingga komunikasi selama proses pemesanan berjalan lancar tanpa kendala.", rating: 5, image: "https://i.pravatar.cc/150?u=exsos" },
+  { name: "Putu Chandra Risca Dinata", role: "4 bulan lalu", text: "Konveksi ini oke sih. Dari bahan sampai hasil akhir sesuai sama yang diharapkan. Adminnya responsif dan enak diajak komunikasi. Worth it buat langganan.", rating: 5, image: "https://i.pravatar.cc/150?u=putu" },
+  { name: "Ni Luh Komang Triayu Laksmi Dewi", role: "2 bulan lalu", text: "pernah skeptis sama konveksi, tapi konveksi yang satu ini berhasil matahin stigma ku itu karena dari proses awal - akhir semuanya dibantu dengan jelas dan jujur! setiap ada problem pstii di kabari dan dari awal selalu di make sure supaya ekspektasi ku dan mereka sama. dan hasil produksi ga kaleng”,bener bener sesuai sama ekspektasi🥹 terharu bgt, semoga owner nya yg buat nih konveksi masuk surga ya kak!", rating: 5, image: "https://i.pravatar.cc/150?u=niluh" },
+  { name: "Cindy Oktacia", role: "4 bulan lalu", text: "pelayanannyaa bagus banget apa lagi hasil sablonnya ga pernah mengecewakan, selalu memuaskaannn, TOP BANGET ⭐️⭐️⭐️⭐️", rating: 5, image: "https://i.pravatar.cc/150?u=cindy" },
+  { name: "helmi kuswandi", role: "2 bulan lalu", text: "Yang saya notice waktu order di Advish Konveksi tuh mereka gak vuma bilang \"bisa\",tapi juga jelasin dari sisi produksi. Bahkan kemungkinan hasil yang kurang maksimal juga dikasih tau dari awal. Jadi kita sebagai customer malah lebih kebayang hasil akhirnya bakal kayak gimana.", rating: 5, image: "https://i.pravatar.cc/150?u=helmi" },
+  { name: "I GUSTI AYU NGURAH ANGGIA PRADNYANI", role: "sebulan lalu", text: "Kualitas bajunya bagus dan ramah dikantong juga nih\nyuk dicoba gais dijamin puas sama hasilnya", rating: 5, image: "https://i.pravatar.cc/150?u=anggia" },
+  { name: "Surya Wirakusumah", role: "2 bulan lalu", text: "Menurutku yang bikin beda Advish tuh mereka jelasin proses nya. Bahkan worst case di produksi juga disampaikan. Jadi kita sebagai customers ngerasa lebih dihargai dan gak dibikin terlalu berharap tinggi doang.", rating: 5, image: "https://i.pravatar.cc/150?u=surya" },
+  { name: "Ni komang Luh suandewi", role: "2 bulan lalu", text: "Salah satu hal yang menurutku beda dari advish mereka transparan banget. Dari bahan proses produksi sampai kemungkinan terburuknya ,juga di jelasin jadi pas barang jadi itu gak kaget malah sesuai ekspektasi.", rating: 5, image: "https://i.pravatar.cc/150?u=suandewi" },
+  { name: "Made Vita Maharani", role: "4 bulan lalu", text: "keren banget kualitasnya gausah diragukan lagii bahannya selalu premium selalu memuaskan", rating: 5, image: "https://i.pravatar.cc/150?u=vita" },
+  { name: "Meybella V. Saputra", role: "sebulan lalu", text: "Pelayanannya bagus banget, sangat informatif dan satset. Kualitas gak usah diraguin lagi deh. Recommended!", rating: 5, image: "https://i.pravatar.cc/150?u=meybella" },
+  { name: "Hendra ije", role: "2 bulan lalu", text: "Enaknya bikin di Advish Konveksi tuh mereka ngasih insight dari sisi produksi juga. Jadi kita gak cuma order doang, tapi dikasih gambaran realistis soal hasil akhirnya. Jarang sih Nemu konveksi yang kayak gitu.", rating: 5, image: "https://i.pravatar.cc/150?u=hendra" },
+  { name: "A.A.Ngurah Agung Kusuma Putra", role: "5 bulan lalu", text: "Pemesanan baju disini sangat baik, selain dari hasil bajunya yang bagus, pelayanannya juga sangat ramah", rating: 5, image: "https://i.pravatar.cc/150?u=agung" },
+  { name: "Enjang Suhadma", role: "2 bulan lalu", text: "Respect sih sama cara Advish handle order. mereka dari awal udah jelasin kemungkinan terbaik sampai kemungkinan kurang idealnya. Buatku itu malah bikin lebih trust sama hasil akhirnya.", rating: 5, image: "https://i.pravatar.cc/150?u=enjang" },
+  { name: "Gusti Ayu Jacinda Mewiana Putri", role: "5 bulan lalu", text: "Kualitas bintang 5 ⭐ hasil dari jahitannya sangat rapiii dan bahannya juga bagus, untuk harganya juga ramah di kantong, bestt dehh pokoknyaa", rating: 5, image: "https://i.pravatar.cc/150?u=jacinda" },
+  { name: "Feby Amanda Sukmawati", role: "4 bulan lalu", text: "selama organisasi yang saya ikuti selalu membuat baju di advish konveksi karena baju disana bahan nya bagus, adem dan juga stylelish.", rating: 5, image: "https://i.pravatar.cc/150?u=feby" },
+  { name: "Putu Dinda Priyah Putri", role: "5 bulan lalu", text: "hasil jahitannya rapi dan bahannya juga bagus,, untuk soal harga sangat amat terjangkau dan kualitass bintang 5❤️", rating: 5, image: "https://i.pravatar.cc/150?u=dinda" },
+  { name: "Ni Komang Kharina Gayatri", role: "6 bulan lalu", text: "Sangat senang bekerja sama dengan Advish Konveksi🤩🤩🤩, hampir setahun bekerja sama dan sudah sangat banyak juga pesenan kami yang ada saja requestnya itu dibuatkan oleh konveksi dengan baik dan teliti. Teruntuk owner Advish Konveksi kak Wibawa dan kak Caca kami ucapkan terima kasih banyak atas semua dedikasinya karena setiap kendala yang ada sudah diselesaikan dan selalu dikomunikasikan dengan baik dan saya mewakili Himatika Udayana mengucapkan maaf jika terdapat hal yang kurang berkenan selama hampir setahun ini💐🙂‍↕️👐🏻. Buat kalian yang mau lihat hasil-hasil karya Advish Konveksi bisa langsung cek Instagram @himatika.udayana periode 2025🔥🔥🔥🤩🤩👏🏻👏🏻👏🏻", rating: 5, image: "https://i.pravatar.cc/150?u=kharina" }
+];
+
+
+export const workSteps = [
+  {
+    step: 1,
+    title: "Konsultasi",
+    description: "Diskusikan kebutuhan apparel custom Anda dengan tim kami melalui WhatsApp.",
+    icon: "phone",
+  },
+  {
+    step: 2,
+    title: "Desain",
+    description: "Tim desain kami bantu wujudkan ide Anda menjadi mockup visual yang menarik.",
+    icon: "ruler",
+  },
+  {
+    step: 3,
+    title: "Produksi",
+    description: "Proses produksi dengan bahan premium dan quality control ketat di setiap tahap.",
+    icon: "factory",
+  },
+  {
+    step: 4,
+    title: "Pengiriman",
+    description: "Pesanan dikemas rapi dan dikirim tepat waktu ke seluruh Indonesia.",
+    icon: "truck",
+  },
+];
+
+export const advantages = [
+  {
+    title: "Gratis Desain",
+    description: "Tim desainer profesional siap membantu mewujudkan ide Anda tanpa biaya tambahan.",
+    icon: "ruler",
+  },
+  {
+    title: "Bahan Premium",
+    description: "Hanya menggunakan bahan berkualitas tinggi untuk hasil yang nyaman dan tahan lama.",
+    icon: "award",
+  },
+  {
+    title: "Produksi Cepat",
+    description: "Proses produksi efisien dengan estimasi waktu 7-14 hari kerja sesuai quantity.",
+    icon: "clock",
+  },
+  {
+    title: "Kirim Seluruh Indonesia",
+    description: "Melayani pengiriman ke seluruh wilayah Indonesia dengan packing aman.",
+    icon: "truck",
+  },
+];
