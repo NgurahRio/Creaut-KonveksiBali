@@ -236,7 +236,7 @@ export default function Home() {
       {/* ══════════════════════════════════════════════════════
           HERO SECTION — Clean White
       ══════════════════════════════════════════════════════ */}
-      <section className="bg-white -mt-30 md:-mt-20 lg:-mt-[68px] pt-40 pb-12 md:pt-36 md:pb-16 lg:pt-44 lg:pb-20 relative overflow-hidden">
+      <section className="bg-white pt-32 pb-12 md:pt-36 md:pb-16 lg:pt-44 lg:pb-20 relative overflow-hidden">
         {/* Subtle background decoration (optional, keeping it clean for now) */}
         <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30" />
 
