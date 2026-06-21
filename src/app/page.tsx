@@ -56,7 +56,7 @@ function TestimonialCard({ t, index, bgColor, onReadMore }: { t: { name: string;
   return (
     <motion.div
       variants={staggerItem}
-      className="group relative flex-none w-[320px] snap-center flex flex-col justify-between overflow-hidden rounded-2xl bg-[#1a1a1a] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#2d2d2d] transition-transform duration-300"
+      className="group relative flex-none w-[90vw] sm:w-[320px] snap-center flex flex-col justify-between overflow-hidden rounded-3xl bg-[#1a1a1a] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#2d2d2d] transition-transform duration-300"
     >
       <div>
         {/* Header: Avatar, Name, Time, Google Logo */}
@@ -465,25 +465,25 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto max-w-7xl">
             {/* Navigation Arrows */}
             <button
               onClick={scrollLeftFn}
               disabled={!canScrollLeft}
-              className={`absolute -left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full shadow-lg transition-all sm:-left-5 ${canScrollLeft ? 'bg-[#1E1E1E] text-white hover:scale-110' : 'bg-gray-200 text-gray-400 cursor-not-allowed opacity-50'}`}>
+              className={`absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full shadow-lg transition-all sm:-left-5 sm:flex ${canScrollLeft ? 'bg-[#1E1E1E] text-white hover:scale-110' : 'bg-gray-200 text-gray-400 cursor-not-allowed opacity-50'}`}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="h-5 w-5"><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
             </button>
             <button
               onClick={scrollRightFn}
               disabled={!canScrollRight}
-              className={`absolute -right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full shadow-lg transition-all sm:-right-5 ${canScrollRight ? 'bg-[#1E1E1E] text-white hover:scale-110' : 'bg-gray-200 text-gray-400 cursor-not-allowed opacity-50'}`}>
+              className={`absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full shadow-lg transition-all sm:-right-5 sm:flex ${canScrollRight ? 'bg-[#1E1E1E] text-white hover:scale-110' : 'bg-gray-200 text-gray-400 cursor-not-allowed opacity-50'}`}>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="h-5 w-5"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
             </button>
 
             <motion.div
               ref={sliderRef}
               onScroll={checkScroll}
-              className="flex gap-4 overflow-x-auto pb-8 pt-4 snap-x snap-mandatory hide-scrollbar"
+              className="flex gap-[10vw] sm:gap-4 overflow-x-auto pb-8 pt-4 snap-x snap-mandatory hide-scrollbar before:shrink-0 before:w-[5vw] sm:before:w-6 lg:before:w-8 after:shrink-0 after:w-[5vw] sm:after:w-6 lg:after:w-8"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               variants={staggerContainer}
               initial="hidden"
