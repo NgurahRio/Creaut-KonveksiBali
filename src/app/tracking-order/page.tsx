@@ -8,7 +8,25 @@ import { orderDetails, trackingSteps } from "@/data/site";
 import React, { useState } from "react";
 import { trackOrderAPI } from "./actions";
 
-function getDynamicTrackingSteps(apiData: any) {
+interface OrderData {
+  status: string;
+  sub_status: string | null;
+  type?: string;
+  size?: string;
+  customer_name?: string;
+  material?: string;
+  qty?: number;
+  amount?: number;
+  number?: string;
+}
+
+function getDynamicTrackingSteps(apiData: OrderData): Array<{
+  title: string;
+  subtitle: string;
+  date: string;
+  icon: string;
+  status: "done" | "active" | "pending";
+}> {
   const statusFlow = [
     ["created", "approved", "down_payment"], // Step 1
     ["production"], // Step 2
@@ -52,24 +70,28 @@ function getDynamicTrackingSteps(apiData: any) {
 
     { title: "Tahap Quality Control & Pengemasan", subtitle: "Pesanan selesai", date: "", icon: "shirt", status: stepIndex === 4 ? "done" : "pending" },
 
-    { title: "Tqwqw", subtitle: "Pesanan selqwqwesai", date: "", icon: "shirt", status: stepIndex === 5 ? "done" : "pending" },
-  ] as any;
+    { title: "Pesanan Selesai", subtitle: "Pesanan telah selesai", date: "", icon: "check", status: stepIndex === 5 ? "done" : "pending" },
+  ];
 }
 
-function getDynamicOrderDetails(apiData: any) {
+function getDynamicOrderDetails(apiData: OrderData) {
   let typeStr = apiData.type || "-";
   let sizeStr = apiData.size || "-";
 
   try {
-    const parsedType = JSON.parse(apiData.type);
-    if (Array.isArray(parsedType)) typeStr = parsedType.join(", ");
+    if (apiData.type) {
+      const parsedType = JSON.parse(apiData.type);
+      if (Array.isArray(parsedType)) typeStr = parsedType.join(", ");
+    }
   } catch (e) {
     // Abaikan jika bukan JSON
   }
 
   try {
-    const parsedSize = JSON.parse(apiData.size);
-    if (Array.isArray(parsedSize)) sizeStr = parsedSize.join(", ");
+    if (apiData.size) {
+      const parsedSize = JSON.parse(apiData.size);
+      if (Array.isArray(parsedSize)) sizeStr = parsedSize.join(", ");
+    }
   } catch (e) {
     // Abaikan jika bukan JSON
   }
@@ -88,7 +110,7 @@ export default function TrackingOrderPage() {
   const [invoice, setInvoice] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [orderData, setOrderData] = useState<any>(null);
+  const [orderData, setOrderData] = useState<OrderData | null>(null);
 
   const handleTrack = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -105,7 +127,7 @@ export default function TrackingOrderPage() {
       } else {
         setError(result.message ?? "Terjadi kesalahan saat melacak pesanan.");
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
       setError("Koneksi gagal. Jika menguji di HP (local IP), Server Action Next.js mungkin memblokirnya.");
     }
@@ -114,12 +136,12 @@ export default function TrackingOrderPage() {
   };
 
   return (
-    <Container className="pt-10 lg:pt-20">
-      <section>
-        <h1 className="text-5xl font-black leading-tight text-gray-900 sm:text-7xl">
-          Tracking Order
+    <Container className="pt-28 lg:pt-36">
+      <section className="text-center max-w-3xl mx-auto">
+        <h1 className="text-4xl font-black leading-tight text-gray-900 sm:text-5xl lg:text-6xl tracking-tight">
+          Tracking <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">Order</span>
         </h1>
-        <p className="mt-8 max-w-2xl text-xl font-semibold leading-10 text-gray-600 sm:text-2xl">
+        <p className="mx-auto mt-6 max-w-2xl text-lg font-medium leading-relaxed text-gray-500 sm:text-xl">
           Pantau setiap tahap produksi pesanan Anda dengan mudah dan real-time.
         </p>
       </section>
@@ -156,7 +178,7 @@ export default function TrackingOrderPage() {
             </p>
             <a
               className="mt-5 flex h-14 items-center justify-center gap-2 rounded-xl border border-[#25b829] bg-[#ecfaec] text-base font-black uppercase text-[#25a728] transition-all duration-300 hover:-translate-y-1 hover:bg-[#d8f5d8] hover:shadow-md active:scale-95"
-              href="https://wa.me/6285738814898"
+              href="https://wa.me/6285738814898?text=Saya%20mengalami%20masalah%20dalam%20tracking%20pesanan%20saya%0AKeluhan%3A%20"
               rel="noreferrer"
               target="_blank"
             >

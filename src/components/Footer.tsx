@@ -41,30 +41,8 @@ const socialLinks = [
 export default function Footer() {
   return (
     <>
-      {/* Wave Separator */}
-      <div className="relative mt-20 lg:mt-28">
-        <svg
-          className="block w-full"
-          viewBox="0 0 1440 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          style={{ height: "60px" }}
-        >
-          <path
-            d="M0 40C240 80 480 0 720 40C960 80 1200 0 1440 40V100H0V40Z"
-            fill="#0c1929"
-          />
-          <path
-            d="M0 60C200 30 400 80 600 50C800 20 1000 70 1200 45C1300 35 1380 55 1440 50V100H0V60Z"
-            fill="#0f2035"
-            opacity="0.6"
-          />
-        </svg>
-      </div>
-
       {/* Main Footer */}
-      <footer className="relative overflow-hidden bg-[#0c1929] pb-0 text-white">
+      <footer className="relative mt-12 overflow-hidden bg-[#0c1929] pb-0 text-white lg:mt-16">
         {/* Decorative background elements */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-cyan-500/5 blur-3xl" />
@@ -72,42 +50,13 @@ export default function Footer() {
           <div className="absolute right-1/4 top-1/2 h-48 w-48 rounded-full bg-teal-500/3 blur-2xl" />
         </div>
 
-        <Container className="relative z-10">
-          {/* CTA Banner */}
-          <div className="mb-16 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-cyan-600/20 via-cyan-500/10 to-teal-600/20 p-8 backdrop-blur-sm lg:p-12">
-            <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:justify-between lg:text-left">
-              <div>
-                <h3 className="text-2xl font-bold tracking-tight lg:text-3xl">
-                  Siap Buat Apparel Custom?
-                </h3>
-                <p className="mt-2 max-w-lg text-sm leading-relaxed text-gray-300 lg:text-base">
-                  Konsultasikan desain Anda bersama tim kami. Gratis estimasi
-                  harga dan mockup desain!
-                </p>
-              </div>
-              <a
-                href="https://wa.me/6285738814898"
-                target="_blank"
-                rel="noreferrer"
-                className="group inline-flex shrink-0 items-center gap-3 rounded-xl bg-gradient-to-r from-cyan-500 to-teal-500 px-8 py-4 font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-cyan-500/30"
-              >
-                <Icon
-                  className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
-                  name="whatsapp"
-                />
-                Hubungi Kami
-                <Icon
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  name="arrowRight"
-                />
-              </a>
-            </div>
-          </div>
+        <Container className="relative z-10 pt-10 lg:pt-14">
+          {/* The CTA Banner has been moved to page.tsx */}
 
           {/* Footer Grid */}
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.5fr_0.8fr_0.8fr_1.2fr_1.5fr]">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.5fr_0.8fr_0.8fr_1.2fr_1.5fr] lg:gap-10">
             {/* Brand Column */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-4">
               <img
                 src="/assets/logo.png"
                 alt="Advish Konveksi Logo"
@@ -246,14 +195,14 @@ export default function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-16 border-t border-white/10 pt-8 lg:mt-20">
+          <div className="mt-10 border-t border-white/10 pt-6 lg:mt-12">
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
               <p className="text-sm text-gray-500">
                 © 2025 Advish Konveksi. All rights reserved.
               </p>
               <p className="flex items-center gap-2 text-sm text-gray-500">
                 Designed with{" "}
-                <Icon className="h-4 w-4 text-red-500" name="heart" /> in Bali
+                <Icon className="h-4 w-4 text-red-500" name="heart" /> Creaut.Bali
               </p>
             </div>
           </div>

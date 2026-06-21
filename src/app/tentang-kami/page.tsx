@@ -258,20 +258,10 @@ export default function TentangKamiPage() {
                   className="object-cover"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
-                  src="/assets/about-hero-workshop.png"
+                  src="/assets/toko.png"
                 />
               </div>
-              {/* Floating accent card */}
-              <motion.div
-                className="absolute -bottom-6 -left-6 rounded-2xl bg-white/10 backdrop-blur-md p-5 shadow-xl border border-white/20 sm:-bottom-8 sm:-left-8"
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
-                <p className="text-3xl font-black text-primary-dark sm:text-4xl">12+</p>
-                <p className="text-sm font-bold text-gray-300">Min. Order (pcs)</p>
-              </motion.div>
+
               {/* Decorative dots */}
               <div className="absolute -right-4 -top-4 hidden h-24 w-24 opacity-30 lg:block">
                 <div
@@ -387,10 +377,6 @@ export default function TentangKamiPage() {
                 viewport={{ once: true, margin: "-50px" }}
                 custom={index}
               >
-                {/* Step number background */}
-                <span className="absolute -right-3 -top-4 text-8xl font-black text-primary-lightest/50 transition-colors duration-500 group-hover:text-primary-light/40">
-                  {item.step}
-                </span>
 
                 <div className="relative z-10">
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-lightest text-primary-dark transition-all duration-300 group-hover:bg-primary-dark group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(14,116,144,0.3)]">

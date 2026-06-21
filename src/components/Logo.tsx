@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface LogoProps {
   href?: string;
@@ -10,18 +11,16 @@ export default function Logo({ href = "/", className = "", isScrolled = false }:
   return (
     <Link
       aria-label="Advish Konveksi"
-      // 2. Ganti 'text-black' dengan kondisi dinamis berdasarkan isScrolled
-      className={`flex items-center gap-3 transition-colors duration-300 ${
-        isScrolled ? "text-black" : "text-white"
-      } ${className}`}
+      className={`flex items-center transition-opacity duration-300 hover:opacity-80 ${className}`}
       href={href}
     >
-      <span className="text-4xl font-black leading-none sm:text-3xl lg:text-5xl">K</span>
-      <span className="text-md font-black leading-[0.9] sm:text-sm lg:text-lg">
-        KONVEKSI
-        <br />
-        BALI
-      </span>
+        <img
+          src="/assets/logo.png"
+          alt="Advish Konveksi Logo"
+          className={`w-24 h-auto object-contain sm:w-28 lg:w-36 transition-all duration-300 ${
+            isScrolled ? "brightness-0" : ""
+          }`}
+        />
     </Link>
   );
 }

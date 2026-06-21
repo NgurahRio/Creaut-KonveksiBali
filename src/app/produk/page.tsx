@@ -1,12 +1,11 @@
 import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
 import ProductCard from "@/components/ProductCard";
-import StatsStrip from "@/components/StatsStrip";
 import { categories, products } from "@/data/site";
 
 export default function ProdukPage() {
   return (
-    <Container className="pt-10 lg:pt-20">
+    <Container className="pt-28 lg:pt-36">
       <section>
         <h1 className="text-5xl font-black leading-tight text-gray-900 sm:text-7xl">Produk Kami</h1>
         <p className="mt-8 max-w-2xl text-lg font-semibold leading-8 text-gray-600 sm:text-2xl sm:leading-9">
@@ -38,7 +37,6 @@ export default function ProdukPage() {
         ))}
       </section>
 
-      <StatsStrip className="mt-20" />
 
       <CTASection
         className="mt-20"

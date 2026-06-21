@@ -25,9 +25,7 @@ export default function RootLayout({
     <html lang="id" className={cn("h-full antialiased", "font-sans", notoSans.variable, playfairDisplayHeading.variable)}>
       <body className="flex min-h-full flex-col ">
         <LanguageProvider>
-          <div className=" mb-30 lg:mb-17 md:mb-20">
-            <Navbar />
-          </div>
+          <Navbar />
           <main className="">{children}</main>
           <Footer />
 

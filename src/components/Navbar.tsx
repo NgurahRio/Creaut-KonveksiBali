@@ -131,8 +131,8 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     className={`transition-colors duration-300 ${active
-                        ? isScrolled ? "text-black font-semibold" : "text-white font-semibold"
-                        : isScrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
+                      ? isScrolled ? "text-black font-semibold" : "text-white font-semibold"
+                      : isScrolled ? "text-gray-600 hover:text-black" : "text-gray-300 hover:text-white"
                       }`}
                   >
                     {link.label}
