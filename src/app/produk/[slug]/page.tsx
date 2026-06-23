@@ -16,15 +16,28 @@ interface ProductDetailPageProps {
 }
 
 export function generateStaticParams() {
-  return products.map((product) => ({
+  const productSlugs = products.map((product) => ({
     slug: product.slug,
   }));
+  const categorySlugs = ["kemeja", "jaket", "kaos", "jersey", "topi"].map((cat) => ({
+    slug: cat,
+  }));
+  return [...productSlugs, ...categorySlugs];
 }
 
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { slug } = await params;
-  console.log()
-  const product = products.find((item) => item.slug === slug);
+  
+  const categoryToProductSlug: Record<string, string> = {
+    kemeja: "pdh-american-drill",
+    jaket: "jaket-sporty",
+    kaos: "kaos-cotton-combed-30s",
+    jersey: "jersey-dryfit-premium",
+    topi: "topi-custom",
+  };
+
+  const targetSlug = categoryToProductSlug[slug.toLowerCase()] || slug;
+  const product = products.find((item) => item.slug === targetSlug);
 
   if (!product) {
     notFound();

@@ -61,3 +61,14 @@ export interface PortfolioItem {
   image: string;
   imageAlt: string;
 }
+
+export interface ProductCategory {
+  id: string;
+  name: string;
+  icon: string;
+  borderColor: string;
+  bgColor: string;
+  iconColor: string;
+  count: number;
+}
+

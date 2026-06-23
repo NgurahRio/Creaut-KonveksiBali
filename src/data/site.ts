@@ -1,4 +1,4 @@
-import type { OrderDetail, Product, StatItem, TrackingStep } from "@/types/site";
+import type { OrderDetail, Product, StatItem, TrackingStep, ProductCategory } from "@/types/site";
 
 export const navLinks = [
   { href: "/", label: "Beranda" },
@@ -100,7 +100,7 @@ export const products: Product[] = [
   {
     slug: "pdh-american-drill",
     name: "PDH American Drill",
-    category: "PDH",
+    category: "Kemeja",
     price: "Mulai dari 100K",
     image: "/assets/product-pdh.png",
     imageAlt: "PDH abu-abu American Drill Advish Konveksi",
@@ -144,7 +144,7 @@ export const products: Product[] = [
   {
     slug: "workshop-wear",
     name: "Workshop Wear",
-    category: "Workshop Wear",
+    category: "Kemeja",
     price: "Mulai dari 110K",
     image: "/assets/product-workshop.png",
     imageAlt: "Workshop wear hitam Advish Konveksi",
@@ -187,7 +187,73 @@ export const products: Product[] = [
   },
 ];
 
-export const categories = ["Semua", "Kaos", "Jersey", "Jaket", "PDH", "Workshop Wear"];
+export const categories = ["Semua", "Kemeja", "Jaket", "Kaos", "Polo", "Jersey", "Topi", "Celana"];
+
+export const productCategories: ProductCategory[] = [
+  {
+    id: "kemeja",
+    name: "Kemeja",
+    icon: "kemeja",
+    borderColor: "border-[#d6f6fc] hover:border-[#00c5eb] hover:shadow-[0_8px_20px_rgba(0,197,235,0.1)]",
+    bgColor: "bg-[#ecfafd]",
+    iconColor: "text-[#00c5eb]",
+    count: 4,
+  },
+  {
+    id: "jaket",
+    name: "Jaket",
+    icon: "jaket",
+    borderColor: "border-[#fef7e0] hover:border-[#f5b041] hover:shadow-[0_8px_20px_rgba(245,176,65,0.1)]",
+    bgColor: "bg-[#fffbf0]",
+    iconColor: "text-[#f5b041]",
+    count: 4,
+  },
+  {
+    id: "kaos",
+    name: "Kaos",
+    icon: "kaos",
+    borderColor: "border-[#ebecfc] hover:border-[#5856d6] hover:shadow-[0_8px_20px_rgba(88,86,214,0.1)]",
+    bgColor: "bg-[#f4f5fd]",
+    iconColor: "text-[#5856d6]",
+    count: 4,
+  },
+  {
+    id: "polo",
+    name: "Polo",
+    icon: "polo",
+    borderColor: "border-[#fce8fc] hover:border-[#a020f0] hover:shadow-[0_8px_20px_rgba(160,32,240,0.1)]",
+    bgColor: "bg-[#fdf0fd]",
+    iconColor: "text-[#a020f0]",
+    count: 0,
+  },
+  {
+    id: "jersey",
+    name: "Jersey",
+    icon: "jersey",
+    borderColor: "border-[#e6fbe6] hover:border-[#2e7d32] hover:shadow-[0_8px_20px_rgba(46,125,50,0.1)]",
+    bgColor: "bg-[#f2fdf2]",
+    iconColor: "text-[#2e7d32]",
+    count: 4,
+  },
+  {
+    id: "topi",
+    name: "Topi",
+    icon: "topi",
+    borderColor: "border-[#fde8e8] hover:border-[#c62828] hover:shadow-[0_8px_20px_rgba(198,40,40,0.1)]",
+    bgColor: "bg-[#fef2f2]",
+    iconColor: "text-[#c62828]",
+    count: 3,
+  },
+  {
+    id: "celana",
+    name: "Celana",
+    icon: "celana",
+    borderColor: "border-[#e6f0fa] hover:border-[#1565c0] hover:shadow-[0_8px_20px_rgba(21,101,192,0.1)]",
+    bgColor: "bg-[#f2f7fc]",
+    iconColor: "text-[#1565c0]",
+    count: 0,
+  },
+];
 
 export const stats: StatItem[] = [
   { value: "2+", label: "Tahun Pengalaman", icon: "briefcase" },

@@ -25,7 +25,14 @@ export type IconName =
   | "quote"
   | "whatsapp"
   | "google"
-  | "x";
+  | "x"
+  | "kemeja"
+  | "jaket"
+  | "kaos"
+  | "polo"
+  | "jersey"
+  | "topi"
+  | "celana";
 
 interface IconProps extends SVGProps<SVGSVGElement> {
   name: IconName | string;
@@ -234,6 +241,85 @@ export function Icon({ name, ...props }: IconProps) {
         <BaseIcon {...props}>
           <path d="M6 6l12 12" />
           <path d="M18 6 6 18" />
+        </BaseIcon>
+      );
+    case "kemeja":
+      return (
+        <BaseIcon {...props}>
+          {/* Collar */}
+          <path d="M12 4.5 L15 7.5 L12 10.5 L9 7.5 Z" />
+          {/* Shirt body */}
+          <path d="M6 7.5 L2 9.5 L4 13.5 L6 12.5 L6 20.5 A 1 1 0 0 0 7 21.5 L17 21.5 A 1 1 0 0 0 18 20.5 L18 12.5 L20 13.5 L22 9.5 L18 7.5 Z" />
+          {/* Buttons line */}
+          <path d="M12 10.5 L12 21.5" />
+          {/* Buttons */}
+          <circle cx="12" cy="13" r="0.75" fill="currentColor" />
+          <circle cx="12" cy="16" r="0.75" fill="currentColor" />
+          <circle cx="12" cy="19" r="0.75" fill="currentColor" />
+        </BaseIcon>
+      );
+    case "jaket":
+      return (
+        <BaseIcon {...props}>
+          {/* Jacket body */}
+          <path d="M6 5.5 L2 7.5 L4 11.5 L6 10.5 L6 20.5 A 1 1 0 0 0 7 21.5 L17 21.5 A 1 1 0 0 0 18 20.5 L18 10.5 L20 11.5 L22 7.5 L18 5.5 Z" />
+          {/* Zipper line */}
+          <path d="M12 5.5 L12 21.5" strokeWidth="2" />
+          {/* Zipper slider */}
+          <rect x="11" y="9.5" width="2" height="3" rx="0.5" fill="currentColor" />
+          {/* Collar lines */}
+          <path d="M6 5.5 L12 9.5 L18 5.5" />
+        </BaseIcon>
+      );
+    case "kaos":
+      return (
+        <BaseIcon {...props}>
+          {/* T-shirt outline */}
+          <path d="M8 4 4 6l-2 5 4 2 1-2v10h10V11l1 2 4-2-2-5-4-2a4 4 0 0 1-8 0z" />
+        </BaseIcon>
+      );
+    case "polo":
+      return (
+        <BaseIcon {...props}>
+          {/* T-shirt outline */}
+          <path d="M8 4 4 6l-2 5 4 2 1-2v10h10V11l1 2 4-2-2-5-4-2a4 4 0 0 1-8 0z" />
+          {/* Collar details */}
+          <path d="M9 4 L12 7 L15 4" />
+          {/* Placket/buttons line */}
+          <path d="M12 7 L12 11" />
+          <circle cx="12" cy="9" r="0.5" fill="currentColor" />
+        </BaseIcon>
+      );
+    case "jersey":
+      return (
+        <BaseIcon {...props}>
+          {/* Jersey outline */}
+          <path d="M8 4 4 6l-2 5 4 2 1-2v10h10V11l1 2 4-2-2-5-4-2a4 4 0 0 1-8 0z" />
+          {/* Sport stripes or V-neck */}
+          <path d="M9 4 L12 6.5 L15 4" />
+          <path d="M5 7.5 L6.5 6" />
+          <path d="M19 7.5 L17.5 6" />
+        </BaseIcon>
+      );
+    case "topi":
+      return (
+        <BaseIcon {...props}>
+          {/* Cap dome */}
+          <path d="M12 16 A 6 6 0 0 1 6 10 A 6 6 0 0 1 18 10 A 6 6 0 0 1 12 16" />
+          {/* Cap visor/brim */}
+          <path d="M5 14 C 2 14, 2 16.5, 5 16.5 L 17 16.5 C 20 16.5, 20 14, 17 14" />
+          {/* Top button */}
+          <circle cx="12" cy="4" r="1" />
+        </BaseIcon>
+      );
+    case "celana":
+      return (
+        <BaseIcon {...props}>
+          {/* Pants/Trousers outline */}
+          <path d="M6 3 H 18 A 1 1 0 0 1 19 4 V 20 A 1 1 0 0 1 18 21 H 13.5 A 0.5 0.5 0 0 1 13 20.5 V 12 A 1 1 0 0 0 12 11 A 1 1 0 0 0 11 12 V 20.5 A 0.5 0.5 0 0 1 10.5 21 H 6 A 1 1 0 0 1 5 20 V 4 A 1 1 0 0 1 6 3 Z" />
+          {/* Belt loops/details */}
+          <path d="M8 6 H 16" />
+          <path d="M12 3 V 6" />
         </BaseIcon>
       );
     default:
