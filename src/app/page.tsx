@@ -56,7 +56,7 @@ function TestimonialCard({ t, index, bgColor, onReadMore }: { t: { name: string;
   return (
     <motion.div
       variants={staggerItem}
-      className="group relative flex-none w-[90vw] sm:w-[320px] snap-center flex flex-col justify-between overflow-hidden rounded-3xl bg-[#1a1a1a] p-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#2d2d2d] transition-transform duration-300"
+      className="group relative flex-none w-[300px] sm:w-[340px] max-w-[85vw] snap-center flex flex-col justify-between overflow-hidden rounded-[20px] bg-[#1a1a1a] p-4 sm:p-5 shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-[#2d2d2d] transition-transform duration-300"
     >
       <div>
         {/* Header: Avatar, Name, Time, Google Logo */}
@@ -483,7 +483,7 @@ export default function Home() {
             <motion.div
               ref={sliderRef}
               onScroll={checkScroll}
-              className="flex gap-[10vw] sm:gap-4 overflow-x-auto pb-8 pt-4 snap-x snap-mandatory hide-scrollbar before:shrink-0 before:w-[5vw] sm:before:w-6 lg:before:w-8 after:shrink-0 after:w-[5vw] sm:after:w-6 lg:after:w-8"
+              className="flex gap-5 sm:gap-6 overflow-x-auto px-5 sm:px-6 lg:px-8 pb-8 pt-4 snap-x snap-mandatory hide-scrollbar"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               variants={staggerContainer}
               initial="hidden"

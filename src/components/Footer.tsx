@@ -54,21 +54,21 @@ export default function Footer() {
           {/* The CTA Banner has been moved to page.tsx */}
 
           {/* Footer Grid */}
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.5fr_0.8fr_0.8fr_1.2fr_1.5fr] lg:gap-10">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.5fr_0.8fr_0.8fr_1.2fr_1.5fr] xl:gap-10">
             {/* Brand Column */}
-            <div className="flex flex-col gap-4">
-              <img
-                src="/assets/logo.png"
-                alt="Advish Konveksi Logo"
-                width={180}
-                height={180}
-                className="brightness-110"
-              />
-              <p className="max-w-xs text-sm leading-relaxed text-gray-400">
-                Advish Konveksi hadir untuk bantu menciptakan apparel dan
-                merchandise custom berkualitas. Masalah baju? Advish siap
-                bantu!
-              </p>
+            <div className="flex flex-col gap-4 md:col-span-2 lg:col-span-3 xl:col-span-1">
+              <div className="flex flex-row items-center gap-4 md:gap-6 xl:flex-col xl:items-start">
+                <img
+                  src="/assets/logo.png"
+                  alt="Advish Konveksi Logo"
+                  className="w-24 shrink-0 brightness-110 md:w-36 lg:w-40 xl:w-[180px]"
+                />
+                <p className="max-w-xs text-sm leading-relaxed text-gray-400 md:max-w-xl md:text-base lg:max-w-2xl lg:text-lg xl:max-w-none xl:text-sm">
+                  Advish Konveksi hadir untuk bantu menciptakan apparel dan
+                  merchandise custom berkualitas. Masalah baju? Advish siap
+                  bantu!
+                </p>
+              </div>
 
               {/* Social Icons */}
               <div className="flex items-center gap-3">
@@ -92,7 +92,7 @@ export default function Footer() {
             </div>
 
             {/* Products Column */}
-            <div>
+            <div className="col-span-1">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
                 Produk
               </h2>
@@ -112,7 +112,7 @@ export default function Footer() {
             </div>
 
             {/* Info Column */}
-            <div>
+            <div className="col-span-1">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
                 Informasi
               </h2>
@@ -132,7 +132,7 @@ export default function Footer() {
             </div>
 
             {/* Contact Column */}
-            <div>
+            <div className="col-span-1 md:col-span-2 lg:col-span-1">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
                 Kontak
               </h2>
@@ -177,7 +177,7 @@ export default function Footer() {
             </div>
 
             {/* Map Column */}
-            <div className="flex w-full flex-col">
+            <div className="flex w-full flex-col md:col-span-2 lg:col-span-3 xl:col-span-1">
               <h2 className="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
                 Lokasi Kami
               </h2>
