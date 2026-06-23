@@ -199,7 +199,7 @@ function TrackingWidget() {
 
   return (
     <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-16 lg:mt-24">
-      <motion.div 
+      <motion.div
         className="rounded-3xl bg-white p-6 shadow-[0_8px_30px_rgb(0,0,0,0.08)] border-2 border-gray-200 sm:p-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -369,6 +369,46 @@ export default function Home() {
       </section>
 
       <Container>
+        {/* ══════════════════════════════════════════════════════
+            TENTANG KAMI (HOOK)
+        ══════════════════════════════════════════════════════ */}
+        <motion.section
+          className="mt-12 lg:mt-16 flex flex-col lg:flex-row gap-8 lg:gap-12 items-center bg-gray-100 rounded-3xl p-6 sm:p-8 lg:p-12 border border-gray-200 shadow-inner"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          custom={0}
+        >
+          <div className="w-full lg:w-[400px] xl:w-[500px] shrink-0 relative aspect-video lg:aspect-square max-h-[300px] lg:max-h-[400px] rounded-2xl overflow-hidden shadow-md ring-1 ring-gray-100/50">
+            <Image
+              src="/assets/toko.png"
+              alt="Advish Konveksi Store"
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent pointer-events-none" />
+          </div>
+          <div className="flex-1 space-y-5 sm:space-y-6">
+            <div>
+              <p className="mb-2 text-sm font-bold uppercase tracking-wider text-cyan-600">Tentang Kami</p>
+              <h2 className="text-3xl font-black sm:text-4xl leading-tight bg-gradient-to-r from-gray-900 to-cyan-800 bg-clip-text text-transparent">Mitra Terpercaya untuk Seragam & Apparel Anda</h2>
+            </div>
+            <p className="text-base font-medium leading-relaxed text-gray-600">
+              Berpengalaman menangani berbagai pesanan dari instansi, perusahaan, hingga komunitas di seluruh Indonesia. Kami sangat mengutamakan kualitas bahan, kerapian jahitan, dan ketepatan waktu produksi.
+            </p>
+            <div className="pt-2">
+              <Link
+                href="/tentang-kami"
+                className="group flex sm:inline-flex w-full sm:w-auto h-12 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-6 text-sm font-bold text-white transition-all hover:shadow-lg hover:shadow-cyan-500/40 hover:-translate-y-0.5"
+              >
+                <span>Selengkapnya Tentang Kami</span>
+                <Icon className="h-4 w-4 transition-transform group-hover:translate-x-1 shrink-0" name="arrowRight" />
+              </Link>
+            </div>
+          </div>
+        </motion.section>
+
         {/* ══════════════════════════════════════════════════════
             CARA KERJA (WORK STEPS)
         ══════════════════════════════════════════════════════ */}
