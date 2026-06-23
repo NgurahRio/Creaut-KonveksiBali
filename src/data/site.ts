@@ -1,4 +1,4 @@
-import type { OrderDetail, Product, StatItem, TrackingStep, ProductCategory } from "@/types/site";
+import type { OrderDetail, Product, StatItem, TrackingStep, ProductCategory, BerandaProduct } from "@/types/site";
 
 export const navLinks = [
   { href: "/", label: "Beranda" },
@@ -366,45 +366,6 @@ export const galleryImages = [
 
 export const clientLogos = ["PT Bali Kreasi", "Komunitas Riders", "Bank BRI", "Hotel Sanur", "Bali United FC", "SMK Negeri 1", "PT Maju Jaya", "Dinas Pariwisata"];
 
-export const portfolioItems = [
-  {
-    title: "Jersey Bali Riders",
-    description: "Jersey full print custom untuk komunitas Bali Riders dengan desain racing dinamis dan bahan dryfit premium.",
-    image: "/assets/gallery-1.png",
-    imageAlt: "Jersey custom Bali Riders Community",
-  },
-  {
-    title: "Kaos Event Festival",
-    description: "Produksi 500 pcs kaos event Bali Festival dengan sablon plastisol 4 warna dan finishing rapi.",
-    image: "/assets/gallery-2.png",
-    imageAlt: "Kaos event Bali Festival",
-  },
-  {
-    title: "Seragam PT Maju Jaya",
-    description: "Seragam kerja American Drill untuk 200 karyawan PT Maju Jaya dengan bordir logo dan nama.",
-    image: "/assets/gallery-3.png",
-    imageAlt: "Seragam kerja PT Maju Jaya",
-  },
-  {
-    title: "Jaket Angkatan SMK",
-    description: "Jaket hoodie custom angkatan 2025 SMK Negeri 1 dengan desain premium dan bahan fleece tebal.",
-    image: "/assets/gallery-4.png",
-    imageAlt: "Jaket angkatan SMK Negeri 1",
-  },
-  {
-    title: "Workshop Wear Hotel",
-    description: "Wearpack custom untuk tim engineering Hotel Sanur dengan bahan drill premium dan banyak kantong.",
-    image: "/assets/gallery-5.png",
-    imageAlt: "Workshop wear Hotel Sanur",
-  },
-  {
-    title: "PDH Dinas Pariwisata",
-    description: "PDH formal untuk Dinas Pariwisata Bali dengan bordir logo dan potongan rapi profesional.",
-    image: "/assets/gallery-6.png",
-    imageAlt: "PDH Dinas Pariwisata Bali",
-  },
-];
-
 export const testimonials = [
   { name: "exsos XII 9", role: "2 bulan lalu", text: "Konveksi Advish benar-benar memberikan pengalaman yang sangat memuaskan. Kualitas jahitannya rapi dan detail, bahan yang digunakan juga terasa nyaman dan tidak murahan. Pelayanan mereka sangat ramah dan responsif, sehingga komunikasi selama proses pemesanan berjalan lancar tanpa kendala.", rating: 5, image: "/assets/advish-konveksi-testimonial1.png" },
   { name: "Putu Chandra Risca Dinata", role: "4 bulan lalu", text: "Konveksi ini oke sih. Dari bahan sampai hasil akhir sesuai sama yang diharapkan. Adminnya responsif dan enak diajak komunikasi. Worth it buat langganan.", rating: 5, image: "/assets/advish-konveksi-testimonial2.png" },
@@ -473,5 +434,39 @@ export const advantages = [
     title: "Kirim Seluruh Indonesia",
     description: "Melayani pengiriman ke seluruh wilayah Indonesia dengan packing aman.",
     icon: "truck",
+  },
+];
+
+export const BerandaProducts: BerandaProduct[] = [
+  {
+    label: "Kaos",
+    image: "/assets/advish-konveksi-kaos1.png",
+    imageAlt: "Kaos custom Advish Konveksi",
+    href: "/produk/kaos-cotton-combed-30s",
+  },
+  {
+    label: "Jersey",
+    image: "/assets/advish-konveksi-jersey2.png",
+    imageAlt: "Jersey dryfit premium Advish Konveksi",
+    href: "/produk/jersey-dryfit-premium",
+  },
+  {
+    label: "Jaket",
+    image: "/assets/advish-konveksi-jaket3.png",
+    imageAlt: "Jaket sporty custom Advish Konveksi",
+    href: "/produk/jaket-sporty",
+  },
+  {
+    label: "Kemeja",
+    image: "/assets/advish-konveksi-kemeja2.png",
+    imageAlt: "Kemeja custom Advish Konveksi",
+    href: "/produk/kemeja",
+  },
+
+  {
+    label: "Polo",
+    image: "/assets/advish-konveksi-polo1.png",
+    imageAlt: "Polo custom Advish Konveksi",
+    href: "/produk/polo",
   },
 ];

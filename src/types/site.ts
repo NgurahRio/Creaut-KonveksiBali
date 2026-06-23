@@ -72,3 +72,10 @@ export interface ProductCategory {
   count: number;
 }
 
+export interface BerandaProduct {
+  label: string;
+  image: string;
+  imageAlt: string;
+  href: string;
+}
+
