@@ -4,106 +4,73 @@ import CTASection from "@/components/CTASection";
 import { productCategories } from "@/data/site";
 import { Icon } from "@/components/Icons";
 
+const hoverTextColors: Record<string, string> = {
+  kemeja: "group-hover:text-[#00c5eb]",
+  jaket: "group-hover:text-[#f5b041]",
+  kaos: "group-hover:text-[#5856d6]",
+  polo: "group-hover:text-[#a020f0]",
+  jersey: "group-hover:text-[#2e7d32]",
+  topi: "group-hover:text-[#c62828]",
+  celana: "group-hover:text-[#1565c0]",
+};
 
-interface CategoryStyle {
-  hoverBorder: string;
-  hoverShadow: string;
-  iconBg: string;
-  iconColor: string;
-}
-
-const categoryStyles: Record<string, CategoryStyle> = {
-  kemeja: {
-    hoverBorder: "hover:border-[#00c5eb]/50",
-    hoverShadow: "hover:shadow-[0_12px_25px_rgba(0,197,235,0.12)]",
-    iconBg: "bg-[#ecfafd]",
-    iconColor: "text-[#00c5eb]",
-  },
-  jaket: {
-    hoverBorder: "hover:border-[#f5b041]/50",
-    hoverShadow: "hover:shadow-[0_12px_25px_rgba(245,176,65,0.12)]",
-    iconBg: "bg-[#fffbf0]",
-    iconColor: "text-[#f5b041]",
-  },
-  kaos: {
-    hoverBorder: "hover:border-[#5856d6]/50",
-    hoverShadow: "hover:shadow-[0_12px_25px_rgba(88,86,214,0.12)]",
-    iconBg: "bg-[#f4f5fd]",
-    iconColor: "text-[#5856d6]",
-  },
-  polo: {
-    hoverBorder: "hover:border-[#a020f0]/50",
-    hoverShadow: "hover:shadow-[0_12px_25px_rgba(160,32,240,0.12)]",
-    iconBg: "bg-[#fdf0fd]",
-    iconColor: "text-[#a020f0]",
-  },
-  jersey: {
-    hoverBorder: "hover:border-[#2e7d32]/50",
-    hoverShadow: "hover:shadow-[0_12px_25px_rgba(46,125,50,0.12)]",
-    iconBg: "bg-[#f2fdf2]",
-    iconColor: "text-[#2e7d32]",
-  },
-  topi: {
-    hoverBorder: "hover:border-[#c62828]/50",
-    hoverShadow: "hover:shadow-[0_12px_25px_rgba(198,40,40,0.12)]",
-    iconBg: "bg-[#fef2f2]",
-    iconColor: "text-[#c62828]",
-  },
-  celana: {
-    hoverBorder: "hover:border-[#1565c0]/50",
-    hoverShadow: "hover:shadow-[0_12px_25px_rgba(21,101,192,0.12)]",
-    iconBg: "bg-[#f2f7fc]",
-    iconColor: "text-[#1565c0]",
-  },
+const hoverBgColors: Record<string, string> = {
+  kemeja: "from-[#00c5eb] to-[#00b0d6]",
+  jaket: "from-[#f5b041] to-[#e09e30]",
+  kaos: "from-[#5856d6] to-[#4745c4]",
+  polo: "from-[#a020f0] to-[#8c1cd1]",
+  jersey: "from-[#2e7d32] to-[#246327]",
+  topi: "from-[#c62828] to-[#ab2020]",
+  celana: "from-[#1565c0] to-[#115099]",
 };
 
 export default function ProdukPage() {
   return (
     <Container className="pt-28 lg:pt-36">
-      <section>
-        <h1 className="text-5xl font-black leading-tight text-gray-900 sm:text-7xl">Kategori Produk</h1>
-        <p className="mt-8 max-w-2xl text-lg font-semibold leading-8 text-gray-600 sm:text-2xl sm:leading-9">
+      {/* Centered page header matching "Tracking Order" style, but with Teal-to-Emerald gradient */}
+      <section className="text-center max-w-3xl mx-auto mb-16">
+        <h1 className="text-4xl font-black leading-tight text-gray-900 sm:text-5xl lg:text-6xl tracking-tight">
+          Kategori <span className="bg-gradient-to-r from-teal-600 to-emerald-500 bg-clip-text text-transparent">Produk</span>
+        </h1>
+        <p className="mx-auto mt-6 max-w-2xl text-lg font-medium leading-relaxed text-gray-500 sm:text-xl">
           Pilih kategori apparel berkualitas tinggi di bawah ini untuk melihat detail pilihan produk yang tersedia.
         </p>
       </section>
 
-      {/* Categories Bento Row/Grid */}
+      {/* Categories Bento Grid - Downward Wrap on Mobile */}
       <section className="mt-12 mb-20">
-        <div className="flex gap-4 overflow-x-auto pb-6 pt-2 px-1 scrollbar-thin md:grid md:grid-cols-4 lg:grid-cols-7 md:overflow-visible">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-7">
           {productCategories.map((category) => {
             const count = category.count;
-
-            const style = categoryStyles[category.id] || {
-              hoverBorder: "hover:border-primary-dark/50",
-              hoverShadow: "hover:shadow-lg",
-              iconBg: "bg-gray-100",
-              iconColor: "text-gray-600",
-            };
+            const hoverTextColor = hoverTextColors[category.id] || "group-hover:text-cyan-600";
+            const hoverBgColor = hoverBgColors[category.id] || "from-cyan-500 to-blue-500";
 
             return (
               <Link
                 href={`/produk/${category.id}`}
                 key={category.id}
-                className={`flex flex-col items-center justify-between p-6 rounded-3xl border-2 border-gray-100/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] min-w-[150px] md:min-w-0 aspect-square ${style.hoverBorder} ${style.hoverShadow}`}
+                className={`group relative flex flex-col items-center justify-between p-6 rounded-2xl bg-white text-center border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5 aspect-square ${category.borderColor}`}
               >
                 {/* Icon Container */}
                 <div
-                  className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-300 ${style.iconBg}`}
+                  className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${category.bgColor} ${category.iconColor}`}
                 >
-                  <Icon className={`w-8 h-8 ${style.iconColor}`} name={category.icon} />
+                  <Icon className="w-8 h-8" name={category.icon} />
                 </div>
 
                 {/* Category Name */}
-                <h3 className="mt-3 text-lg font-black text-gray-900 text-center leading-tight">
+                <h3 className={`mt-3 text-lg font-black text-gray-900 text-center leading-tight transition-colors ${hoverTextColor}`}>
                   {category.name}
                 </h3>
 
                 {/* Badge Count */}
                 <div
-                  className="mt-4 px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase bg-gray-100/80 text-gray-500"
+                  className="mt-4 px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase bg-gray-100 text-gray-500"
                 >
                   {count} PILIHAN
                 </div>
+                
+                <div className={`absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-gradient-to-r ${hoverBgColor} transition-transform duration-300 group-hover:scale-x-100`} />
               </Link>
             );
           })}

@@ -1,5 +1,4 @@
 
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/Container";
@@ -27,7 +26,7 @@ export function generateStaticParams() {
 
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { slug } = await params;
-  
+
   const categoryToProductSlug: Record<string, string> = {
     kemeja: "pdh-american-drill",
     jaket: "jaket-sporty",
@@ -43,10 +42,6 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
     notFound();
   }
 
-  const mainImage = product.detailImages[0] ?? {
-    src: product.image,
-    alt: product.imageAlt,
-  };
   const recommendations = products
     .filter((item) => item.slug !== product.slug)
     .slice(4, 8);
@@ -56,28 +51,8 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
   return (
     <Container className="pt-10 lg:pt-20">
       <section className="grid gap-12 md:grid-cols-2 lg:grid-cols-[0.85fr_1fr] lg:items-center">
-        <div className=" flex justify-center items-center gap-5">
-          <div className="flex justify-center items-center">
-            {/* {product.detailImages.slice(1).map((image) => (
-              <div
-                className="overflow-hidden rounded-lg bg-white shadow-[0_8px_22px_rgba(0,0,0,0.08)]"
-                key={image.src}
-              >
-                <Image width={300} height={300} alt={image.alt} className="object-contain" src={image.src} />
-              </div>
-            ))} */}
-          </div>
-          {/* <div className="relative aspect-square overflow-hidden rounded-lg bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
-            <Image
-              alt={mainImage.alt}
-              className="object-contain p-6"
-              fill
-              priority
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              src={mainImage.src}
-            />
-          </div> */}
-          <Products/>
+        <div className="w-full flex justify-center items-center">
+          <Products currentProductSlug={product.slug}/>
         </div>
 
         <div className="">

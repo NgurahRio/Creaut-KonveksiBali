@@ -408,6 +408,7 @@ export default function Home() {
               src="/assets/toko.png"
               alt="Advish Konveksi Store"
               fill
+              sizes="(min-width: 1280px) 500px, (min-width: 1024px) 400px, 100vw"
               className="object-cover transition-transform duration-700 hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-transparent pointer-events-none" />
@@ -499,51 +500,62 @@ export default function Home() {
             4. KATEGORI PRODUK
             ────────────────────────────────────────────────────── */}
         <motion.section
-          className="mt-16 rounded-3xl bg-gray-50 p-6 ring-1 ring-gray-200/60 sm:p-8 lg:mt-24 lg:p-12"
+          className="mt-16 rounded-3xl bg-gradient-to-r from-[#0a5264] to-[#0e7490] p-6 border border-white/10 sm:p-8 lg:mt-24 lg:p-12 text-white shadow-[0_12px_40px_rgba(0,0,0,0.2)] relative overflow-hidden"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           custom={0}
         >
-          <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="mb-1 text-sm font-bold uppercase tracking-wider text-primary">Koleksi Kami</p>
-              <h2 className="text-2xl font-black uppercase text-black">Kategori Produk</h2>
-            </div>
-            <Link
-              className="group flex items-center gap-2 text-base font-bold text-gray-500 transition-colors hover:text-primary-dark"
-              href="/produk"
-            >
-              Lihat Semua Katalog
-              <Icon className="h-5 w-5 transition-transform group-hover:translate-x-1" name="arrowRight" />
-            </Link>
+          {/* Subtle background grid pattern */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)",
+              backgroundSize: "24px 24px",
+            }}
+          />
+
+          <div className="relative z-10 text-center mb-12">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-cyan-300 ring-1 ring-white/10">
+              Koleksi Kami
+            </span>
+            <h2 className="text-3xl font-black text-white sm:text-4xl mt-3">
+              Kategori Produk
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-sm font-medium text-cyan-100/80 leading-relaxed">
+              Temukan berbagai macam pilihan apparel berkualitas tinggi untuk instansi, perusahaan, komunitas, dan kebutuhan event Anda.
+            </p>
           </div>
           {/* Grid Kategori */}
 
           <motion.div
-            className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5 max-w-6xl mx-auto"
+            className="relative z-10 flex flex-wrap justify-center gap-6 max-w-6xl mx-auto"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
             {BerandaProducts.map((product) => (
-              <motion.div key={product.label} variants={staggerItem}>
+              <motion.div
+                key={product.label}
+                variants={staggerItem}
+                className="w-[calc(50%-12px)] sm:w-[calc(33.33%-16px)] lg:w-[calc(20%-20px)] max-w-[240px] shrink-0"
+              >
                 <Link
-                  className="group relative block overflow-hidden rounded-2xl bg-white p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] ring-1 ring-gray-200/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(8,145,178,0.15)] hover:ring-cyan-200"
+                  className="group relative block overflow-hidden rounded-2xl bg-white p-5 text-center border border-[#0c5c70]/20 shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(6,182,212,0.25)] hover:border-cyan-300"
                   href={product.href}
                 >
-                  <div className="relative aspect-square w-full overflow-hidden rounded-xl">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-transparent mb-4">
                     <Image
                       alt={product.imageAlt}
-                      className="object-contain scale-[1.6] transition-transform duration-500 group-hover:scale-[1.7]"
+                      className="object-contain scale-[1.4] transition-transform duration-500 group-hover:scale-[1.5]"
                       fill
                       sizes="(min-width: 1024px) 20vw, 50vw"
                       src={product.image}
                     />
                   </div>
-                  <h3 className="mt-4 text-lg sm:text-xl font-bold text-gray-900 transition-colors group-hover:text-cyan-600">
+                  <h3 className="mt-4 text-base sm:text-lg font-black text-gray-900 transition-colors group-hover:text-cyan-600">
                     {product.label}
                   </h3>
                   <div className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-cyan-500 to-blue-500 transition-transform duration-300 group-hover:scale-x-100" />
@@ -551,6 +563,16 @@ export default function Home() {
               </motion.div>
             ))}
           </motion.div>
+
+          <div className="relative z-10 mt-12 flex justify-center">
+            <Link
+              className="group inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-white px-6 text-sm font-bold text-gray-900 transition-all hover:bg-cyan-400 hover:text-gray-900 hover:shadow-lg hover:shadow-cyan-400/30"
+              href="/produk"
+            >
+              <span>Lihat Semua Katalog</span>
+              <Icon className="h-4 w-4 transition-transform group-hover:translate-x-1" name="arrowRight" />
+            </Link>
+          </div>
         </motion.section>
       </Container>
 
