@@ -531,58 +531,6 @@ export const stats: StatItem[] = [
   { value: "99%", label: "On Time Pengiriman", icon: "clock" },
 ];
 
-export const trackingSteps: TrackingStep[] = [
-  {
-    title: "Order Diterima",
-    subtitle: "Pesanan masuk",
-    date: "20 Mei 2026",
-    icon: "check",
-    status: "done",
-  },
-  {
-    title: "Produksi",
-    subtitle: "Sedang diproduksi",
-    date: "21 Mei 2026",
-    icon: "factory",
-    status: "done",
-  },
-  {
-    title: "Printing",
-    subtitle: "Proses sablon",
-    date: "22 Mei 2026",
-    icon: "printer",
-    status: "pending",
-  },
-  {
-    title: "Finishing",
-    subtitle: "Proses finishing",
-    date: "24 Mei 2026",
-    icon: "package",
-    status: "pending",
-  },
-  {
-    title: "Pengiriman",
-    subtitle: "Siap dikirim",
-    date: "28 Mei 2026",
-    icon: "truck",
-    status: "pending",
-  },
-  {
-    title: "Selesai",
-    subtitle: "Pesanan selesai",
-    date: "30 Mei 2026",
-    icon: "shirt",
-    status: "pending",
-  },
-];
-
-export const compactTrackingSteps: TrackingStep[] = [
-  { title: "Produksi", subtitle: "Sedang diproduksi", icon: "factory", status: "active" },
-  { title: "Printing", subtitle: "Proses sablon", icon: "printer", status: "pending" },
-  { title: "Finishing", subtitle: "Proses finishing", icon: "package", status: "pending" },
-  { title: "Siap Kirim", subtitle: "Siap dikirim", icon: "truck", status: "pending" },
-  { title: "Selesai", subtitle: "Pesanan selesai", icon: "shirt", status: "pending" },
-];
 
 export const orderDetails: OrderDetail[] = [
   { label: "Produk", value: "Jersey Full Print" },

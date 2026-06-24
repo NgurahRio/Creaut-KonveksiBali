@@ -29,8 +29,6 @@ export interface StatItem {
 
 export interface TrackingStep {
   title: string;
-  subtitle: string;
-  date?: string;
   icon: string;
   status: "done" | "active" | "pending";
 }

@@ -4,7 +4,6 @@ import Container from "@/components/Container";
 import CTASection from "@/components/CTASection";
 import { Icon } from "@/components/Icons";
 import TrackingTimeline from "@/components/TrackingTimeline";
-import { orderDetails, trackingSteps } from "@/data/site";
 import React, { useState } from "react";
 import { trackOrderAPI } from "./actions";
 
@@ -22,55 +21,61 @@ interface OrderData {
 
 function getDynamicTrackingSteps(apiData: OrderData): Array<{
   title: string;
-  subtitle: string;
-  date: string;
+
   icon: string;
   status: "done" | "active" | "pending";
 }> {
-  const statusFlow = [
-    ["created", "approved", "down_payment"], // Step 1
-    ["production"], // Step 2
-    ["finish_production"], // Step 3
-    ["paid_off"], // Step 4
-    [""], // Step 5
-    ["order_complete"], // Step 6
-  ];
-
   const currentApiStatus = apiData.status;
-  console.log("ini data substatus", apiData.sub_status)
+  const currentSubStatus = apiData.sub_status;
+
   let stepIndex = 0;
-  statusFlow.forEach((group, index) => {
-    if (group.includes(currentApiStatus)) stepIndex = index;
-  });
+
+  // Logika pemetaan API ke 6 Tahapan Client
+  if (["created", "approved", "down_payment"].includes(currentApiStatus)) {
+    stepIndex = 0; // Verifikasi Pesanan
+  } else if (currentApiStatus === "production") {
+    // Di tahap produksi, kita cek sub_status-nya
+    if (!currentSubStatus || ["buy_material", "material_in_queue", "cutting"].includes(currentSubStatus)) {
+      stepIndex = 1; // Tahap Potong
+    } else if (currentSubStatus === "detailing") {
+      stepIndex = 3; // LOMPAT ke Tahap Jarit (Bordir/Sablon otomatis tercentang selesai)
+    } else if (currentSubStatus === "qtc" || currentSubStatus === "packaging") {
+      stepIndex = 4; // Tahap QC & Pengemasan
+    } else {
+      stepIndex = 1; // Default
+    }
+  } else if (["finish_production", "paid_off"].includes(currentApiStatus)) {
+    stepIndex = 4; // Tahap QC & Pengemasan
+  } else if (currentApiStatus === "order_complete") {
+    stepIndex = 5; // Order Selesai
+  }
 
   const getSubStatusLabel = (sub: string | null) => {
-    if (!sub) return "Sedang diproduksi";
+    if (!sub) return "Sedang diproses";
     const labels: Record<string, string> = {
       buy_material: "Beli Bahan",
       material_in_queue: "Bahan Antri",
       cutting: "Proses Potong",
       detailing: "Detailing",
+      sewing: "Proses Jarit",
       qtc: "Quality Control (QTC)",
+      packaging: "Pengemasan",
     };
     return labels[sub] || sub;
   };
 
   return [
-    { title: "Verifikasi Pesanan", subtitle: "Pesanan masuk", date: "", icon: "check", status: stepIndex > 0 ? "done" : stepIndex === 0 ? "active" : "pending" },
+    { title: "Verifikasi Pesanan", icon: "check", status: stepIndex > 0 ? "done" : stepIndex === 0 ? "active" : "pending" },
 
-    { title: "Tahap Potong", subtitle: stepIndex === 1 ? getSubStatusLabel(apiData.sub_status) : "Sedang diproduksi", date: "", icon: "factory", status: stepIndex > 1 ? "done" : stepIndex === 1 ? "active" : "pending" },
+    { title: "Tahap Potong", icon: "scissors", status: stepIndex > 1 ? "done" : stepIndex === 1 ? "active" : "pending" },
 
-    {
-      title: `Tahap Bordir
-      /Sablon
-      /Sublim`, subtitle: "Proses finishing", date: "", icon: "package", status: stepIndex > 2 ? "done" : stepIndex === 2 ? "active" : "pending"
-    },
+    { title: `Tahap Bordir / Sablon / Sublim`, icon: "droplet", status: stepIndex > 2 ? "done" : stepIndex === 2 ? "active" : "pending" },
 
-    { title: "Tahap Jarit", subtitle: "", date: "", icon: "truck", status: stepIndex > 3 ? "done" : stepIndex === 3 ? "active" : "pending" },
+    { title: "Tahap Jarit", icon: "shirt", status: stepIndex > 3 ? "done" : stepIndex === 3 ? "active" : "pending" },
 
-    { title: "Tahap Quality Control & Pengemasan", subtitle: "Pesanan selesai", date: "", icon: "shirt", status: stepIndex === 4 ? "done" : "pending" },
+    { title: "Tahap Quality Control & Pengemasan", icon: "package", status: stepIndex > 4 ? "done" : stepIndex === 4 ? "active" : "pending" },
 
-    { title: "Pesanan Selesai", subtitle: "Pesanan telah selesai", date: "", icon: "check", status: stepIndex === 5 ? "done" : "pending" },
+    { title: "Order Selesai", icon: "truck", status: stepIndex === 5 ? "done" : "pending" },
   ];
 }
 
@@ -194,7 +199,7 @@ export default function TrackingOrderPage() {
               <h2 className="text-2xl font-black text-gray-900">{orderData.number}</h2>
             </div>
 
-            <TrackingTimeline showDates steps={getDynamicTrackingSteps(orderData)} />
+            <TrackingTimeline steps={getDynamicTrackingSteps(orderData)} />
 
             <div className="mt-10">
               <h3 className="mb-6 text-xl font-black text-gray-900">Detail Pesanan</h3>
