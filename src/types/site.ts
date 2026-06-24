@@ -53,13 +53,6 @@ export interface WorkStep {
   icon: string;
 }
 
-export interface PortfolioItem {
-  title: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-}
-
 export interface ProductCategory {
   id: string;
   name: string;

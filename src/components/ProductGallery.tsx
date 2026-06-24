@@ -14,7 +14,7 @@ interface ProductGalleryProps {
   className?: string;
 }
 
-import { motion, AnimatePresence } from "framer-motion"
+
 
 export function ProductGallery({ images, className }: ProductGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0)

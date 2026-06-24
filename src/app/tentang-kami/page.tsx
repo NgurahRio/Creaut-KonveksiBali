@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Container from "@/components/Container";
 import { Icon } from "@/components/Icons";
 import StatsStrip from "@/components/StatsStrip";
-import { galleryImages, journey, values } from "@/data/site";
+import { galleryImages, values } from "@/data/site";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },

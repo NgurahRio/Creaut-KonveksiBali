@@ -14,9 +14,11 @@ export default function Logo({ href = "/", className = "", isScrolled = false }:
       className={`flex items-center transition-opacity duration-300 hover:opacity-80 ${className}`}
       href={href}
     >
-        <img
+        <Image
           src="/assets/logo.png"
           alt="Advish Konveksi Logo"
+          width={144}
+          height={48}
           className={`w-24 h-auto object-contain sm:w-28 lg:w-36 transition-all duration-300 ${
             isScrolled ? "brightness-0" : ""
           }`}

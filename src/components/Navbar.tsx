@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { navLinks } from "@/data/site";
 import Container from "./Container";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useLanguage } from "./LanguageProvider"; // Import useLanguage
 import Logo from "./Logo";
 
 function isActiveRoute(pathname: string, href: string) {
@@ -63,7 +62,6 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { language } = useLanguage(); // Dapatkan bahasa aktif
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {

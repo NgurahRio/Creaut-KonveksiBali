@@ -1,4 +1,4 @@
-import type { OrderDetail, Product, StatItem, TrackingStep, ProductCategory, BerandaProduct } from "@/types/site";
+import type { Product, StatItem, ProductCategory, BerandaProduct } from "@/types/site";
 
 export const navLinks = [
   { href: "/", label: "Beranda" },
@@ -456,7 +456,7 @@ export const products: Product[] = [
   },
 ];
 
-export const categories = ["Semua", "Kemeja", "Jaket", "Kaos", "Polo", "Jersey", "Topi", "Celana"];
+
 
 export const productCategories: ProductCategory[] = [
   {
@@ -532,20 +532,9 @@ export const stats: StatItem[] = [
 ];
 
 
-export const orderDetails: OrderDetail[] = [
-  { label: "Produk", value: "Jersey Full Print" },
-  { label: "Jumlah", value: "50 Pcs" },
-  { label: "Ukuran", value: "M, L, XL" },
-  { label: "Warna", value: "Ungu, Putih, Hitam" },
-  { label: "Bahan", value: "Dryfit Premium" },
-  { label: "Catatan", value: "-" },
-];
 
-export const journey = [
-  { year: "2023", text: "Advish Konveksi resmi berdiri di Denpasar, Bali dengan visi menghadirkan apparel custom berkualitas." },
-  { year: "2024", text: "Berkembang pesat dan dipercaya oleh berbagai komunitas, event, dan brand lokal di Bali." },
-  { year: "2025", text: "Terus berinovasi dalam desain dan produksi, memperluas layanan ke seluruh Indonesia." },
-];
+
+
 
 export const values = [
   {
@@ -631,28 +620,7 @@ export const workSteps = [
   },
 ];
 
-export const advantages = [
-  {
-    title: "Gratis Desain",
-    description: "Tim desainer profesional siap membantu mewujudkan ide Anda tanpa biaya tambahan.",
-    icon: "ruler",
-  },
-  {
-    title: "Bahan Premium",
-    description: "Hanya menggunakan bahan berkualitas tinggi untuk hasil yang nyaman dan tahan lama.",
-    icon: "award",
-  },
-  {
-    title: "Produksi Cepat",
-    description: "Proses produksi efisien dengan estimasi waktu 7-14 hari kerja sesuai quantity.",
-    icon: "clock",
-  },
-  {
-    title: "Kirim Seluruh Indonesia",
-    description: "Melayani pengiriman ke seluruh wilayah Indonesia dengan packing aman.",
-    icon: "truck",
-  },
-];
+
 
 export const BerandaProducts: BerandaProduct[] = [
   {

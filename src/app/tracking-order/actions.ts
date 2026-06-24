@@ -8,7 +8,7 @@ export async function trackOrderAPI(orderId: string) {
       throw new Error("Token API tidak dikonfigurasi di server.");
     }
 
-    const response = await fetch(`https://simadvishkonveksi.com/api/v1/orders/detail?number=${orderId}`, {
+    const response = await fetch(`https://simadvishkonveksi.com/api/v1/orders/detail?number=${encodeURIComponent(orderId)}`, {
       method: "GET",
       headers: {
         "Accept": "application/json",
@@ -25,7 +25,7 @@ export async function trackOrderAPI(orderId: string) {
     let data;
     try {
       data = JSON.parse(text);
-    } catch (parseError) {
+    } catch {
       console.error(`API tidak mengembalikan JSON (Status: ${response.status}). Respons asli:`, text.substring(0, 500));
       throw new Error(`Akses ditolak oleh server (Status: ${response.status}). Pastikan API token valid.`);
     }

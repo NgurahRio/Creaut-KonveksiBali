@@ -58,10 +58,12 @@ export default function Footer() {
             {/* Brand Column */}
             <div className="flex flex-col gap-4 md:col-span-2 lg:col-span-3 xl:col-span-1">
               <div className="flex flex-row items-center gap-4 md:gap-6 xl:flex-col xl:items-start">
-                <img
+                <Image
                   src="/assets/logo.png"
                   alt="Advish Konveksi Logo"
-                  className="w-24 shrink-0 brightness-110 md:w-36 lg:w-40 xl:w-[180px]"
+                  width={180}
+                  height={60}
+                  className="w-24 shrink-0 brightness-110 md:w-36 lg:w-40 xl:w-[180px] h-auto object-contain"
                 />
                 <p className="max-w-xs text-sm leading-relaxed text-gray-400 md:max-w-xl md:text-base lg:max-w-2xl lg:text-lg xl:max-w-none xl:text-sm">
                   Advish Konveksi hadir untuk bantu menciptakan apparel dan

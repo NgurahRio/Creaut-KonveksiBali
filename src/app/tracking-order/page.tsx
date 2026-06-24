@@ -50,19 +50,7 @@ function getDynamicTrackingSteps(apiData: OrderData): Array<{
     stepIndex = 5; // Order Selesai
   }
 
-  const getSubStatusLabel = (sub: string | null) => {
-    if (!sub) return "Sedang diproses";
-    const labels: Record<string, string> = {
-      buy_material: "Beli Bahan",
-      material_in_queue: "Bahan Antri",
-      cutting: "Proses Potong",
-      detailing: "Detailing",
-      sewing: "Proses Jarit",
-      qtc: "Quality Control (QTC)",
-      packaging: "Pengemasan",
-    };
-    return labels[sub] || sub;
-  };
+
 
   return [
     { title: "Verifikasi Pesanan", icon: "check", status: stepIndex > 0 ? "done" : stepIndex === 0 ? "active" : "pending" },
@@ -88,18 +76,14 @@ function getDynamicOrderDetails(apiData: OrderData) {
       const parsedType = JSON.parse(apiData.type);
       if (Array.isArray(parsedType)) typeStr = parsedType.join(", ");
     }
-  } catch (e) {
-    // Abaikan jika bukan JSON
-  }
+  } catch {}
 
   try {
     if (apiData.size) {
       const parsedSize = JSON.parse(apiData.size);
       if (Array.isArray(parsedSize)) sizeStr = parsedSize.join(", ");
     }
-  } catch (e) {
-    // Abaikan jika bukan JSON
-  }
+  } catch {}
 
   return [
     { label: "Atas Nama", value: apiData.customer_name || "-" },

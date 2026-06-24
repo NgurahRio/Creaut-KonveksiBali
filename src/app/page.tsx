@@ -190,9 +190,11 @@ function TestimonialCard({
         <div className="flex justify-between items-start mb-3">
           <div className="flex gap-3 items-center">
             {t.image ? (
-              <img
+              <Image
                 src={t.image}
                 alt={t.name}
+                width={40}
+                height={40}
                 className="h-10 w-10 shrink-0 rounded-full object-cover border border-white/10"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
@@ -683,7 +685,7 @@ export default function Home() {
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex gap-3 items-center">
                         {selectedReview.image ? (
-                          <img src={selectedReview.image} alt={selectedReview.name} className="h-12 w-12 rounded-full object-cover border border-gray-200" />
+                          <Image src={selectedReview.image} alt={selectedReview.name} width={48} height={48} className="h-12 w-12 rounded-full object-cover border border-gray-200" />
                         ) : (
                           <div className={`h-12 w-12 flex items-center justify-center rounded-full ${selectedBg} text-lg font-black text-white`}>
                             {selectedReview.name.charAt(0).toUpperCase()}
