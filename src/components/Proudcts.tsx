@@ -14,7 +14,7 @@ export function Products({ currentProductSlug }: ProductsProps) {
   }
 
   return (
-    <div className="w-full flex justify-center py-10">
+    <div className="w-full flex justify-center py-4">
       <ProductGallery images={product.detailImages} />
     </div>
   )

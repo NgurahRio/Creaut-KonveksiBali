@@ -60,7 +60,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
                 fill
                 priority={index === 0}
                 sizes="(max-width: 768px) 100vw, 400px"
-                className="object-contain scale-110 sm:scale-[1.25] pointer-events-none"
+                className="object-contain scale-110 sm:scale-[1.25] pointer-events-none mix-blend-multiply"
               />
             </div>
           </div>
@@ -69,13 +69,13 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
 
       {/* Thumbnails */}
       <div className="w-full flex justify-center">
-        <div className="flex gap-3 sm:gap-4 max-w-full overflow-x-auto px-4 py-4 snap-x [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="flex gap-3 sm:gap-4 w-fit max-w-full mx-auto overflow-x-auto px-4 py-4 snap-x [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {images.map((image, index) => (
             <button
               key={index}
               onClick={() => scrollToImage(index)}
               className={cn(
-                "relative w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-2xl overflow-hidden border-2 transition-all duration-300 snap-center",
+                "relative w-16 h-16 sm:w-24 sm:h-24 shrink-0 rounded-2xl overflow-hidden border-2 transition-all duration-300 snap-center",
                 activeIndex === index
                   ? "border-cyan-500 shadow-md ring-4 ring-cyan-500/20 scale-105"
                   : "border-transparent hover:border-cyan-300 opacity-60 hover:opacity-100"
@@ -86,7 +86,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
                 alt={image.alt}
                 fill
                 sizes="96px"
-                className="object-contain p-1"
+                className="object-contain p-1 mix-blend-multiply"
               />
             </button>
           ))}
