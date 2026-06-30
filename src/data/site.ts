@@ -174,10 +174,10 @@ export const products: Product[] = [
     ],
     printOptions: ["Sublimasi Fullprint", "Polyflex", "DTF"],
     detailImages: [
+      { src: "/assets/advish-konveksi-jersey4.png", alt: "Jersey Model 4" },
       { src: "/assets/advish-konveksi-jersey1.png", alt: "Jersey Model 1" },
       { src: "/assets/advish-konveksi-jersey2.png", alt: "Jersey Model 2" },
       { src: "/assets/advish-konveksi-jersey3.png", alt: "Jersey Model 3" },
-      { src: "/assets/advish-konveksi-jersey4.png", alt: "Jersey Model 4" },
     ],
   },
   {
@@ -268,10 +268,10 @@ export const products: Product[] = [
     ],
     printOptions: ["Bordir Komputer", "DTF", "Patch Plastisol"],
     detailImages: [
+      { src: "/assets/advish-konveksi-jaket4.png", alt: "Jaket Model 4" },
       { src: "/assets/advish-konveksi-jaket1.png", alt: "Jaket Model 1" },
       { src: "/assets/advish-konveksi-jaket2.png", alt: "Jaket Model 2" },
       { src: "/assets/advish-konveksi-jaket3.png", alt: "Jaket Model 3" },
-      { src: "/assets/advish-konveksi-jaket4.png", alt: "Jaket Model 4" },
     ],
   },
   {
@@ -362,10 +362,10 @@ export const products: Product[] = [
     ],
     printOptions: ["Bordir Komputer", "Patch Emblim"],
     detailImages: [
+      { src: "/assets/advish-konveksi-kemeja4.png", alt: "Kemeja Model 4" },
       { src: "/assets/advish-konveksi-kemeja1.png", alt: "Kemeja Model 1" },
       { src: "/assets/advish-konveksi-kemeja2.png", alt: "Kemeja Model 2" },
       { src: "/assets/advish-konveksi-kemeja3.png", alt: "Kemeja Model 3" },
-      { src: "/assets/advish-konveksi-kemeja4.png", alt: "Kemeja Model 4" },
     ],
   },
   {
@@ -459,7 +459,6 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-topi1.png", alt: "Topi Model 1" },
       { src: "/assets/advish-konveksi-topi2.png", alt: "Topi Model 2" },
       { src: "/assets/advish-konveksi-topi3.png", alt: "Topi Model 3" },
-      { src: "/assets/advish-konveksi-topi1.png", alt: "Topi Model 1 (Copy)" },
     ],
   },
   {
