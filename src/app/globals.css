@@ -350,3 +350,37 @@ body::-webkit-scrollbar-thumb:hover {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Tracking Timeline Animations */
+@keyframes progress-y {
+  from { background-position: 0 0; }
+  to { background-position: 0 16px; }
+}
+@keyframes progress-x {
+  from { background-position: 0 0; }
+  to { background-position: 16px 0; }
+}
+.line-progress-y {
+  background-image: linear-gradient(to bottom, #06b6d4 50%, transparent 50%);
+  background-size: 100% 16px;
+  animation: progress-y 1s linear infinite;
+  opacity: 0.3;
+}
+.line-progress-x {
+  background-image: linear-gradient(to right, #06b6d4 50%, transparent 50%);
+  background-size: 16px 100%;
+  animation: progress-x 1s linear infinite;
+  opacity: 0.3;
+}
+
+/* Marquee Animations */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

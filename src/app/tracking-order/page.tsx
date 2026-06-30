@@ -1,9 +1,10 @@
 "use client";
 
-import Container from "@/components/Container";
-import CTASection from "@/components/CTASection";
-import { Icon } from "@/components/Icons";
-import TrackingTimeline from "@/components/TrackingTimeline";
+import Container from "@/components/layout/Container";
+import CTASection from "@/components/sections/CTASection";
+import { Icon } from "@/components/common/Icons";
+import TrackingTimeline from "@/components/tracking/TrackingTimeline";
+import { WHATSAPP_URL } from "@/data/site";
 import React, { useState } from "react";
 import { trackOrderAPI } from "./actions";
 
@@ -167,7 +168,7 @@ export default function TrackingOrderPage() {
             </p>
             <a
               className="mt-5 flex h-14 items-center justify-center gap-2 rounded-xl border border-[#25b829] bg-[#ecfaec] text-base font-black uppercase text-[#25a728] transition-all duration-300 hover:-translate-y-1 hover:bg-[#d8f5d8] hover:shadow-md active:scale-95"
-              href="https://wa.me/6285738814898?text=Saya%20mengalami%20masalah%20dalam%20tracking%20pesanan%20saya%0AKeluhan%3A%20"
+              href={`${WHATSAPP_URL}?text=Saya%20mengalami%20masalah%20dalam%20tracking%20pesanan%20saya%0AKeluhan%3A%20`}
               rel="noreferrer"
               target="_blank"
             >

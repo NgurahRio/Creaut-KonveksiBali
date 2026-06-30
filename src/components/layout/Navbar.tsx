@@ -4,9 +4,9 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks } from "@/data/site";
-import Container from "./Container";
-import LanguageSwitcher from "./LanguageSwitcher";
-import Logo from "./Logo";
+import Container from "@/components/layout/Container";
+import LanguageSwitcher from "@/components/i18n/LanguageSwitcher";
+import Logo from "@/components/common/Logo";
 
 function isActiveRoute(pathname: string, href: string) {
   if (href === "/") {

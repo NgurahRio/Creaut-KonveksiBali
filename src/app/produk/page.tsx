@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Container from "@/components/Container";
-import CTASection from "@/components/CTASection";
+import Container from "@/components/layout/Container";
+import CTASection from "@/components/sections/CTASection";
 import { productCategories } from "@/data/site";
-import { Icon } from "@/components/Icons";
+import { Icon } from "@/components/common/Icons";
 
 const hoverTextColors: Record<string, string> = {
   kemeja: "group-hover:text-[#00c5eb]",

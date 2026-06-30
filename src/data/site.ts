@@ -1,4 +1,54 @@
-import type { Product, StatItem, ProductCategory, BerandaProduct } from "@/types/site";
+/**
+ * ════════════════════════════════════════════════════════════
+ *  CENTRAL DATA STORE
+ *
+ *  Semua data statis (mock data, konfigurasi konten, dll)
+ *  disimpan di file ini. Page dan komponen cukup mengimpor
+ *  data yang dibutuhkan — tidak boleh mendefinisikan data
+ *  langsung di page file.
+ *
+ *  Struktur file:
+ *  1. Constants (WhatsApp, dll)
+ *  2. Navigation
+ *  3. Produk & Kategori
+ *  4. Statistik
+ *  5. Cara Kerja (Work Steps)
+ *  6. Testimoni & Client
+ *  7. Beranda Products (ringkasan)
+ *  8. Tentang Kami (proses, filosofi, misi, values, gallery)
+ *  9. Footer Data
+ *  10. Produk Page (hover colors)
+ *  11. Produk Detail (category specs, category slugs)
+ * ════════════════════════════════════════════════════════════
+ */
+
+import type {
+  Product,
+  StatItem,
+  ProductCategory,
+  BerandaProduct,
+  ProcessStep,
+  TeamPhilosophy,
+  FooterLink,
+  SocialLink,
+  CategorySpecMap,
+  CategorySlugMap,
+  HoverColorMap,
+} from "@/types/site";
+
+/* ══════════════════════════════════════════════════════════
+   1. CONSTANTS
+   ══════════════════════════════════════════════════════════ */
+
+/** Nomor WhatsApp utama — satu sumber kebenaran untuk seluruh website */
+export const WHATSAPP_NUMBER = "6285738814898";
+
+/** URL WhatsApp yang sudah diformat untuk link */
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+
+/* ══════════════════════════════════════════════════════════
+   2. NAVIGATION
+   ══════════════════════════════════════════════════════════ */
 
 export const navLinks = [
   { href: "/", label: "Beranda" },
@@ -6,6 +56,10 @@ export const navLinks = [
   { href: "/produk", label: "Produk" },
   { href: "/tracking-order", label: "Tracking Order" },
 ];
+
+/* ══════════════════════════════════════════════════════════
+   3. PRODUK & KATEGORI
+   ══════════════════════════════════════════════════════════ */
 
 export const products: Product[] = [
   // Kaos
@@ -456,8 +510,6 @@ export const products: Product[] = [
   },
 ];
 
-
-
 export const productCategories: ProductCategory[] = [
   {
     id: "kemeja",
@@ -524,6 +576,10 @@ export const productCategories: ProductCategory[] = [
   },
 ];
 
+/* ══════════════════════════════════════════════════════════
+   4. STATISTIK
+   ══════════════════════════════════════════════════════════ */
+
 export const stats: StatItem[] = [
   { value: "2+", label: "Tahun Pengalaman", icon: "briefcase" },
   { value: "100+", label: "Project Selesai", icon: "shirt" },
@@ -531,51 +587,48 @@ export const stats: StatItem[] = [
   { value: "99%", label: "On Time Pengiriman", icon: "clock" },
 ];
 
+/* ══════════════════════════════════════════════════════════
+   5. CARA KERJA (BERANDA)
+   ══════════════════════════════════════════════════════════ */
 
-
-
-
-
-export const values = [
+export const workSteps = [
   {
-    title: "Kualitas Terbaik",
-    text: "Menggunakan bahan premium dan dikerjakan oleh tenaga ahli.",
-    icon: "award",
+    step: 1,
+    title: "Konsultasi",
+    icon: "phone",
   },
   {
-    title: "Produksi Cepat",
-    text: "Proses produksi efisien dan tepat waktu.",
+    step: 2,
+    title: "Fiksasi Data Order",
+    icon: "check",
+  },
+  {
+    step: 3,
+    title: "Produksi",
     icon: "factory",
   },
   {
-    title: "Desain Kreatif",
-    text: "Tim desain siap membantu mewujudkan ide Anda.",
-    icon: "ruler",
+    step: 4,
+    title: "Pemeriksaan Akhir & Pengemasan",
+    icon: "package",
   },
   {
-    title: "Layanan Profesional",
-    text: "Komunikasi responsif dan layanan terbaik untuk Anda.",
+    step: 5,
+    title: "Produk Selesai",
     icon: "thumb",
   },
 ];
 
-export const galleryImages = [
-  { src: "/assets/gallery-1.png", alt: "Workshop konveksi dengan tim menjahit" },
-  { src: "/assets/gallery-2.png", alt: "Detail proses jahit kain motif" },
-  { src: "/assets/gallery-3.png", alt: "Area produksi konveksi Bali" },
-  { src: "/assets/gallery-4.png", alt: "Meja potong dan produksi apparel" },
-  { src: "/assets/gallery-5.png", alt: "Mesin produksi apparel custom" },
-  { src: "/assets/gallery-6.png", alt: "Tim menyiapkan kain produksi" },
-  { src: "/assets/gallery-7.png", alt: "Proses printing apparel" },
-  { src: "/assets/gallery-8.png", alt: "Tim workshop Advish Konveksi" },
-];
+/* ══════════════════════════════════════════════════════════
+   6. TESTIMONI & CLIENT
+   ══════════════════════════════════════════════════════════ */
 
 export const clientLogos = ["PT Bali Kreasi", "Komunitas Riders", "Bank BRI", "Hotel Sanur", "Bali United FC", "SMK Negeri 1", "PT Maju Jaya", "Dinas Pariwisata"];
 
 export const testimonials = [
   { name: "exsos XII 9", role: "2 bulan lalu", text: "Konveksi Advish benar-benar memberikan pengalaman yang sangat memuaskan. Kualitas jahitannya rapi dan detail, bahan yang digunakan juga terasa nyaman dan tidak murahan. Pelayanan mereka sangat ramah dan responsif, sehingga komunikasi selama proses pemesanan berjalan lancar tanpa kendala.", rating: 5, image: "/assets/advish-konveksi-testimonial1.png" },
   { name: "Putu Chandra Risca Dinata", role: "4 bulan lalu", text: "Konveksi ini oke sih. Dari bahan sampai hasil akhir sesuai sama yang diharapkan. Adminnya responsif dan enak diajak komunikasi. Worth it buat langganan.", rating: 5, image: "/assets/advish-konveksi-testimonial2.png" },
-  { name: "Ni Luh Komang Triayu Laksmi Dewi", role: "2 bulan lalu", text: "pernah skeptis sama konveksi, tapi konveksi yang satu ini berhasil matahin stigma ku itu karena dari proses awal - akhir semuanya dibantu dengan jelas dan jujur! setiap ada problem pstii di kabari dan dari awal selalu di make sure supaya ekspektasi ku dan mereka sama. dan hasil produksi ga kaleng”,bener bener sesuai sama ekspektasi🥹 terharu bgt, semoga owner nya yg buat nih konveksi masuk surga ya kak!", rating: 5, image: "/assets/advish-konveksi-testimonial3.png" },
+  { name: "Ni Luh Komang Triayu Laksmi Dewi", role: "2 bulan lalu", text: "pernah skeptis sama konveksi, tapi konveksi yang satu ini berhasil matahin stigma ku itu karena dari proses awal - akhir semuanya dibantu dengan jelas dan jujur! setiap ada problem pstii di kabari dan dari awal selalu di make sure supaya ekspektasi ku dan mereka sama. dan hasil produksi ga kaleng\u201Dbener bener sesuai sama ekspektasi🥹 terharu bgt, semoga owner nya yg buat nih konveksi masuk surga ya kak!", rating: 5, image: "/assets/advish-konveksi-testimonial3.png" },
   { name: "Cindy Oktacia", role: "4 bulan lalu", text: "pelayanannyaa bagus banget apa lagi hasil sablonnya ga pernah mengecewakan, selalu memuaskaannn, TOP BANGET ⭐️⭐️⭐️⭐️", rating: 5, image: "/assets/advish-konveksi-testimonial4.png" },
   { name: "helmi kuswandi", role: "2 bulan lalu", text: "Yang saya notice waktu order di Advish Konveksi tuh mereka gak vuma bilang \"bisa\",tapi juga jelasin dari sisi produksi. Bahkan kemungkinan hasil yang kurang maksimal juga dikasih tau dari awal. Jadi kita sebagai customer malah lebih kebayang hasil akhirnya bakal kayak gimana.", rating: 5, image: "/assets/advish-konveksi-testimonial5.png" },
   { name: "I GUSTI AYU NGURAH ANGGIA PRADNYANI", role: "sebulan lalu", text: "Kualitas bajunya bagus dan ramah dikantong juga nih\nyuk dicoba gais dijamin puas sama hasilnya", rating: 5, image: "/assets/advish-konveksi-testimonial6.png" },
@@ -589,38 +642,12 @@ export const testimonials = [
   { name: "Gusti Ayu Jacinda Mewiana Putri", role: "5 bulan lalu", text: "Kualitas bintang 5 ⭐ hasil dari jahitannya sangat rapiii dan bahannya juga bagus, untuk harganya juga ramah di kantong, bestt dehh pokoknyaa", rating: 5, image: "/assets/advish-konveksi-testimonial14.png" },
   { name: "Feby Amanda Sukmawati", role: "4 bulan lalu", text: "selama organisasi yang saya ikuti selalu membuat baju di advish konveksi karena baju disana bahan nya bagus, adem dan juga stylelish.", rating: 5, image: "/assets/advish-konveksi-testimonial15.png" },
   { name: "Putu Dinda Priyah Putri", role: "5 bulan lalu", text: "hasil jahitannya rapi dan bahannya juga bagus,, untuk soal harga sangat amat terjangkau dan kualitass bintang 5❤️", rating: 5, image: "/assets/advish-konveksi-testimonial16.png" },
-  { name: "Ni Komang Kharina Gayatri", role: "6 bulan lalu", text: "Sangat senang bekerja sama dengan Advish Konveksi🤩🤩🤩, hampir setahun bekerja sama dan sudah sangat banyak juga pesenan kami yang ada saja requestnya itu dibuatkan oleh konveksi dengan baik dan teliti. Teruntuk owner Advish Konveksi kak Wibawa dan kak Caca kami ucapkan terima kasih banyak atas semua dedikasinya karena setiap kendala yang ada sudah diselesaikan dan selalu dikomunikasikan dengan baik dan saya mewakili Himatika Udayana mengucapkan maaf jika terdapat hal yang kurang berkenan selama hampir setahun ini💐🙂‍↕️👐🏻. Buat kalian yang mau lihat hasil-hasil karya Advish Konveksi bisa langsung cek Instagram @himatika.udayana periode 2025🔥🔥🔥🤩🤩👏🏻👏🏻👏🏻", rating: 5, image: "/assets/advish-konveksi-testimonial17.png" }
+  { name: "Ni Komang Kharina Gayatri", role: "6 bulan lalu", text: "Sangat senang bekerja sama dengan Advish Konveksi🤩🤩🤩, hampir setahun bekerja sama dan sudah sangat banyak juga pesenan kami yang ada saja requestnya itu dibuatkan oleh konveksi dengan baik dan teliti. Teruntuk owner Advish Konveksi kak Wibawa dan kak Caca kami ucapkan terima kasih banyak atas semua dedikasinya karena setiap kendala yang ada sudah diselesaikan dan selalu dikomunikasikan dengan baik dan saya mewakili Himatika Udayana mengucapkan maaf jika terdapat hal yang kurang berkenan selama hampir setahun ini💐🙂‍↕️👐🏻. Buat kalian yang mau lihat hasil-hasil karya Advish Konveksi bisa langsung cek Instagram @himatika.udayana periode 2025🔥🔥🔥🤩🤩👏🏻👏🏻👏🏻", rating: 5, image: "/assets/advish-konveksi-testimonial17.png" },
 ];
 
-
-export const workSteps = [
-  {
-    step: 1,
-    title: "Konsultasi",
-    description: "Diskusikan kebutuhan apparel custom Anda dengan tim kami melalui WhatsApp.",
-    icon: "phone",
-  },
-  {
-    step: 2,
-    title: "Desain",
-    description: "Tim desain kami bantu wujudkan ide Anda menjadi mockup visual yang menarik.",
-    icon: "ruler",
-  },
-  {
-    step: 3,
-    title: "Produksi",
-    description: "Proses produksi dengan bahan premium dan quality control ketat di setiap tahap.",
-    icon: "factory",
-  },
-  {
-    step: 4,
-    title: "Pengiriman",
-    description: "Pesanan dikemas rapi dan dikirim tepat waktu ke seluruh Indonesia.",
-    icon: "truck",
-  },
-];
-
-
+/* ══════════════════════════════════════════════════════════
+   7. BERANDA PRODUCTS (Ringkasan Kategori di Home)
+   ══════════════════════════════════════════════════════════ */
 
 export const BerandaProducts: BerandaProduct[] = [
   {
@@ -647,7 +674,6 @@ export const BerandaProducts: BerandaProduct[] = [
     imageAlt: "Kemeja custom Advish Konveksi",
     href: "/produk/kemeja",
   },
-
   {
     label: "Polo",
     image: "/assets/advish-konveksi-polo1.png",
@@ -655,3 +681,168 @@ export const BerandaProducts: BerandaProduct[] = [
     href: "/produk/polo",
   },
 ];
+
+/* ══════════════════════════════════════════════════════════
+   8. TENTANG KAMI
+   ══════════════════════════════════════════════════════════ */
+
+/** Langkah proses kerja yang ditampilkan di halaman Tentang Kami */
+export const processSteps: ProcessStep[] = [
+  {
+    step: "01",
+    title: "Konsultasi & Desain",
+    description:
+      "Diskusikan kebutuhan Anda dengan tim kami. Kami bantu wujudkan desain dari konsep hingga mockup final yang sesuai identitas brand Anda.",
+    icon: "ruler",
+  },
+  {
+    step: "02",
+    title: "Pemilihan Bahan",
+    description:
+      "Kami menyediakan pilihan bahan premium mulai dari Cotton Combed, Dryfit, hingga American Drill dengan kualitas terjamin.",
+    icon: "package",
+  },
+  {
+    step: "03",
+    title: "Produksi & QC",
+    description:
+      "Proses produksi menggunakan mesin modern dengan quality control ketat di setiap tahap untuk memastikan hasil terbaik.",
+    icon: "factory",
+  },
+  {
+    step: "04",
+    title: "Pengiriman Tepat Waktu",
+    description:
+      "Pesanan dikemas rapi dan dikirim tepat waktu ke seluruh Indonesia. Lacak status pesanan Anda secara real-time.",
+    icon: "truck",
+  },
+];
+
+/** Filosofi tim yang ditampilkan di halaman Tentang Kami */
+export const teamPhilosophy: TeamPhilosophy[] = [
+  {
+    title: "Berpusat pada Klien",
+    description:
+      "Setiap project dimulai dengan memahami kebutuhan unik klien. Kami bukan sekadar vendor — kami partner kreatif Anda.",
+    icon: "heart",
+  },
+  {
+    title: "Inovasi Tanpa Henti",
+    description:
+      "Kami terus berinvestasi pada teknologi dan teknik terbaru untuk memberikan hasil produksi yang selalu lebih baik.",
+    icon: "award",
+  },
+  {
+    title: "Komitmen Keberlanjutan",
+    description:
+      "Menggunakan proses produksi yang bertanggung jawab dengan meminimalkan limbah dan memilih bahan ramah lingkungan.",
+    icon: "thumb",
+  },
+];
+
+/** Item misi perusahaan */
+export const missionItems: string[] = [
+  "Menghasilkan produk konveksi dengan kualitas terbaik dan standar produksi yang konsisten.",
+  "Memberikan pelayanan profesional, cepat, dan responsif kepada setiap pelanggan.",
+  "Mengembangkan desain dan inovasi produk sesuai tren serta kebutuhan pasar.",
+  "Membangun hubungan kerja yang baik dengan mitra dan pelanggan secara berkelanjutan.",
+  "Dapat mengimplementasikan bentuk kegiataan pengabdian kepada masyarakat yang tersirat melalui keberlangsungan kemitraan ini.",
+
+];
+
+/** Nilai-nilai perusahaan */
+export const values = [
+  {
+    title: "Kualitas Terbaik",
+    text: "Menggunakan bahan premium dan dikerjakan oleh tenaga ahli.",
+    icon: "award",
+  },
+  {
+    title: "Desain Kreatif",
+    text: "Tim desain siap membantu mewujudkan ide Anda.",
+    icon: "ruler",
+  },
+  {
+    title: "Layanan Profesional",
+    text: "Komunikasi responsif dan layanan terbaik untuk Anda.",
+    icon: "thumb",
+  },
+];
+
+/** Foto galeri workshop */
+export const galleryImages = [
+  { src: "/assets/gallery-1.png", alt: "Workshop konveksi dengan tim menjahit" },
+  { src: "/assets/gallery-2.png", alt: "Detail proses jahit kain motif" },
+  { src: "/assets/gallery-3.png", alt: "Area produksi konveksi Bali" },
+  { src: "/assets/gallery-4.png", alt: "Meja potong dan produksi apparel" },
+  { src: "/assets/gallery-5.png", alt: "Mesin produksi apparel custom" },
+  { src: "/assets/gallery-6.png", alt: "Tim menyiapkan kain produksi" },
+  { src: "/assets/gallery-7.png", alt: "Proses printing apparel" },
+  { src: "/assets/gallery-8.png", alt: "Tim workshop Advish Konveksi" },
+];
+
+/* ══════════════════════════════════════════════════════════
+   11. PRODUK DETAIL PAGE
+   ══════════════════════════════════════════════════════════ */
+
+/**
+ * Mapping dari slug kategori ke slug produk default.
+ * Digunakan saat user mengakses /produk/[kategori] langsung.
+ */
+export const categoryToProductSlug: CategorySlugMap = {
+  kemeja: "pdh-american-drill",
+  jaket: "jaket-sporty",
+  kaos: "kaos-cotton-combed-30s",
+  jersey: "jersey-dryfit-premium",
+  topi: "topi-custom",
+};
+
+/**
+ * Spesifikasi umum per kategori produk.
+ * Ditampilkan di halaman detail produk sebagai pengganti spesifikasi
+ * produk individual saat mengakses via kategori.
+ */
+export const categorySpecs: CategorySpecMap = {
+  "Kemeja": [
+    { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
+    { label: "Pilihan Warna", value: "Custom" },
+    { label: "Size Chart", value: "Custom" },
+    { label: "Bahan", value: "American Drill, Japan Drill, Nagata Drill, Twill, Poplin, Katun, dll" },
+  ],
+  "Jaket": [
+    { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
+    { label: "Pilihan Warna", value: "Custom" },
+    { label: "Size Chart", value: "Banyak Pilihan" },
+    { label: "Bahan", value: "American Drill, Japan Drill, Nagata Drill, Twill, Cotton Fleece, Canvas, Microfiber, Corduroy, Scuba, Diadora, dll" },
+  ],
+  "Kaos": [
+    { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
+    { label: "Pilihan Warna", value: "Custom" },
+    { label: "Size Chart", value: "Banyak Pilihan" },
+    { label: "Bahan", value: "Cotton Combed, Cotton Korean, Cotton Danball, Cotton Bamboo, Carded, dll" },
+  ],
+  "Polo": [
+    { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
+    { label: "Pilihan Warna", value: "Custom" },
+    { label: "Size Chart", value: "Banyak Pilihan" },
+    { label: "Bahan", value: "Lacoste Cotton, Lacoste CVC, Lacoste PE, Cotton Combed, dll" },
+  ],
+  "Jersey": [
+    { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
+    { label: "Pilihan Warna", value: "Custom" },
+    { label: "Size Chart", value: "Banyak Pilihan" },
+    { label: "Bahan", value: "Lacoste Cotton, Lacoste CVC, Lacoste PE, Cotton Combed, dll" },
+  ],
+  "Topi": [
+    { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
+    { label: "Pilihan Warna", value: "Custom" },
+    { label: "Size Chart", value: "Banyak Pilihan" },
+    { label: "Bahan", value: "Drill, Corduroy, Canvas, Rafel, Jaring, dll" },
+  ],
+  "Celana": [
+    { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
+    { label: "Pilihan Warna", value: "Custom" },
+    { label: "Size Chart", value: "Banyak Pilihan" },
+    { label: "Bahan", value: "Drill, Corduroy, Canvas, Rafel, Jaring, dll" },
+  ],
+};

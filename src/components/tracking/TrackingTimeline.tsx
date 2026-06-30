@@ -2,7 +2,7 @@
 
 import type { TrackingStep } from "@/types/site";
 import { useEffect, useState } from "react";
-import { Icon } from "./Icons";
+import { Icon } from "@/components/common/Icons";
 
 interface TrackingTimelineProps {
   steps: TrackingStep[];
@@ -116,7 +116,7 @@ export default function TrackingTimeline({
                 <Icon
                   className={`h-7 w-7 transition-all duration-500 ${hasReached ? "scale-100 opacity-100" : isNextStep ? "scale-75 opacity-80 animate-bounce" : "scale-50 opacity-40"
                     }`}
-                  name={step.icon as import("./Icons").IconName}
+                  name={step.icon as import("@/components/common/Icons").IconName}
                 />
               </div>
               <div

@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Container from "@/components/Container";
-import { Icon } from "@/components/Icons";
-import StatsStrip from "@/components/StatsStrip";
-import { galleryImages, values } from "@/data/site";
+import Container from "@/components/layout/Container";
+import { Icon } from "@/components/common/Icons";
+import StatsStrip from "@/components/common/StatsStrip";
+import { galleryImages, values, processSteps, teamPhilosophy, missionItems, WHATSAPP_URL } from "@/data/site";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -43,64 +43,6 @@ const scaleIn = {
   }),
 };
 
-const processSteps = [
-  {
-    step: "01",
-    title: "Konsultasi & Desain",
-    description:
-      "Diskusikan kebutuhan Anda dengan tim kami. Kami bantu wujudkan desain dari konsep hingga mockup final yang sesuai identitas brand Anda.",
-    icon: "ruler",
-  },
-  {
-    step: "02",
-    title: "Pemilihan Bahan",
-    description:
-      "Kami menyediakan pilihan bahan premium mulai dari Cotton Combed, Dryfit, hingga American Drill dengan kualitas terjamin.",
-    icon: "package",
-  },
-  {
-    step: "03",
-    title: "Produksi & QC",
-    description:
-      "Proses produksi menggunakan mesin modern dengan quality control ketat di setiap tahap untuk memastikan hasil terbaik.",
-    icon: "factory",
-  },
-  {
-    step: "04",
-    title: "Pengiriman Tepat Waktu",
-    description:
-      "Pesanan dikemas rapi dan dikirim tepat waktu ke seluruh Indonesia. Lacak status pesanan Anda secara real-time.",
-    icon: "truck",
-  },
-];
-
-const teamPhilosophy = [
-  {
-    title: "Berpusat pada Klien",
-    description:
-      "Setiap project dimulai dengan memahami kebutuhan unik klien. Kami bukan sekadar vendor — kami partner kreatif Anda.",
-    icon: "heart",
-  },
-  {
-    title: "Inovasi Tanpa Henti",
-    description:
-      "Kami terus berinvestasi pada teknologi dan teknik terbaru untuk memberikan hasil produksi yang selalu lebih baik.",
-    icon: "award",
-  },
-  {
-    title: "Komitmen Keberlanjutan",
-    description:
-      "Menggunakan proses produksi yang bertanggung jawab dengan meminimalkan limbah dan memilih bahan ramah lingkungan.",
-    icon: "thumb",
-  },
-];
-
-const missionItems = [
-  "Menghasilkan produk konveksi dengan kualitas terbaik dan standar produksi yang konsisten.",
-  "Memberikan pelayanan profesional, cepat, dan responsif kepada setiap pelanggan.",
-  "Mengembangkan desain dan inovasi produk sesuai tren serta kebutuhan pasar.",
-  "Membangun hubungan kerja yang baik dengan mitra dan pelanggan secara berkelanjutan.",
-];
 
 export default function TentangKamiPage() {
   return (
@@ -172,7 +114,7 @@ export default function TentangKamiPage() {
             >
               <a
                 className="flex h-14 items-center gap-3 rounded-xl bg-white px-8 text-base font-black uppercase text-primary-dark transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(0,0,0,0.2)]"
-                href="https://wa.me/6285738814898"
+                href={WHATSAPP_URL}
                 rel="noreferrer"
                 target="_blank"
               >

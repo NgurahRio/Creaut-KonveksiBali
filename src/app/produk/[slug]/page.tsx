@@ -1,12 +1,11 @@
-
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Container from "@/components/Container";
-import CTASection from "@/components/CTASection";
-import { Icon } from "@/components/Icons";
-import ProductCard from "@/components/ProductCard";
-import { products } from "@/data/site";
-import { Products } from "@/components/Proudcts";
+import Container from "@/components/layout/Container";
+import CTASection from "@/components/sections/CTASection";
+import { Icon } from "@/components/common/Icons";
+import ProductCard from "@/components/product/ProductCard";
+import { Products } from "@/components/product/Products";
+import { products, categoryToProductSlug, categorySpecs, WHATSAPP_URL } from "@/data/site";
 
 interface ProductDetailPageProps {
   params: Promise<{
@@ -27,14 +26,6 @@ export function generateStaticParams() {
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { slug } = await params;
 
-  const categoryToProductSlug: Record<string, string> = {
-    kemeja: "pdh-american-drill",
-    jaket: "jaket-sporty",
-    kaos: "kaos-cotton-combed-30s",
-    jersey: "jersey-dryfit-premium",
-    topi: "topi-custom",
-  };
-
   const targetSlug = categoryToProductSlug[slug.toLowerCase()] || slug;
   const product = products.find((item) => item.slug === targetSlug);
 
@@ -48,51 +39,6 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
 
   const recommendations = [...otherProducts]
     .slice(0, 4);
-
-  const categorySpecs: Record<string, { label: string; value: string }[]> = {
-    "Kemeja": [
-      { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
-      { label: "Pilihan Warna", value: "Custom" },
-      { label: "Size Chart", value: "Custom" },
-      { label: "Bahan", value: "American Drill, Japan Drill, Nagata Drill, Twill, Poplin, Katun, dll" }
-    ],
-    "Jaket": [
-      { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
-      { label: "Pilihan Warna", value: "Custom" },
-      { label: "Size Chart", value: "Banyak Pilihan" },
-      { label: "Bahan", value: "American Drill, Japan Drill, Nagata Drill, Twill, Cotton Fleece, Canvas, Microfiber, Corduroy, Scuba, Diadora, dll" }
-    ],
-    "Kaos": [
-      { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
-      { label: "Pilihan Warna", value: "Custom" },
-      { label: "Size Chart", value: "Banyak Pilihan" },
-      { label: "Bahan", value: "Cotton Combed, Cotton Korean, Cotton Danball, Cotton Bamboo, Carded, dll" }
-    ],
-    "Polo": [
-      { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
-      { label: "Pilihan Warna", value: "Custom" },
-      { label: "Size Chart", value: "Banyak Pilihan" },
-      { label: "Bahan", value: "Lacoste Cotton, Lacoste CVC, Lacoste PE, Cotton Combed, dll" }
-    ],
-    "Jersey": [
-      { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
-      { label: "Pilihan Warna", value: "Custom" },
-      { label: "Size Chart", value: "Banyak Pilihan" },
-      { label: "Bahan", value: "Lacoste Cotton, Lacoste CVC, Lacoste PE, Cotton Combed, dll" }
-    ],
-    "Topi": [
-      { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
-      { label: "Pilihan Warna", value: "Custom" },
-      { label: "Size Chart", value: "Banyak Pilihan" },
-      { label: "Bahan", value: "Drill, Corduroy, Canvas, Rafel, Jaring, dll" }
-    ],
-    "Celana": [
-      { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
-      { label: "Pilihan Warna", value: "Custom" },
-      { label: "Size Chart", value: "Banyak Pilihan" },
-      { label: "Bahan", value: "Drill, Corduroy, Canvas, Rafel, Jaring, dll" }
-    ]
-  };
 
   const specsToDisplay = categorySpecs[product.category] || product.specs;
 
@@ -154,7 +100,7 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             {/* ── CTA Button ── */}
             <a
               className="mt-8 w-full sm:w-auto mx-auto lg:mx-0 inline-flex h-14 items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-teal-500 to-cyan-500 px-8 text-base font-black uppercase tracking-wide text-white shadow-lg shadow-teal-500/25 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-500/30 active:scale-95"
-              href="https://wa.me/6281345677890"
+              href={WHATSAPP_URL}
               rel="noreferrer"
               target="_blank"
             >

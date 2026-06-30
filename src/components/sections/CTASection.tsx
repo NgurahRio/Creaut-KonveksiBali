@@ -1,4 +1,4 @@
-import { Icon } from "./Icons";
+import { Icon } from "@/components/common/Icons";
 
 interface CTASectionProps {
   className?: string;

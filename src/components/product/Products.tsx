@@ -1,5 +1,5 @@
 import { products } from "@/data/site"
-import { ProductGallery } from "@/components/ProductGallery"
+import { ProductGallery } from "@/components/product/ProductGallery"
 
 interface ProductsProps {
   currentProductSlug?: string

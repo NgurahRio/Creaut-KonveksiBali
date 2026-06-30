@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import Container from "./Container";
-import { Icon } from "./Icons";
+import Container from "@/components/layout/Container";
+import { Icon } from "@/components/common/Icons";
 
 const productLinks = [
   { label: "Kaos", href: "/produk" },

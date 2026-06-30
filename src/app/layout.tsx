@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Footer from "@/components/Footer";
-import LanguageProvider from "@/components/LanguageProvider";
-import Navbar from "@/components/Navbar";
+import Footer from "@/components/layout/Footer";
+import LanguageProvider from "@/components/i18n/LanguageProvider";
+import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
 import { Noto_Sans, Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
