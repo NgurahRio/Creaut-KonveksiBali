@@ -127,15 +127,17 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.8 }}
               >
                 {[
-                  { label: "Gratis Desain", icon: "ruler" as const },
-                  { label: "MOQ 12 Pcs", icon: "package" as const },
-                  { label: "Se-Indonesia", icon: "truck" as const },
+                  { label: "Gratis Desain", icon: "ruler" },
+                  { label: "MOQ 12 Pcs", icon: "package" },
+                  { label: "Se-Indonesia", icon: "truck" },
                 ].map((badge) => (
                   <span
                     key={badge.label}
                     className="flex items-center gap-2 rounded-full bg-gray-50 px-4 py-2 text-sm font-semibold text-gray-600 ring-1 ring-gray-200"
                   >
-                    <Icon className="h-4 w-4 text-cyan-500" name={badge.icon as any} />
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-cyan-100/50 shadow-sm transition-transform duration-300 group-hover:scale-110">
+                      <Icon className="h-4 w-4 text-cyan-500" name={badge.icon as string} />
+                    </div>
                     {badge.label}
                   </span>
                 ))}
@@ -241,7 +243,7 @@ export default function Home() {
                 {/* Icon Tahapan */}
                 <div className="mt-2 mb-3 flex justify-center">
                   <div className="flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary-lightest to-cyan-50 text-primary-dark transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-200/40">
-                    <Icon className="h-7 w-7 sm:h-8 sm:w-8" name={ws.icon as any} />
+                    <Icon className="h-7 w-7 sm:h-8 sm:w-8" name={ws.icon as string} />
                   </div>
                 </div>
                 <h3 className="text-base sm:text-lg font-black text-black leading-snug">{ws.title}</h3>
@@ -284,7 +286,7 @@ export default function Home() {
           {/* Grid Kategori */}
 
           <motion.div
-            className="relative z-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto"
+            className="relative z-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 max-w-6xl mx-auto"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -395,7 +397,7 @@ export default function Home() {
                 return (
                   <TestimonialCard
                     key={index}
-                    t={t as any}
+                    t={t}
                     bgColor={bgColor}
                     onReadMore={() => {
                       setSelectedReview(t);

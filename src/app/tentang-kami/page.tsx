@@ -288,30 +288,30 @@ export default function TentangKamiPage() {
 
 
       {/* ── How We Work / Process ── */}
-      <section className="mt-24 bg-gray-50 border-y border-gray-100 py-20 lg:mt-32 lg:py-28">
+      <section className="mt-24 bg-gray-50 border-y border-gray-100 py-20 lg:mt-32 lg:py-28 overflow-hidden">
         <Container>
           <motion.div
-            className="mb-16 text-center"
+            className="mb-16 text-left lg:text-center"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
             <p className="mb-4 text-sm font-black uppercase tracking-widest text-primary">
-              Cara Kami Bekerja
+              Cara Pesan
             </p>
             <h2 className="text-3xl font-black text-gray-900 sm:text-4xl">
-              Dari Ide ke Realita dalam 4 Langkah
+              Proses Mudah dalam 7 Langkah
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-base font-medium text-gray-600">
-              Proses kerja kami dirancang untuk memastikan setiap produk yang sampai di tangan Anda memenuhi standar kualitas tertinggi.
+            <p className="mt-4 max-w-xl text-base font-medium text-gray-600 lg:mx-auto">
+              Proses pemesanan kami dirancang sesederhana mungkin agar Anda mendapatkan pengalaman terbaik dari awal hingga produk sampai di tangan Anda.
             </p>
           </motion.div>
 
-          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
             {processSteps.map((item, index) => (
               <motion.div
-                className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-md border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:border-primary-light hover:shadow-lg hover:shadow-primary-light/20"
+                className="group relative flex w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] xl:w-[calc(25%-24px)] flex-col overflow-hidden rounded-2xl bg-white p-8 shadow-sm border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:border-primary-light hover:shadow-xl hover:shadow-primary-light/20"
                 key={item.step}
                 variants={scaleIn}
                 initial="hidden"
@@ -319,15 +319,19 @@ export default function TentangKamiPage() {
                 viewport={{ once: true, margin: "-50px" }}
                 custom={index}
               >
-
-                <div className="relative z-10">
+                <div className="relative z-10 flex-1 flex flex-col">
                   <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary-lightest text-primary-dark transition-all duration-300 group-hover:bg-primary-dark group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(14,116,144,0.3)]">
-                    <Icon className="h-7 w-7" name={item.icon} />
+                    <Icon className="h-7 w-7" name={item.icon as string} />
                   </div>
-                  <h3 className="mb-3 text-lg font-black text-gray-900">{item.title}</h3>
-                  <p className="text-sm font-medium leading-6 text-gray-600">
+                  <h3 className="mb-3 text-lg font-black text-gray-900 leading-snug">{item.title}</h3>
+                  <p className="text-sm font-medium leading-relaxed text-gray-600 flex-1">
                     {item.description}
                   </p>
+                </div>
+                
+                {/* Connecting Line (Only visible on desktop, except for the last item of a row) */}
+                <div className="absolute top-1/2 -right-4 hidden w-8 -translate-y-1/2 items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 xl:group-hover:flex">
+                  <div className="h-1 w-full bg-primary-100 rounded-full" />
                 </div>
               </motion.div>
             ))}

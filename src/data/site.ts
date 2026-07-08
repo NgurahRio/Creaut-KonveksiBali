@@ -38,7 +38,7 @@ export const navLinks = [
 export const products: Product[] = [
   // Kaos
   {
-    slug: "kaos-cotton-combed-30s",
+    slug: "Kaos",
     category: "Kaos",
     image: "/assets/advish-konveksi-kaos1.png",
     imageAlt: "Kaos Putih Cotton Combed 30s Advish Konveksi",
@@ -55,64 +55,10 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-kaos4.png", alt: "Kaos Model 4" },
     ],
   },
-  {
-    slug: "kaos-oversized-heavyweight",
-    category: "Kaos",
-    image: "/assets/advish-konveksi-kaos2.png",
-    imageAlt: "Kaos Oversized Advish Konveksi",
-    specs: [
-      { label: "Bahan", value: "Cotton Combed 24s/20s Heavy" },
-      { label: "Potongan", value: "Oversized Fit" },
-      { label: "Gramasi", value: "210-220 Gsm" },
-      { label: "Jahitan", value: "Rantai & Overdeck" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-kaos2.png", alt: "Kaos Model 2" },
-      { src: "/assets/advish-konveksi-kaos3.png", alt: "Kaos Model 3" },
-      { src: "/assets/advish-konveksi-kaos4.png", alt: "Kaos Model 4" },
-      { src: "/assets/advish-konveksi-kaos1.png", alt: "Kaos Model 1" },
-    ],
-  },
-  {
-    slug: "kaos-polo-pique",
-    category: "Kaos",
-    image: "/assets/advish-konveksi-kaos3.png",
-    imageAlt: "Kaos Polo Advish Konveksi",
-    specs: [
-      { label: "Bahan", value: "Lacoste CVC Pique" },
-      { label: "Kerah", value: "Rib Katun Premium" },
-      { label: "Detail", value: "Kancing Placket Depan" },
-      { label: "Karakter", value: "Tebal & Berpori" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-kaos3.png", alt: "Kaos Model 3" },
-      { src: "/assets/advish-konveksi-kaos4.png", alt: "Kaos Model 4" },
-      { src: "/assets/advish-konveksi-kaos1.png", alt: "Kaos Model 1" },
-      { src: "/assets/advish-konveksi-kaos2.png", alt: "Kaos Model 2" },
-    ],
-  },
-  {
-    slug: "kaos-raglan-custom",
-    category: "Kaos",
-    image: "/assets/advish-konveksi-kaos4.png",
-    imageAlt: "Kaos Raglan Advish Konveksi",
-    specs: [
-      { label: "Bahan", value: "Cotton Combed 30s" },
-      { label: "Lengan", value: "Raglan 3/4 atau Panjang" },
-      { label: "Warna", value: "Kombinasi Dual-Tone" },
-      { label: "Kenyamanan", value: "Adem & Menyerap Keringat" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-kaos4.png", alt: "Kaos Model 4" },
-      { src: "/assets/advish-konveksi-kaos1.png", alt: "Kaos Model 1" },
-      { src: "/assets/advish-konveksi-kaos2.png", alt: "Kaos Model 2" },
-      { src: "/assets/advish-konveksi-kaos3.png", alt: "Kaos Model 3" },
-    ],
-  },
 
   // Jersey
   {
-    slug: "jersey-dryfit-premium",
+    slug: "Jersey",
     category: "Jersey",
     image: "/assets/advish-konveksi-jersey1.png",
     imageAlt: "Jersey Dryfit Premium Advish Konveksi",
@@ -129,64 +75,10 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-jersey3.png", alt: "Jersey Model 3" },
     ],
   },
-  {
-    slug: "jersey-sublim-fullprint",
-    category: "Jersey",
-    image: "/assets/advish-konveksi-jersey2.png",
-    imageAlt: "Jersey Sublim Advish Konveksi",
-    specs: [
-      { label: "Bahan", value: "Dryfit Premium Polyester" },
-      { label: "Cetak", value: "Sublimasi Tinta Jepang EPSON" },
-      { label: "Warna", value: "Full Color & Gradasi Bebas" },
-      { label: "Kerah", value: "O-Neck / V-Neck / Kerah Polo" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-jersey2.png", alt: "Jersey Model 2" },
-      { src: "/assets/advish-konveksi-jersey3.png", alt: "Jersey Model 3" },
-      { src: "/assets/advish-konveksi-jersey4.png", alt: "Jersey Model 4" },
-      { src: "/assets/advish-konveksi-jersey1.png", alt: "Jersey Model 1" },
-    ],
-  },
-  {
-    slug: "jersey-esport-pro",
-    category: "Jersey",
-    image: "/assets/advish-konveksi-jersey3.png",
-    imageAlt: "Jersey Esport Advish Konveksi",
-    specs: [
-      { label: "Bahan", value: "Dryfit Waffle / Riffle" },
-      { label: "Pilihan Kerah", value: "Rib Katun / Kerah Zipper" },
-      { label: "Custom", value: "Nama, Nomor & Logo Sponsor" },
-      { label: "Tekstur", value: "Lembut & Elastis" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-jersey3.png", alt: "Jersey Model 3" },
-      { src: "/assets/advish-konveksi-jersey4.png", alt: "Jersey Model 4" },
-      { src: "/assets/advish-konveksi-jersey1.png", alt: "Jersey Model 1" },
-      { src: "/assets/advish-konveksi-jersey2.png", alt: "Jersey Model 2" },
-    ],
-  },
-  {
-    slug: "jersey-running-ultra",
-    category: "Jersey",
-    image: "/assets/advish-konveksi-jersey4.png",
-    imageAlt: "Jersey Running Advish Konveksi",
-    specs: [
-      { label: "Bahan", value: "Dryfit Billabong / Dotmicro" },
-      { label: "Gramasi", value: "Lightweight 120 Gsm" },
-      { label: "Jahitan", value: "Flatlock Stitch (Anti Gesekan)" },
-      { label: "Keamanan", value: "Reflector Stripe (Opsional)" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-jersey4.png", alt: "Jersey Model 4" },
-      { src: "/assets/advish-konveksi-jersey1.png", alt: "Jersey Model 1" },
-      { src: "/assets/advish-konveksi-jersey2.png", alt: "Jersey Model 2" },
-      { src: "/assets/advish-konveksi-jersey3.png", alt: "Jersey Model 3" },
-    ],
-  },
 
   // Jaket
   {
-    slug: "jaket-sporty",
+    slug: "Jaket",
     category: "Jaket",
     image: "/assets/advish-konveksi-jaket1.png",
     imageAlt: "Jaket Sporty Advish Konveksi",
@@ -203,64 +95,10 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-jaket3.png", alt: "Jaket Model 3" },
     ],
   },
-  {
-    slug: "jaket-formal",
-    category: "Jaket",
-    image: "/assets/advish-konveksi-jaket2.png",
-    imageAlt: "Jaket Formal Advish Konveksi",
-    specs: [
-      { label: "Bahan luar", value: "High Twist Premium / Drill" },
-      { label: "Furing", value: "Dormeuil England Full" },
-      { label: "Kerah", value: "Kerah Jas dengan Lapel" },
-      { label: "Saku", value: "Saku Bobok Samping & Dada" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-jaket2.png", alt: "Jaket Model 2" },
-      { src: "/assets/advish-konveksi-jaket3.png", alt: "Jaket Model 3" },
-      { src: "/assets/advish-konveksi-jaket4.png", alt: "Jaket Model 4" },
-      { src: "/assets/advish-konveksi-jaket1.png", alt: "Jaket Model 1" },
-    ],
-  },
-  {
-    slug: "jaket-hoodie-custom",
-    category: "Jaket",
-    image: "/assets/advish-konveksi-jaket3.png",
-    imageAlt: "Jaket Hoodie Custom Advish Konveksi",
-    specs: [
-      { label: "Bahan", value: "Cotton Fleece Premium" },
-      { label: "Model", value: "Hoodie Pullover / Zipper" },
-      { label: "Tudung", value: "Double Layer Hood + Tali Katun" },
-      { label: "Rib", value: "Rib Elastis Tebal di Lengan & Pinggang" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-jaket3.png", alt: "Jaket Model 3" },
-      { src: "/assets/advish-konveksi-jaket4.png", alt: "Jaket Model 4" },
-      { src: "/assets/advish-konveksi-jaket1.png", alt: "Jaket Model 1" },
-      { src: "/assets/advish-konveksi-jaket2.png", alt: "Jaket Model 2" },
-    ],
-  },
-  {
-    slug: "jaket-bomber-varsity",
-    category: "Jaket",
-    image: "/assets/advish-konveksi-jaket4.png",
-    imageAlt: "Jaket Bomber Varsity Advish Konveksi",
-    specs: [
-      { label: "Bahan luar", value: "Baby Canvas / Despo / Wool" },
-      { label: "Furing", value: "Dakron Tebal Berlapis" },
-      { label: "Kancing", value: "Snap Button Besi (Varsity)" },
-      { label: "Kerah & Manset", value: "Rib Rajut Kombinasi Garis" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-jaket4.png", alt: "Jaket Model 4" },
-      { src: "/assets/advish-konveksi-jaket1.png", alt: "Jaket Model 1" },
-      { src: "/assets/advish-konveksi-jaket2.png", alt: "Jaket Model 2" },
-      { src: "/assets/advish-konveksi-jaket3.png", alt: "Jaket Model 3" },
-    ],
-  },
 
   // Kemeja
   {
-    slug: "pdh-american-drill",
+    slug: "Baju PDH",
     category: "Kemeja",
     image: "/assets/advish-konveksi-kemeja1.png",
     imageAlt: "Kemeja PDH American Drill Advish",
@@ -277,64 +115,10 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-kemeja3.png", alt: "Kemeja Model 3" },
     ],
   },
-  {
-    slug: "workshop-wear",
-    category: "Kemeja",
-    image: "/assets/advish-konveksi-kemeja2.png",
-    imageAlt: "Workshop Wear Kemeja Advish",
-    specs: [
-      { label: "Bahan", value: "Japan Drill High Quality" },
-      { label: "Model", value: "Safety Shirt Fit" },
-      { label: "Scotlight", value: "Reflective Tape Depan & Belakang" },
-      { label: "Jahitan", value: "Rantai 3 Jarum (Ekstra Kuat)" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-kemeja2.png", alt: "Kemeja Model 2" },
-      { src: "/assets/advish-konveksi-kemeja3.png", alt: "Kemeja Model 3" },
-      { src: "/assets/advish-konveksi-kemeja4.png", alt: "Kemeja Model 4" },
-      { src: "/assets/advish-konveksi-kemeja1.png", alt: "Kemeja Model 1" },
-    ],
-  },
-  {
-    slug: "kemeja-pdl-lapangan",
-    category: "Kemeja",
-    image: "/assets/advish-konveksi-kemeja3.png",
-    imageAlt: "Kemeja PDL Lapangan Advish",
-    specs: [
-      { label: "Bahan", value: "Ripstop Tornado (Anti Sobek)" },
-      { label: "Ventilasi", value: "Jaring Udara di Punggung Belakang" },
-      { label: "Lengan", value: "Lengan Panjang dengan Tali Pengikat Gulungan" },
-      { label: "Karakter", value: "Kuat, Ringan, Tahan Cuaca Ekstrem" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-kemeja3.png", alt: "Kemeja Model 3" },
-      { src: "/assets/advish-konveksi-kemeja4.png", alt: "Kemeja Model 4" },
-      { src: "/assets/advish-konveksi-kemeja1.png", alt: "Kemeja Model 1" },
-      { src: "/assets/advish-konveksi-kemeja2.png", alt: "Kemeja Model 2" },
-    ],
-  },
-  {
-    slug: "kemeja-flanel-premium",
-    category: "Kemeja",
-    image: "/assets/advish-konveksi-kemeja4.png",
-    imageAlt: "Kemeja Flanel Advish",
-    specs: [
-      { label: "Bahan", value: "Flannel Wool Import" },
-      { label: "Motif", value: "Plaid / Kotak-kotak Custom" },
-      { label: "Potongan", value: "Regular Fit / Oversized Style" },
-      { label: "Kancing", value: "Kancing Akrilik Premium" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-kemeja4.png", alt: "Kemeja Model 4" },
-      { src: "/assets/advish-konveksi-kemeja1.png", alt: "Kemeja Model 1" },
-      { src: "/assets/advish-konveksi-kemeja2.png", alt: "Kemeja Model 2" },
-      { src: "/assets/advish-konveksi-kemeja3.png", alt: "Kemeja Model 3" },
-    ],
-  },
 
   // Topi
   {
-    slug: "topi-custom",
+    slug: "Topi",
     category: "Topi",
     image: "/assets/advish-konveksi-topi1.png",
     imageAlt: "Topi Custom Baseball Advish",
@@ -348,42 +132,6 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-topi1.png", alt: "Topi Model 1" },
       { src: "/assets/advish-konveksi-topi2.png", alt: "Topi Model 2" },
       { src: "/assets/advish-konveksi-topi3.png", alt: "Topi Model 3" },
-    ],
-  },
-  {
-    slug: "topi-trucker-panel",
-    category: "Topi",
-    image: "/assets/advish-konveksi-topi2.png",
-    imageAlt: "Topi Trucker Advish",
-    specs: [
-      { label: "Bahan depan", value: "Lotto Busa Tebal" },
-      { label: "Bahan belakang", value: "Jaring Double Mesh Lembut" },
-      { label: "Pengatur", value: "Snap Plastik (Adjustable)" },
-      { label: "Tekstur", value: "Ringan & Sejuk" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-topi2.png", alt: "Topi Model 2" },
-      { src: "/assets/advish-konveksi-topi3.png", alt: "Topi Model 3" },
-      { src: "/assets/advish-konveksi-topi1.png", alt: "Topi Model 1" },
-      { src: "/assets/advish-konveksi-topi2.png", alt: "Topi Model 2 (Copy)" },
-    ],
-  },
-  {
-    slug: "topi-snapback-streetwear",
-    category: "Topi",
-    image: "/assets/advish-konveksi-topi3.png",
-    imageAlt: "Topi Snapback Advish",
-    specs: [
-      { label: "Bahan", value: "Rafel Daimaru / Canvas Drill" },
-      { label: "Visor", value: "Flat Visor (Datar Keras)" },
-      { label: "Panel", value: "High-Profile 5/6 Panel" },
-      { label: "Jahitan", value: "Sangat Rapi & Kokoh" },
-    ],
-    detailImages: [
-      { src: "/assets/advish-konveksi-topi3.png", alt: "Topi Model 3" },
-      { src: "/assets/advish-konveksi-topi1.png", alt: "Topi Model 1" },
-      { src: "/assets/advish-konveksi-topi2.png", alt: "Topi Model 2" },
-      { src: "/assets/advish-konveksi-topi3.png", alt: "Topi Model 3 (Copy)" },
     ],
   },
 
@@ -409,7 +157,7 @@ export const products: Product[] = [
 
   // Celana
   {
-    slug: "celana-training-sport",
+    slug: "Celana",
     category: "Celana",
     image: "/assets/advish-konveksi-celana1.png",
     imageAlt: "Celana Training Sport Advish Konveksi",
@@ -573,19 +321,19 @@ export const BerandaProducts: BerandaProduct[] = [
     label: "Kaos",
     image: "/assets/advish-konveksi-kaos1.png",
     imageAlt: "Kaos custom Advish Konveksi",
-    href: "/produk/kaos-cotton-combed-30s",
+    href: "/produk/kaos",
   },
   {
     label: "Jersey",
     image: "/assets/advish-konveksi-jersey2.png",
     imageAlt: "Jersey dryfit premium Advish Konveksi",
-    href: "/produk/jersey-dryfit-premium",
+    href: "/produk/jersey",
   },
   {
     label: "Jaket",
     image: "/assets/advish-konveksi-jaket3.png",
     imageAlt: "Jaket sporty custom Advish Konveksi",
-    href: "/produk/jaket-sporty",
+    href: "/produk/jaket",
   },
   {
     label: "Kemeja",
@@ -599,6 +347,12 @@ export const BerandaProducts: BerandaProduct[] = [
     imageAlt: "Polo custom Advish Konveksi",
     href: "/produk/polo",
   },
+  {
+    label: "Celana",
+    image: "/assets/advish-konveksi-celana1.png",
+    imageAlt: "Celana custom Advish Konveksi",
+    href: "/produk/celana",
+  },
 ];
 
 /* ══════════════════════════════════════════════════════════
@@ -609,30 +363,44 @@ export const BerandaProducts: BerandaProduct[] = [
 export const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Konsultasi & Desain",
-    description:
-      "Diskusikan kebutuhan Anda dengan tim kami. Kami bantu wujudkan desain dari konsep hingga mockup final yang sesuai identitas brand Anda.",
-    icon: "ruler",
+    title: "Konsultasi Order",
+    description: "Diskusikan kebutuhan, desain, dan budget Anda. Kami bantu arahkan bahan dan spesifikasi terbaik.",
+    icon: "phone",
   },
   {
     step: "02",
-    title: "Pemilihan Bahan",
-    description:
-      "Kami menyediakan pilihan bahan premium mulai dari Cotton Combed, Dryfit, hingga American Drill dengan kualitas terjamin.",
-    icon: "package",
+    title: "Fiksasi Data Order",
+    description: "Penetapan desain final, jumlah pesanan, ukuran, dan jadwal pengerjaan agar semuanya terukur dengan pasti.",
+    icon: "check",
   },
   {
     step: "03",
-    title: "Produksi & QC",
-    description:
-      "Proses produksi menggunakan mesin modern dengan quality control ketat di setiap tahap untuk memastikan hasil terbaik.",
-    icon: "factory",
+    title: "Pembayaran Uang Muka",
+    description: "Proses produksi akan dimulai segera setelah pembayaran Down Payment (DP) kami terima.",
+    icon: "money",
   },
   {
     step: "04",
-    title: "Pengiriman Tepat Waktu",
-    description:
-      "Pesanan dikemas rapi dan dikirim tepat waktu ke seluruh Indonesia. Lacak status pesanan Anda secara real-time.",
+    title: "Produksi",
+    description: "Pesanan Anda masuk ke tahap produksi dengan standar jahitan dan sablon/bordir berkualitas tinggi.",
+    icon: "factory",
+  },
+  {
+    step: "05",
+    title: "Pemeriksaan Akhir & Pengemasan",
+    description: "Setiap produk melewati Quality Control (QC) ketat sebelum dilipat dan dikemas rapi.",
+    icon: "package",
+  },
+  {
+    step: "06",
+    title: "Pelunasan",
+    description: "Selesaikan sisa pembayaran setelah pesanan siap untuk dikirimkan atau diambil.",
+    icon: "creditCard",
+  },
+  {
+    step: "07",
+    title: "Produk Selesai",
+    description: "Produk dikirim ke alamat Anda dan siap digunakan untuk kebutuhan acara atau seragam Anda.",
     icon: "truck",
   },
 ];
@@ -709,13 +477,13 @@ export const galleryImages = [
  * Digunakan saat user mengakses /produk/[kategori] langsung.
  */
 export const categoryToProductSlug: CategorySlugMap = {
-  kemeja: "pdh-american-drill",
-  jaket: "jaket-sporty",
-  kaos: "kaos-cotton-combed-30s",
-  jersey: "jersey-dryfit-premium",
-  topi: "topi-custom",
+  kemeja: "Kemeja",
+  jaket: "Jaket",
+  kaos: "Kaos",
+  jersey: "Jersey",
+  topi: "Topi",
   polo: "Polo",
-  celana: "celana-training-sport",
+  celana: "Celana",
 };
 
 /**

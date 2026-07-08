@@ -204,6 +204,22 @@ export const translationEntries = [
   ["Lihat di Google Maps", "View on Google Maps"],
   ["Designed with", "Designed with"],
   ["in Bali", "in Bali"],
+  ["Cara Pesan", "How To Order"],
+  ["Proses Mudah dalam 7 Langkah", "Easy Process in 7 Steps"],
+  ["Proses pemesanan kami dirancang sesederhana mungkin agar Anda mendapatkan pengalaman terbaik dari awal hingga produk sampai di tangan Anda.", "Our ordering process is designed to be as simple as possible so you get the best experience from the beginning until the product reaches your hands."],
+  ["Konsultasi Order", "Order Consultation"],
+  ["Diskusikan kebutuhan, desain, dan budget Anda. Kami bantu arahkan bahan dan spesifikasi terbaik.", "Discuss your needs, design, and budget. We will help guide you to the best materials and specifications."],
+  ["Fiksasi Data Order", "Order Data Fixation"],
+  ["Penetapan desain final, jumlah pesanan, ukuran, dan jadwal pengerjaan agar semuanya terukur dengan pasti.", "Determination of final design, order quantity, sizes, and production schedule so everything is precisely measured."],
+  ["Pembayaran Uang Muka", "Down Payment"],
+  ["Proses produksi akan dimulai segera setelah pembayaran Down Payment (DP) kami terima.", "The production process will begin immediately after we receive the Down Payment (DP)."],
+  ["Pesanan Anda masuk ke tahap produksi dengan standar jahitan dan sablon/bordir berkualitas tinggi.", "Your order enters the production stage with high-quality stitching and screen printing/embroidery standards."],
+  ["Pemeriksaan Akhir & Pengemasan", "Final Inspection & Packaging"],
+  ["Setiap produk melewati Quality Control (QC) ketat sebelum dilipat dan dikemas rapi.", "Every product passes strict Quality Control (QC) before being neatly folded and packaged."],
+  ["Pelunasan", "Final Payment"],
+  ["Selesaikan sisa pembayaran setelah pesanan siap untuk dikirimkan atau diambil.", "Complete the remaining payment after the order is ready to be shipped or picked up."],
+  ["Produk Selesai", "Product Finished"],
+  ["Produk dikirim ke alamat Anda dan siap digunakan untuk kebutuhan acara atau seragam Anda.", "The product is shipped to your address and ready to be used for your event or uniform needs."],
 ] as const;
 
 export const idToEnTranslations: Record<string, string> = Object.fromEntries(translationEntries);
