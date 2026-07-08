@@ -176,7 +176,7 @@ export default function TentangKamiPage() {
               </h2>
               <div className="mt-8 space-y-5 text-base font-medium leading-7 text-gray-600">
                 <p>
-                  Berdiri sejak 2023 di Denpasar, Bali, Advish Konveksi lahir dari semangat untuk menghadirkan solusi apparel custom yang berkualitas, tepat waktu, dan inovatif. Kami percaya bahwa setiap detail pada pakaian punya arti, dan setiap produk punya cerita.
+                  Berdiri sejak 2022 di Denpasar, Bali, Advish Konveksi lahir dari semangat untuk menghadirkan solusi apparel custom yang berkualitas, tepat waktu, dan inovatif. Kami percaya bahwa setiap detail pada pakaian punya arti, dan setiap produk punya cerita.
                 </p>
                 <p>
                   Dengan tim yang berpengalaman dan fasilitas produksi modern, kami telah melayani berbagai kebutuhan mulai dari seragam komunitas, merchandise event, hingga apparel brand — semua dengan standar kualitas yang konsisten dan pelayanan profesional.

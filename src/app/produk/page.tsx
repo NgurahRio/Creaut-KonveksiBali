@@ -49,11 +49,11 @@ export default function ProdukPage() {
               <Link
                 href={`/produk/${category.id}`}
                 key={category.id}
-                className={`group relative flex flex-col items-center justify-between p-6 rounded-2xl bg-white text-center border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5 aspect-square ${category.borderColor}`}
+                className={`group relative flex flex-col items-center justify-between p-6 rounded-2xl text-center border shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5 aspect-square ${category.borderColor} ${category.bgColor}`}
               >
                 {/* Icon Container */}
                 <div
-                  className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${category.bgColor} ${category.iconColor}`}
+                  className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 bg-white shadow-sm ${category.iconColor}`}
                 >
                   <Icon className="w-8 h-8" name={category.icon} />
                 </div>
@@ -65,7 +65,7 @@ export default function ProdukPage() {
 
                 {/* Badge Count */}
                 <div
-                  className="mt-4 px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase bg-gray-100 text-gray-500"
+                  className="mt-4 px-3 py-1 rounded-full text-[10px] font-black tracking-wider uppercase bg-white text-gray-500 shadow-sm"
                 >
                   {count} PILIHAN
                 </div>

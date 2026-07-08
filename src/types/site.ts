@@ -21,14 +21,10 @@ export interface ProductDetailImage {
 
 export interface Product {
   slug: string;
-  name: string;
   category: string;
-  price: string;
   image: string;
   imageAlt: string;
-  description: string;
   specs: ProductSpec[];
-  printOptions: string[];
   detailImages: ProductDetailImage[];
 }
 
