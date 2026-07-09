@@ -98,7 +98,7 @@ export const products: Product[] = [
 
   // Kemeja
   {
-    slug: "Baju PDH",
+    slug: "Kemeja",
     category: "Kemeja",
     image: "/assets/advish-konveksi-kemeja1.png",
     imageAlt: "Kemeja PDH American Drill Advish",

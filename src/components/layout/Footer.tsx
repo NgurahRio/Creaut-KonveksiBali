@@ -66,9 +66,7 @@ export default function Footer() {
                   className="w-24 shrink-0 brightness-110 md:w-36 lg:w-40 xl:w-[180px] h-auto object-contain"
                 />
                 <p className="max-w-xs text-sm leading-relaxed text-gray-400 md:max-w-xl md:text-base lg:max-w-2xl lg:text-lg xl:max-w-none xl:text-sm">
-                  Advish Konveksi hadir untuk bantu menciptakan apparel dan
-                  merchandise custom berkualitas. Masalah baju? Advish siap
-                  bantu!
+                  Advish Konveksi hadir untuk bantu menciptakan apparel dan merchandise custom berkualitas. Masalah baju? Advish siap bantu!
                 </p>
               </div>
 

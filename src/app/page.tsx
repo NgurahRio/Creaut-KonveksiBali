@@ -90,8 +90,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.5 }}
               >
-                Kami membantu brand, komunitas dan bisnis mewujudkan apparel
-                berkualitas dengan desain bebas dan hasil maksimal.
+                Kami membantu brand, komunitas dan bisnis mewujudkan apparel berkualitas dengan desain bebas dan hasil maksimal.
               </motion.p>
 
               {/* Tombol Utama (Call to Action) */}

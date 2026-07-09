@@ -2,13 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/components/i18n/LanguageProvider";
 
 export default function TypewriterHeadline() {
   const [charsShown, setCharsShown] = useState(0);
-  const text1 = "Wujudkan ";
-  const text2 = "Ide";
-  const text3 = ", Kita ";
-  const text4 = "Produksi!";
+  const { language } = useLanguage();
+
+  const text1 = language === "en" ? "Bring " : "Wujudkan ";
+  const text2 = language === "en" ? "Ideas" : "Ide";
+  const text3 = language === "en" ? ", We " : ", Kita ";
+  const text4 = language === "en" ? "Produce!" : "Produksi!";
   const totalChars = text1.length + text2.length + text3.length + text4.length;
 
   useEffect(() => {
