@@ -167,29 +167,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
               <X className="w-6 h-6" />
             </button>
 
-            {/* Prev Image */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                if (activeIndex > 0) scrollToImage(activeIndex - 1);
-              }}
-              disabled={activeIndex === 0}
-              className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-50 w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:hover:bg-transparent rounded-full text-white transition-colors"
-            >
-              <ChevronLeft className="w-8 h-8" />
-            </button>
 
-            {/* Next Image */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                if (activeIndex < images.length - 1) scrollToImage(activeIndex + 1);
-              }}
-              disabled={activeIndex === images.length - 1}
-              className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-50 w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:hover:bg-transparent rounded-full text-white transition-colors"
-            >
-              <ChevronRight className="w-8 h-8" />
-            </button>
 
             <motion.div 
               initial={{ scale: 0.9, opacity: 0 }}
@@ -197,7 +175,6 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="relative w-full h-full max-w-5xl max-h-[85vh] flex items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
             >
               <Image
                 src={images[activeIndex].src}
