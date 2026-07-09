@@ -82,7 +82,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
       >
         {images.map((image, index) => (
           <div key={index} className="relative shrink-0 w-full aspect-[4/5] flex items-center justify-center p-0 snap-center overflow-hidden">
-            <div 
+            <div
               className="relative w-full h-full flex items-center justify-center cursor-pointer hover:opacity-95 transition-opacity"
               onClick={() => setIsLightboxOpen(true)}
             >
@@ -94,7 +94,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
                 sizes="(max-width: 768px) 100vw, 400px"
                 className={cn(
                   "object-contain pointer-events-none mix-blend-multiply",
-                  !image.src.includes('size') && "scale-110 sm:scale-[1.25]"
+                  !image.src.includes('size') && "scale-110 sm:scale-[1.25] -translate-x-9"
                 )}
               />
             </div>
@@ -169,7 +169,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
 
 
 
-            <motion.div 
+            <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
