@@ -4,20 +4,22 @@ import Container from "@/components/layout/Container";
 import { Icon } from "@/components/common/Icons";
 
 const productLinks = [
-  { label: "Kaos", href: "/produk" },
-  { label: "Jersey", href: "/produk" },
-  { label: "Jaket Sporty", href: "/produk" },
-  { label: "Jaket Formal", href: "/produk" },
-  { label: "PDH", href: "/produk" },
-  { label: "Workshop Wear", href: "/produk" },
+  { label: "Kemeja", href: "/produk/kemeja" },
+  { label: "Jaket", href: "/produk/jaket" },
+  { label: "Kaos", href: "/produk/kaos" },
+  { label: "Polo", href: "/produk/polo" },
+  { label: "Jersey", href: "/produk/jersey" },
+  { label: "Topi", href: "/produk/topi" },
+  { label: "Celana", href: "/produk/celana" },
 ];
 
 const infoLinks = [
-  { label: "Cara Order", href: "/produk" },
-  { label: "Size Chart", href: "/produk" },
-  { label: "Pengiriman", href: "/produk" },
-  { label: "Ketentuan", href: "/produk" },
-  { label: "FAQ", href: "/produk" },
+  { label: "Tentang Kami", href: "/tentang-kami" },
+  { label: "Keunggulan", href: "/tentang-kami#keunggulan" },
+  { label: "Cara Order", href: "/tentang-kami#cara-order" },
+  { label: "Tracking Order", href: "/tracking-order" },
+  { label: "Testimoni", href: "/#testimoni" },
+  { label: "Klien & Partner", href: "/#klien-partner" },
 ];
 
 const socialLinks = [

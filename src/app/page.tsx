@@ -341,7 +341,8 @@ export default function Home() {
             6. TESTIMONI (Kata Mereka)
             ────────────────────────────────────────────────────── */}
         <motion.section
-          className="mt-20 relative"
+          id="testimoni"
+          className="scroll-mt-24 mt-20 relative"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -502,7 +503,8 @@ export default function Home() {
             7. CLIENT & PARTNER (Logos Partner)
             ────────────────────────────────────────────────────── */}
         <motion.section
-          className="mt-20"
+          id="klien-partner"
+          className="scroll-mt-24 mt-20"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"

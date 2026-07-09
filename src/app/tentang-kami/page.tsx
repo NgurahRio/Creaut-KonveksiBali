@@ -288,7 +288,7 @@ export default function TentangKamiPage() {
 
 
       {/* ── How We Work / Process ── */}
-      <section className="mt-24 bg-gray-50 border-y border-gray-100 py-20 lg:mt-32 lg:py-28 overflow-hidden">
+      <section id="cara-order" className="scroll-mt-24 mt-24 bg-gray-50 border-y border-gray-100 py-20 lg:mt-32 lg:py-28 overflow-hidden">
         <Container>
           <motion.div
             className="mb-16 text-left lg:text-center"
@@ -340,11 +340,12 @@ export default function TentangKamiPage() {
       </section>
 
       {/* ── Values ── */}
-      <Container className="mt-24 lg:mt-32">
-        <section>
-          <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
+      <section id="keunggulan" className="scroll-mt-32 mt-24 lg:mt-32">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.5fr] lg:gap-20">
             <motion.div
-              variants={fadeLeft}
+              className="lg:sticky lg:top-32 lg:h-fit"
+              variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
@@ -382,8 +383,8 @@ export default function TentangKamiPage() {
               ))}
             </div>
           </div>
-        </section>
-      </Container>
+        </Container>
+      </section>
 
       {/* ── Team Philosophy ── */}
       <section className="mt-24 bg-gradient-to-br from-gray-950 via-gray-900 to-primary-dark py-20 text-white lg:mt-32 lg:py-28 relative">
