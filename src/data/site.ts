@@ -53,6 +53,10 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-kaos2.png", alt: "Kaos Model 2" },
       { src: "/assets/advish-konveksi-kaos3.png", alt: "Kaos Model 3" },
       { src: "/assets/advish-konveksi-kaos4.png", alt: "Kaos Model 4" },
+      { src: "/assets/advish-konveksi-kaos-size1.jpg", alt: "Kaos Size 1" },
+      { src: "/assets/advish-konveksi-kaos-size2.jpg", alt: "Kaos Size 2" },
+      { src: "/assets/advish-konveksi-kaos-size3.jpg", alt: "Kaos Size 3" },
+      { src: "/assets/advish-konveksi-kaos-size4.jpg", alt: "Kaos Size 4" },
     ],
   },
 
@@ -73,6 +77,9 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-jersey1.png", alt: "Jersey Model 1" },
       { src: "/assets/advish-konveksi-jersey2.png", alt: "Jersey Model 2" },
       { src: "/assets/advish-konveksi-jersey3.png", alt: "Jersey Model 3" },
+      { src: "/assets/advish-konveksi-jersey-size1.jpg", alt: "Jersey Size 1" },
+      { src: "/assets/advish-konveksi-jersey-size2.jpg", alt: "Jersey Size 2" },
+      { src: "/assets/advish-konveksi-jersey-size3.jpg", alt: "Jersey Size 3" },
     ],
   },
 
@@ -93,6 +100,8 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-jaket1.png", alt: "Jaket Model 1" },
       { src: "/assets/advish-konveksi-jaket2.png", alt: "Jaket Model 2" },
       { src: "/assets/advish-konveksi-jaket3.png", alt: "Jaket Model 3" },
+      { src: "/assets/advish-konveksi-jaket-size1.jpg", alt: "Jaket Size 1" },
+      { src: "/assets/advish-konveksi-jaket-size2.jpg", alt: "Jaket Size 2" },
     ],
   },
 
@@ -113,6 +122,8 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-kemeja1.png", alt: "Kemeja Model 1" },
       { src: "/assets/advish-konveksi-kemeja2.png", alt: "Kemeja Model 2" },
       { src: "/assets/advish-konveksi-kemeja3.png", alt: "Kemeja Model 3" },
+      { src: "/assets/advish-konveksi-kemeja-size1.jpg", alt: "Kemeja Size 1" },
+      { src: "/assets/advish-konveksi-kemeja-size2.jpg", alt: "Kemeja Size 2" },
     ],
   },
 
@@ -152,6 +163,8 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-polo2.png", alt: "Polo Model 2" },
       { src: "/assets/advish-konveksi-polo3.png", alt: "Polo Model 3" },
       { src: "/assets/advish-konveksi-polo4.png", alt: "Polo Model 4" },
+      { src: "/assets/advish-konveksi-polo-size1.jpg", alt: "Polo Size 1" },
+      { src: "/assets/advish-konveksi-polo-size2.jpg", alt: "Polo Size 2" },
     ],
   },
 
@@ -172,6 +185,7 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-celana2.png", alt: "Celana Model 2" },
       { src: "/assets/advish-konveksi-celana3.png", alt: "Celana Model 3" },
       { src: "/assets/advish-konveksi-celana4.png", alt: "Celana Model 4" },
+      { src: "/assets/advish-konveksi-celana-size1.jpg", alt: "Celana Size 1" },
     ],
   },
 ];
