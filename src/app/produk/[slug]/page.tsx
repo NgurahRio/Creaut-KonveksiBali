@@ -59,8 +59,10 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       <section className="relative">
         <div className="relative grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
           {/* Left — Gallery (centered on mobile) */}
-          <div className="flex w-full items-center justify-center">
-            <Products currentProductSlug={product.slug} />
+          <div className="min-w-0 w-full">
+            <div className="-mx-4 w-[calc(100%+2rem)] sm:mx-0 sm:w-full flex items-center justify-center">
+              <Products currentProductSlug={product.slug} />
+            </div>
           </div>
 
           {/* Right — Product Info */}
@@ -83,14 +85,15 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                   </div>
                   Spesifikasi
                 </h2>
-                <dl className="grid gap-2.5">
+                <dl className="grid grid-cols-[auto_auto_auto_1fr] items-start gap-x-1.5 sm:gap-x-2 gap-y-2.5">
                   {specsToDisplay.map((spec) => (
-                    <div key={spec.label} className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-teal-400" />
-                      <div>
-                        <dt className="inline text-sm font-bold text-gray-700">{spec.label}: </dt>
-                        <dd className="inline text-sm font-medium text-gray-500">{spec.value}</dd>
+                    <div key={spec.label} className="contents">
+                      <div className="flex items-center h-[22px]">
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-teal-400" />
                       </div>
+                      <dt className="text-sm font-bold text-gray-700 whitespace-nowrap pt-[1px]">{spec.label}</dt>
+                      <span className="text-sm font-bold text-gray-700 pt-[1px]">:</span>
+                      <dd className="text-sm font-medium text-gray-500 leading-relaxed pt-[1px]">{spec.value}</dd>
                     </div>
                   ))}
                 </dl>

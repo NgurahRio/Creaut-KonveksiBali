@@ -94,7 +94,7 @@ export function ProductGallery({ images, className }: ProductGalleryProps) {
                 sizes="(max-width: 768px) 100vw, 400px"
                 className={cn(
                   "object-contain pointer-events-none mix-blend-multiply",
-                  !image.src.includes('size') && "scale-110 sm:scale-[1.25] -translate-x-9"
+                  !image.src.includes('size') && "scale-110 sm:scale-[1.25] -translate-x-1"
                 )}
               />
             </div>
