@@ -345,6 +345,16 @@ export const translationEntries = [
   ["Total Harga", "Total Price"],
   ["Terjadi kesalahan saat melacak pesanan.", "An error occurred while tracking the order."],
   ["Koneksi gagal. Jika menguji di HP (local IP), Server Action Next.js mungkin memblokirnya.", "Connection failed. If testing on a mobile device (local IP), Next.js Server Action might block it."],
+  [
+    "Pantau setiap tahap produksi pesanan Anda dengan mudah dan real-time melalui sistem terpadu kami.",
+    "Track every stage of your order production easily and in real-time through our integrated system.",
+  ],
+  ["Cek Status Pesanan Kamu", "Check Your Order Status"],
+  [
+    "Untuk memberikan pengalaman pelacakan yang lebih baik dan aman, layanan tracking pesanan kini dapat diakses langsung melalui portal sistem produksi utama kami.",
+    "To provide a better and secure tracking experience, our order tracking service can now be accessed directly through our main production system portal.",
+  ],
+  ["Menuju Portal Tracking", "Go to Tracking Portal"],
 ] as const;
 
 export const idToEnTranslations: Record<string, string> = Object.fromEntries(translationEntries);

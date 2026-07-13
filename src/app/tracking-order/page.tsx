@@ -3,128 +3,8 @@
 import Container from "@/components/layout/Container";
 import CTASection from "@/components/sections/CTASection";
 import { Icon } from "@/components/common/Icons";
-import TrackingTimeline from "@/components/tracking/TrackingTimeline";
-import { WHATSAPP_URL } from "@/data/site";
-import React, { useState } from "react";
-import { trackOrderAPI } from "./actions";
-
-interface OrderData {
-  status: string;
-  sub_status: string | null;
-  type?: string;
-  size?: string;
-  customer_name?: string;
-  material?: string;
-  qty?: number;
-  amount?: number;
-  number?: string;
-}
-
-function getDynamicTrackingSteps(apiData: OrderData): Array<{
-  title: string;
-
-  icon: string;
-  status: "done" | "active" | "pending";
-}> {
-  const currentApiStatus = apiData.status;
-  const currentSubStatus = apiData.sub_status;
-
-  let stepIndex = 0;
-
-  // Logika pemetaan API ke 6 Tahapan Client
-  if (["created", "approved", "down_payment"].includes(currentApiStatus)) {
-    stepIndex = 0; // Verifikasi Pesanan
-  } else if (currentApiStatus === "production") {
-    // Di tahap produksi, kita cek sub_status-nya
-    if (!currentSubStatus || ["buy_material", "material_in_queue", "cutting"].includes(currentSubStatus)) {
-      stepIndex = 1; // Tahap Potong
-    } else if (currentSubStatus === "detailing") {
-      stepIndex = 3; // LOMPAT ke Tahap Jarit (Bordir/Sablon otomatis tercentang selesai)
-    } else if (currentSubStatus === "qtc" || currentSubStatus === "packaging") {
-      stepIndex = 4; // Tahap QC & Pengemasan
-    } else {
-      stepIndex = 1; // Default
-    }
-  } else if (["finish_production", "paid_off"].includes(currentApiStatus)) {
-    stepIndex = 4; // Tahap QC & Pengemasan
-  } else if (currentApiStatus === "order_complete") {
-    stepIndex = 5; // Order Selesai
-  }
-
-
-
-  return [
-    { title: "Verifikasi Pesanan", icon: "check", status: stepIndex > 0 ? "done" : stepIndex === 0 ? "active" : "pending" },
-
-    { title: "Tahap Potong", icon: "scissors", status: stepIndex > 1 ? "done" : stepIndex === 1 ? "active" : "pending" },
-
-    { title: `Tahap Bordir / Sablon / Sublim`, icon: "droplet", status: stepIndex > 2 ? "done" : stepIndex === 2 ? "active" : "pending" },
-
-    { title: "Tahap Jarit", icon: "shirt", status: stepIndex > 3 ? "done" : stepIndex === 3 ? "active" : "pending" },
-
-    { title: "Tahap Quality Control & Pengemasan", icon: "package", status: stepIndex > 4 ? "done" : stepIndex === 4 ? "active" : "pending" },
-
-    { title: "Order Selesai", icon: "truck", status: stepIndex === 5 ? "done" : "pending" },
-  ];
-}
-
-function getDynamicOrderDetails(apiData: OrderData) {
-  let typeStr = apiData.type || "-";
-  let sizeStr = apiData.size || "-";
-
-  try {
-    if (apiData.type) {
-      const parsedType = JSON.parse(apiData.type);
-      if (Array.isArray(parsedType)) typeStr = parsedType.join(", ");
-    }
-  } catch {}
-
-  try {
-    if (apiData.size) {
-      const parsedSize = JSON.parse(apiData.size);
-      if (Array.isArray(parsedSize)) sizeStr = parsedSize.join(", ");
-    }
-  } catch {}
-
-  return [
-    { label: "Atas Nama", value: apiData.customer_name || "-" },
-    { label: "Produk", value: typeStr },
-    { label: "Material", value: apiData.material || "-" },
-    { label: "Jumlah", value: apiData.qty ? `${apiData.qty} Pcs` : "-" },
-    { label: "Ukuran", value: sizeStr },
-    { label: "Total Harga", value: apiData.amount ? `Rp ${apiData.amount.toLocaleString("id-ID")}` : "-" },
-  ];
-}
 
 export default function TrackingOrderPage() {
-  const [invoice, setInvoice] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [orderData, setOrderData] = useState<OrderData | null>(null);
-
-  const handleTrack = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!invoice.trim()) return;
-
-    setIsLoading(true);
-    setError(null);
-    setOrderData(null);
-
-    try {
-      const result = await trackOrderAPI(invoice);
-      if (result.success) {
-        setOrderData(result.data);
-      } else {
-        setError(result.message ?? "Terjadi kesalahan saat melacak pesanan.");
-      }
-    } catch (err: unknown) {
-      console.error(err);
-      setError("Koneksi gagal. Jika menguji di HP (local IP), Server Action Next.js mungkin memblokirnya.");
-    }
-
-    setIsLoading(false);
-  };
-
   return (
     <Container className="pt-28 lg:pt-36">
       <section className="text-center max-w-3xl mx-auto">
@@ -132,83 +12,32 @@ export default function TrackingOrderPage() {
           Tracking <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">Order</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg font-medium leading-relaxed text-gray-500 sm:text-xl">
-          Pantau setiap tahap produksi pesanan Anda dengan mudah dan real-time.
+          Pantau setiap tahap produksi pesanan Anda dengan mudah dan real-time melalui sistem terpadu kami.
         </p>
       </section>
 
-      <section className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-[0.7fr_1.5fr]">
-        <div className="grid gap-6">
-          <form onSubmit={handleTrack} className="relative z-10 rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-light/20">
-            <label className="text-lg font-black text-gray-900" htmlFor="invoice">
-              Masukkan Nomor Invoice
-            </label>
-            <input
-              className="mt-4 h-16 w-full rounded-full border border-gray-200 bg-gray-50 text-gray-900 px-6 text-lg font-semibold outline-none placeholder:text-gray-400 transition-all duration-300 focus:-translate-y-1 focus:border-primary-light focus:bg-white focus:ring-2 focus:ring-primary-light"
-              id="invoice"
-              value={invoice}
-              onChange={(e) => setInvoice(e.target.value)}
-              placeholder="Contoh: ORD3/02/10/23"
-              type="text"
-              required
-            />
-            <button
-              disabled={isLoading}
-              className="mt-4 h-16 w-full rounded-full bg-primary-dark px-6 text-base font-black uppercase text-white transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-[0_8px_20px_rgba(8,145,178,0.25)] active:scale-95 disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:shadow-none disabled:active:scale-100"
-              type="submit"
-            >
-              {isLoading ? "Mencari..." : "Lacak Order"}
-            </button>
-            {error && <p className="mt-4 text-center font-semibold text-red-500">{error}</p>}
-          </form>
-
-          <aside className="rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-light/20">
-            <h2 className="text-lg font-black text-gray-900">Butuh Bantuan?</h2>
-            <p className="mt-2 text-base font-semibold text-gray-600">
-              Hubungi kami via WhatsApp untuk informasi lebih lanjut.
-            </p>
-            <a
-              className="mt-5 flex h-14 items-center justify-center gap-2 rounded-xl border border-[#25b829] bg-[#ecfaec] text-base font-black uppercase text-[#25a728] transition-all duration-300 hover:-translate-y-1 hover:bg-[#d8f5d8] hover:shadow-md active:scale-95"
-              href={`${WHATSAPP_URL}?text=Saya%20mengalami%20masalah%20dalam%20tracking%20pesanan%20saya%0AKeluhan%3A%20`}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <Icon className="h-6 w-6" name="whatsapp" />
-              Chat WhatsApp
-            </a>
-          </aside>
+      <section className="mt-12 max-w-2xl mx-auto">
+        <div className="flex flex-col items-center justify-center rounded-3xl border border-gray-200 bg-gray-100 p-8 shadow-xl shadow-primary-light/10 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary-light/20 sm:p-12">
+          <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-full bg-primary-light/10 text-primary">
+            <Icon className="h-12 w-12" name="search" />
+          </div>
+          
+          <h2 className="text-2xl font-black text-gray-900 sm:text-3xl">Cek Status Pesanan Kamu</h2>
+          
+          <p className="mt-4 text-base font-medium leading-relaxed text-gray-600 sm:text-lg">
+            Untuk memberikan pengalaman pelacakan yang lebih baik dan aman, layanan tracking pesanan kini dapat diakses langsung melalui portal sistem produksi utama kami.
+          </p>
+          
+          <a
+            href="https://simadvishkonveksi.com/track"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-10 inline-flex h-auto py-3 sm:py-4 items-center justify-center gap-4 rounded-full bg-primary-dark px-8 sm:px-12 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-[0_8px_20px_rgba(8,145,178,0.25)] active:scale-95 text-base sm:text-lg font-black uppercase tracking-wide"
+          >
+            Menuju Portal Tracking
+            <Icon className="h-6 w-6 ml-2 hidden sm:block" name="arrowRight" />
+          </a>
         </div>
-
-        {orderData ? (
-          <article className="rounded-2xl border border-gray-100 bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-light/20 lg:p-8">
-            <div className="mb-8">
-              <h2 className="text-2xl font-black text-gray-900">{orderData.number}</h2>
-            </div>
-
-            <TrackingTimeline steps={getDynamicTrackingSteps(orderData)} />
-
-            <div className="mt-10">
-              <h3 className="mb-6 text-xl font-black text-gray-900">Detail Pesanan</h3>
-              <dl className="grid gap-x-12 gap-y-5 sm:grid-cols-2 xl:grid-cols-3">
-                {getDynamicOrderDetails(orderData).map((item) => (
-                  <div key={item.label}>
-                    <dt className="text-lg font-black text-gray-900">{item.label}</dt>
-                    <dd className="mt-2 text-lg font-semibold text-gray-600">{item.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </article>
-        ) : (
-          <article className="flex min-h-[400px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50 p-6 text-center transition-all duration-300 lg:p-8">
-            <div className="mb-6 flex h-24 w-24 items-center justify-center rounded-full bg-white text-primary-dark shadow-md">
-              <Icon className="h-10 w-10" name="search" />
-            </div>
-            <h2 className="text-2xl font-black text-gray-900">Ayo Cek Pesanan Kamu!</h2>
-            <p className="mt-3 max-w-md text-base font-semibold leading-relaxed text-gray-600">
-              Masukkan nomor invoice (contoh: ORD...) pada form di sebelah kiri untuk melihat status produksi dan detail pesananmu secara lengkap.
-            </p>
-          </article>
-        )}
       </section>
 
       <CTASection className="mt-24" />

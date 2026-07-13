@@ -1,11 +1,12 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+
 import { motion } from "framer-motion";
 import { Icon } from "@/components/common/Icons";
+import Link from "next/link";
 
 export default function TrackingWidget() {
-  const router = useRouter();
+
 
   return (
     <div className="relative z-20 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-16 lg:mt-24">
@@ -29,12 +30,12 @@ export default function TrackingWidget() {
             </p>
           </div>
           <div className="flex shrink-0">
-            <button
-              onClick={() => router.push('/tracking-order')}
+            <Link
+              href="/tracking-order"
               className="flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl bg-gray-900 px-8 py-3.5 text-sm font-bold text-white transition-all hover:bg-cyan-500 hover:shadow-lg hover:shadow-cyan-500/30"
             >
               Cek Status
-            </button>
+            </Link>
           </div>
         </div>
       </motion.div>
