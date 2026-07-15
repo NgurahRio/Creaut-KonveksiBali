@@ -472,14 +472,16 @@ export const values = [
 
 /** Foto galeri workshop */
 export const galleryImages = [
-  { src: "/assets/gallery-1.png", alt: "Workshop konveksi dengan tim menjahit" },
-  { src: "/assets/gallery-2.png", alt: "Detail proses jahit kain motif" },
-  { src: "/assets/gallery-3.png", alt: "Area produksi konveksi Bali" },
-  { src: "/assets/gallery-4.png", alt: "Meja potong dan produksi apparel" },
-  { src: "/assets/gallery-5.png", alt: "Mesin produksi apparel custom" },
-  { src: "/assets/gallery-6.png", alt: "Tim menyiapkan kain produksi" },
-  { src: "/assets/gallery-7.png", alt: "Proses printing apparel" },
-  { src: "/assets/gallery-8.png", alt: "Tim workshop Advish Konveksi" },
+  { src: "/assets/AdvishWork1.webp" },
+  { src: "/assets/AdvishWork2.webp" },
+  { src: "/assets/AdvishWork3.webp" },
+  { src: "/assets/AdvishWork4.webp" },
+  { src: "/assets/AdvishWork5.webp" },
+  { src: "/assets/AdvishWork6.webp" },
+  { src: "/assets/AdvishWork7.webp" },
+  { src: "/assets/AdvishWork8.webp" },
+  { src: "/assets/AdvishWork9.webp" },
+  { src: "/assets/AdvishWork10.webp" },
 ];
 
 /* ══════════════════════════════════════════════════════════

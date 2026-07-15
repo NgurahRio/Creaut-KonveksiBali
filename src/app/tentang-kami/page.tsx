@@ -328,7 +328,7 @@ export default function TentangKamiPage() {
                     {item.description}
                   </p>
                 </div>
-                
+
                 {/* Connecting Line (Only visible on desktop, except for the last item of a row) */}
                 <div className="absolute top-1/2 -right-4 hidden w-8 -translate-y-1/2 items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 xl:group-hover:flex">
                   <div className="h-1 w-full bg-primary-100 rounded-full" />
@@ -492,16 +492,12 @@ export default function TentangKamiPage() {
                 custom={index % 4}
               >
                 <Image
-                  alt={image.alt}
+                  alt="Gallery Workshop"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   fill
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   src={image.src}
                 />
-                {/* Hover overlay */}
-                <div className="absolute inset-0 flex items-end bg-gradient-to-t from-primary-dark/70 via-primary-dark/20 to-transparent p-5 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <p className="text-sm font-bold text-white">{image.alt}</p>
-                </div>
               </motion.div>
             ))}
           </div>
