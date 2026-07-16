@@ -304,7 +304,28 @@ export const workSteps = [
    6. TESTIMONI & CLIENT
    ══════════════════════════════════════════════════════════ */
 
-export const clientLogos = ["PT Bali Kreasi", "Komunitas Riders", "Bank BRI", "Hotel Sanur", "Bali United FC", "SMK Negeri 1", "PT Maju Jaya", "Dinas Pariwisata"];
+export const clientLogos = [
+  "/assets/AdvishClient1.webp",
+  "/assets/AdvishClient2.webp",
+  "/assets/AdvishClient3.webp",
+  "/assets/AdvishClient4.webp",
+  "/assets/AdvishClient5.webp",
+  "/assets/AdvishClient6.webp",
+  "/assets/AdvishClient7.webp",
+  "/assets/AdvishClient8.webp",
+  "/assets/AdvishClient9.webp",
+  "/assets/AdvishClient10.webp",
+  "/assets/AdvishClient11.webp",
+  "/assets/AdvishClient12.webp",
+  "/assets/AdvishClient13.webp",
+  "/assets/AdvishClient14.webp",
+  "/assets/AdvishClient15.webp",
+  "/assets/AdvishClient16.webp",
+  "/assets/AdvishClient17.webp",
+  "/assets/AdvishClient18.webp",
+  "/assets/AdvishClient19.webp",
+  "/assets/AdvishClient20.webp"
+];
 
 export const testimonials = [
   { name: "exsos XII 9", role: "2 bulan lalu", text: "Konveksi Advish benar-benar memberikan pengalaman yang sangat memuaskan. Kualitas jahitannya rapi dan detail, bahan yang digunakan juga terasa nyaman dan tidak murahan. Pelayanan mereka sangat ramah dan responsif, sehingga komunikasi selama proses pemesanan berjalan lancar tanpa kendala.", rating: 5, image: "/assets/advish-konveksi-testimonial1.png" },

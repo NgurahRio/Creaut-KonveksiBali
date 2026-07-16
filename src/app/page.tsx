@@ -526,10 +526,10 @@ export default function Home() {
               <div className="animate-marquee flex shrink-0 gap-6" key={i}>
                 {[...clientLogos, ...clientLogos].map((client, index) => (
                   <div
-                    className="flex h-20 w-52 shrink-0 items-center justify-center rounded-xl bg-gray-50 text-lg font-black text-primary-dark/50 ring-1 ring-gray-100 transition-all duration-300 hover:bg-white hover:text-primary-dark hover:shadow-lg hover:ring-cyan-200 hover:scale-105"
+                    className="relative flex h-16 w-36 md:h-24 md:w-48 shrink-0 items-center justify-center transition-all duration-300 hover:scale-110"
                     key={`${client}-${index}`}
                   >
-                    {client}
+                    <Image src={client} alt={`Client ${index}`} fill className="object-contain" sizes="(max-width: 768px) 144px, 192px" />
                   </div>
                 ))}
               </div>
