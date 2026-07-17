@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "Konveksi Bali",
   description:
     "Konveksi apparel custom di Bali untuk kaos, jersey, jaket, PDH, dan workshop wear.",
+  verification: {
+    google: "X9IXP5lIpM47ki0n3JpOXN7F7GowfR373wsNdYycp9I",
+  },
 };
 
 export default function RootLayout({
