@@ -11,9 +11,20 @@ const playfairDisplayHeading = Playfair_Display({ subsets: ['latin'], variable: 
 const notoSans = Noto_Sans({ subsets: ['latin'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
-  title: "Konveksi Bali",
+  title: "Konveksi Bali - Jasa Pembuatan Kaos, Seragam & Apparel Custom",
   description:
-    "Konveksi apparel custom di Bali untuk kaos, jersey, jaket, PDH, dan workshop wear.",
+    "Vendor konveksi apparel custom di Bali dan Denpasar untuk kaos, jersey, jaket, PDH, kemeja, polo shirt, dan seragam perusahaan dengan kualitas terbaik.",
+  keywords: [
+    "Konveksi Bali", "Jasa Konveksi Bali", "Konveksi Kaos Bali", "Konveksi Kaos Custom",
+    "Konveksi Seragam", "Vendor Seragam Perusahaan", "Konveksi Hoodie", "Konveksi Polo Shirt",
+    "Konveksi Kemeja", "Konveksi Jaket", "Konveksi Jersey", "Jasa Bordir Komputer",
+    "Jasa Sablon Kaos", "Tempat Bikin Kaos Custom", "Vendor Merchandise Perusahaan",
+    "Konveksi Baju Custom", "Konveksi PDH & PDL", "Vendor Seragam Hotel Bali",
+    "Konveksi Clothing Brand", "Produksi Apparel Custom", "Konveksi Denpasar",
+    "Jasa Konveksi Denpasar", "Konveksi Kaos Denpasar", "Konveksi Kaos Custom Denpasar",
+    "Konveksi Seragam Denpasar", "Vendor Seragam Denpasar", "Konveksi Hoodie Denpasar",
+    "Konveksi Polo Shirt Denpasar", "Konveksi Kemeja Denpasar", "Konveksi Jaket Denpasar"
+  ],
   verification: {
     google: "X9IXP5lIpM47ki0n3JpOXN7F7GowfR373wsNdYycp9I",
   },
