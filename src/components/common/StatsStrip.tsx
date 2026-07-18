@@ -8,7 +8,7 @@ import { Icon } from "./Icons";
 function AnimatedNumber({ value }: { value: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  
+
   const numericPart = parseInt(value.replace(/[^0-9]/g, "")) || 0;
   const suffix = value.replace(/[0-9]/g, "");
 
@@ -47,11 +47,9 @@ export default function StatsStrip({ className = "", compact = false }: StatsStr
     >
       {stats.map((item, index) => (
         <div
-          className={`flex min-h-28 items-center justify-center gap-4 px-4 py-6 ${
-            index % 2 === 1 ? "border-l border-gray-100 md:border-l-0" : ""
-          } ${index > 1 ? "border-t border-gray-100 md:border-t-0" : ""} ${
-            index > 0 ? "md:border-l md:border-gray-100" : ""
-          }`}
+          className={`flex min-h-28 items-center justify-center gap-4 px-4 py-6 ${index % 2 === 1 ? "border-l border-gray-100 md:border-l-0" : ""
+            } ${index > 1 ? "border-t border-gray-100 md:border-t-0" : ""} ${index > 0 ? "md:border-l md:border-gray-100" : ""
+            }`}
           key={item.label}
         >
           <Icon className="h-8 w-8 shrink-0 text-primary-dark" name={item.icon} />

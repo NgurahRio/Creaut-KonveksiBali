@@ -265,7 +265,7 @@ export const stats: StatItem[] = [
   { value: "3+", label: "Tahun Pengalaman", icon: "briefcase" },
   { value: "100+", label: "Project Selesai", icon: "shirt" },
   { value: "50+", label: "Klien Puas", icon: "user" },
-  { value: "99%", label: "On Time Pengiriman", icon: "clock" },
+  { value: "100rb+", label: "Jumlah Order Pelanggan", icon: "package" },
 ];
 
 /* ══════════════════════════════════════════════════════════
@@ -557,7 +557,7 @@ export const categorySpecs: CategorySpecMap = {
     { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
     { label: "Pilihan Warna", value: "Custom" },
     { label: "Size Chart", value: "Banyak Pilihan" },
-    { label: "Bahan", value: "Lacoste Cotton, Lacoste CVC, Lacoste PE, Cotton Combed, dll" },
+    { label: "Bahan", value: "Dryfit, Embos, Jacquard,  etc" },
   ],
   "Topi": [
     { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },

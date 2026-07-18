@@ -45,7 +45,7 @@ export default function TypewriterHeadline() {
       <span className="whitespace-pre-wrap text-center">
         {text1.substring(0, charsShown)}
         {charsShown > text1.length && (
-          <span className="text-blue-600">
+          <span className="text-blue-900">
             {text2.substring(0, charsShown - text1.length)}
           </span>
         )}
@@ -53,7 +53,7 @@ export default function TypewriterHeadline() {
           <span>{text3.substring(0, charsShown - text1.length - text2.length)}</span>
         )}
         {charsShown > text1.length + text2.length + text3.length && (
-          <span className="text-blue-600">
+          <span className="text-blue-900">
             {text4.substring(0, charsShown - text1.length - text2.length - text3.length)}
           </span>
         )}
