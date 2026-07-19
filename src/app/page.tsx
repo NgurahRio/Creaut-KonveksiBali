@@ -351,7 +351,7 @@ export default function Home() {
         >
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-black text-[#1d2939] sm:text-4xl">
-              Kata Mereka <span className="text-[#2081E2]">Tentang Kami</span>
+              Kata Mereka <span className="text-[#2081E2]">Tentang Advish Konveksi</span>
             </h2>
             <div className="mx-auto mt-2 h-1 w-12 rounded bg-[#2081E2]"></div>
             <p className="mx-auto mt-4 max-w-2xl text-base font-semibold text-gray-500">
