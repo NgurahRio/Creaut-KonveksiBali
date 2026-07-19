@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/layout/Container";
@@ -6,6 +7,7 @@ import { Icon } from "@/components/common/Icons";
 import ProductCard from "@/components/product/ProductCard";
 import { Products } from "@/components/product/Products";
 import { products, categoryToProductSlug, categorySpecs, WHATSAPP_URL } from "@/data/site";
+import { productSeoContent, SITE_NAME, SITE_URL } from "@/data/seo";
 
 interface ProductDetailPageProps {
   params: Promise<{
@@ -13,21 +15,79 @@ interface ProductDetailPageProps {
   }>;
 }
 
+function JsonLd({ data }: { data: Record<string, unknown> }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
+    />
+  );
+}
+
 export function generateStaticParams() {
-  const productSlugs = products.map((product) => ({
-    slug: product.slug,
-  }));
-  const categorySlugs = ["kemeja", "jaket", "kaos", "jersey", "topi"].map((cat) => ({
+  const routeSlugs = new Set([
+    ...products.map((product) => product.slug.toLowerCase()),
+    ...Object.keys(categoryToProductSlug),
+  ]);
+
+  return Array.from(routeSlugs).map((cat) => ({
     slug: cat,
   }));
-  return [...productSlugs, ...categorySlugs];
+}
+
+function findProductBySlug(slug: string) {
+  const targetSlug = categoryToProductSlug[slug.toLowerCase()] || slug;
+
+  return products.find((item) => item.slug.toLowerCase() === targetSlug.toLowerCase());
+}
+
+export async function generateMetadata({ params }: ProductDetailPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const product = findProductBySlug(slug);
+
+  if (!product) {
+    return {
+      title: "Produk Tidak Ditemukan | Advish Konveksi",
+    };
+  }
+
+  const seoContent = productSeoContent[product.category];
+  const title = seoContent?.title || `Konveksi ${product.category} Bali | Advish Konveksi`;
+  const description =
+    seoContent?.description ||
+    `Produksi ${product.category.toLowerCase()} custom di Bali dan Denpasar bersama Advish Konveksi.`;
+  const canonicalPath = `/produk/${product.category.toLowerCase()}`;
+
+  return {
+    title,
+    description,
+    keywords: seoContent?.keywords || [`Konveksi ${product.category} Bali`, `Konveksi ${product.category} Denpasar`],
+    alternates: {
+      canonical: canonicalPath,
+    },
+    openGraph: {
+      title,
+      description,
+      siteName: SITE_NAME,
+      url: `${SITE_URL}${canonicalPath}`,
+      images: [
+        {
+          url: `${SITE_URL}${product.image}`,
+          width: 1200,
+          height: 630,
+          alt: product.imageAlt,
+        },
+      ],
+    },
+  };
 }
 
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
   const { slug } = await params;
 
-  const targetSlug = categoryToProductSlug[slug.toLowerCase()] || slug;
-  const product = products.find((item) => item.slug === targetSlug);
+  const product = findProductBySlug(slug);
 
   if (!product) {
     notFound();
@@ -41,9 +101,28 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
     .slice(0, 4);
 
   const specsToDisplay = categorySpecs[product.category] || product.specs;
+  const seoContent = productSeoContent[product.category];
+  const canonicalPath = `/produk/${product.category.toLowerCase()}`;
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: seoContent?.h1 || `Konveksi ${product.category} Custom Bali`,
+    description:
+      seoContent?.description ||
+      `Produksi ${product.category.toLowerCase()} custom di Bali dan Denpasar bersama Advish Konveksi.`,
+    serviceType: seoContent?.h1 || `Konveksi ${product.category}`,
+    areaServed: ["Bali", "Denpasar", "Indonesia"],
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Advish Konveksi",
+      url: SITE_URL,
+    },
+    url: `${SITE_URL}${canonicalPath}`,
+  };
 
   return (
     <Container className="pt-24 lg:pt-28 overflow-hidden">
+      <JsonLd data={serviceJsonLd} />
       {/* ── Back Button (Icon Only) ── */}
       <Link
         href="/produk"
@@ -74,7 +153,6 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                 {product.category}
               </span>
             </div>
-
 
             {/* ── Specs ── */}
             <div className="mt-8 w-full max-w-xl mx-auto lg:mx-0">

@@ -1,8 +1,35 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Container from "@/components/layout/Container";
 import CTASection from "@/components/sections/CTASection";
 import { productCategories } from "@/data/site";
 import { Icon } from "@/components/common/Icons";
+import { SEO_KEYWORDS, SITE_NAME, SITE_URL } from "@/data/seo";
+
+export const metadata: Metadata = {
+  title: "Produk Konveksi Bali | Kaos, Seragam, Jaket, Polo & Jersey",
+  description:
+    "Katalog produk Advish Konveksi Bali untuk kaos custom, jersey, jaket, kemeja, polo shirt, topi, celana, seragam, bordir, sablon, dan apparel custom di Denpasar.",
+  keywords: [...SEO_KEYWORDS],
+  alternates: {
+    canonical: "/produk",
+  },
+  openGraph: {
+    title: "Produk Konveksi Bali | Advish Konveksi",
+    description:
+      "Pilih kategori produk konveksi custom di Bali dan Denpasar: kaos, jersey, jaket, kemeja, polo shirt, topi, celana, dan seragam.",
+    siteName: SITE_NAME,
+    url: `${SITE_URL}/produk`,
+    images: [
+      {
+        url: `${SITE_URL}/assets/advish-konveksi-kaos1.png`,
+        width: 1200,
+        height: 630,
+        alt: "Produk apparel custom Advish Konveksi Bali",
+      },
+    ],
+  },
+};
 
 const hoverTextColors: Record<string, string> = {
   kemeja: "group-hover:text-[#00c5eb]",

@@ -10,7 +10,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
       className="group block overflow-hidden rounded-2xl bg-white border border-gray-100 p-3 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-500/20 hover:border-teal-200"
-      href={`/produk/${product.slug}`}
+      href={`/produk/${product.slug.toLowerCase()}`}
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-50 rounded-xl">
         <Image
