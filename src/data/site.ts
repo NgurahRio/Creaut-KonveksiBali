@@ -49,14 +49,14 @@ export const products: Product[] = [
       { label: "Pilihan Warna", value: "Lebih dari 30 Warna" },
     ],
     detailImages: [
-      { src: "/assets/advish-konveksi-kaos1.png", alt: "Kaos Model 1" },
       { src: "/assets/advish-konveksi-kaos2.png", alt: "Kaos Model 2" },
+      { src: "/assets/advish-konveksi-kaos1.png", alt: "Kaos Model 1" },
       { src: "/assets/advish-konveksi-kaos3.png", alt: "Kaos Model 3" },
       { src: "/assets/advish-konveksi-kaos4.png", alt: "Kaos Model 4" },
-      { src: "/assets/advish-konveksi-kaos-size1.jpg", alt: "Kaos Size 1" },
       { src: "/assets/advish-konveksi-kaos-size2.jpg", alt: "Kaos Size 2" },
-      { src: "/assets/advish-konveksi-kaos-size3.jpg", alt: "Kaos Size 3" },
       { src: "/assets/advish-konveksi-kaos-size4.jpg", alt: "Kaos Size 4" },
+      { src: "/assets/advish-konveksi-kaos-size1.jpg", alt: "Kaos Size 1" },
+      { src: "/assets/advish-konveksi-kaos-size3.jpg", alt: "Kaos Size 3" },
     ],
   },
 
@@ -102,6 +102,7 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-jaket3.png", alt: "Jaket Model 3" },
       { src: "/assets/advish-konveksi-jaket-size1.jpg", alt: "Jaket Size 1" },
       { src: "/assets/advish-konveksi-jaket-size2.jpg", alt: "Jaket Size 2" },
+      { src: "/assets/advish-konveksi-jaket-size3.jpg", alt: "Jaket Size 3" },
     ],
   },
 
@@ -122,8 +123,9 @@ export const products: Product[] = [
       { src: "/assets/advish-konveksi-kemeja1.png", alt: "Kemeja Model 1" },
       { src: "/assets/advish-konveksi-kemeja2.png", alt: "Kemeja Model 2" },
       { src: "/assets/advish-konveksi-kemeja3.png", alt: "Kemeja Model 3" },
-      { src: "/assets/advish-konveksi-kemeja-size1.jpg", alt: "Kemeja Size 1" },
-      { src: "/assets/advish-konveksi-kemeja-size2.jpg", alt: "Kemeja Size 2" },
+      { src: "/assets/advish-konveksi-kemeja-size3.jpg", alt: "Kemeja Size 3" },
+      { src: "/assets/advish-konveksi-kemeja-size4.jpg", alt: "Kemeja Size 4" },
+
     ],
   },
 
@@ -262,10 +264,10 @@ export const productCategories: ProductCategory[] = [
    ══════════════════════════════════════════════════════════ */
 
 export const stats: StatItem[] = [
-  { value: "3+", label: "Tahun Pengalaman", icon: "briefcase" },
-  { value: "100+", label: "Project Selesai", icon: "shirt" },
-  { value: "50+", label: "Klien Puas", icon: "user" },
-  { value: "100rb+", label: "Jumlah Order Pelanggan", icon: "package" },
+  { value: "4+", label: "Tahun Pengalaman", icon: "briefcase" },
+  { value: "10K+", label: "Project Selesai", icon: "shirt" },
+  { value: "10Rb+", label: "Klien Puas", icon: "user" },
+  { value: "100Rb+", label: "Jumlah Order Pelanggan", icon: "package" },
 ];
 
 /* ══════════════════════════════════════════════════════════
@@ -533,13 +535,13 @@ export const categorySpecs: CategorySpecMap = {
     { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
     { label: "Pilihan Warna", value: "Custom" },
     { label: "Size Chart", value: "Custom" },
-    { label: "Bahan", value: "American Drill, Japan Drill, Nagata Drill, Twill, Poplin, Katun, dll" },
+    { label: "Bahan", value: "Drill, Twill, Poplin, Canvas, Corduroy, Katun, dll" },
   ],
   "Jaket": [
     { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
     { label: "Pilihan Warna", value: "Custom" },
     { label: "Size Chart", value: "Banyak Pilihan" },
-    { label: "Bahan", value: "American Drill, Japan Drill, Nagata Drill, Twill, Cotton Fleece, Canvas, Microfiber, Corduroy, Scuba, Diadora, dll" },
+    { label: "Bahan", value: "Drill, Twill, Cotton Fleece, Canvas, Corduroy, Microfiber, Scuba, Diadora, dll" },
   ],
   "Kaos": [
     { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
@@ -557,7 +559,7 @@ export const categorySpecs: CategorySpecMap = {
     { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
     { label: "Pilihan Warna", value: "Custom" },
     { label: "Size Chart", value: "Banyak Pilihan" },
-    { label: "Bahan", value: "Dryfit, Embos, Jacquard,  etc" },
+    { label: "Bahan", value: "Dryfit, Embos, Running, Jacquard, Serena, Airwalk, dll" },
   ],
   "Topi": [
     { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
@@ -569,6 +571,6 @@ export const categorySpecs: CategorySpecMap = {
     { label: "Variasi Model", value: "Custom (Regular, Slim, atau Relaxed)" },
     { label: "Pilihan Warna", value: "Custom" },
     { label: "Size Chart", value: "Banyak Pilihan" },
-    { label: "Bahan", value: "Drill, Corduroy, Canvas, Rafel, Jaring, dll" },
+    { label: "Bahan", value: "Drill, Twill, Canvas, Diadora, Fleece, Peles, Microfiber, dll" },
   ],
 };

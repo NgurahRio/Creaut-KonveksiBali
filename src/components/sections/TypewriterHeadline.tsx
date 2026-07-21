@@ -45,7 +45,7 @@ export default function TypewriterHeadline() {
       <span className="whitespace-pre-wrap text-center">
         {text1.substring(0, charsShown)}
         {charsShown > text1.length && (
-          <span className="text-blue-900">
+          <span className="bg-[length:200%_auto] animate-[gradient-slide_3s_linear_infinite] bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
             {text2.substring(0, charsShown - text1.length)}
           </span>
         )}
@@ -53,7 +53,7 @@ export default function TypewriterHeadline() {
           <span>{text3.substring(0, charsShown - text1.length - text2.length)}</span>
         )}
         {charsShown > text1.length + text2.length + text3.length && (
-          <span className="text-blue-900">
+          <span className="bg-[length:200%_auto] animate-[gradient-slide_3s_linear_infinite] bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
             {text4.substring(0, charsShown - text1.length - text2.length - text3.length)}
           </span>
         )}

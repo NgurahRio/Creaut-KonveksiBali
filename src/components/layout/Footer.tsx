@@ -38,6 +38,11 @@ const socialLinks = [
     href: "mailto:advishkonveksi@gmail.com",
     icon: "mail" as const,
   },
+  {
+    name: "TikTok",
+    href: "https://www.tiktok.com/@konveksi.advish",
+    icon: "tiktok" as const,
+  },
 ];
 
 export default function Footer() {

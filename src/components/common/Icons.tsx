@@ -33,7 +33,8 @@ export type IconName =
   | "polo"
   | "jersey"
   | "topi"
-  | "celana";
+  | "celana"
+  | "tiktok";
 
 interface IconProps extends SVGProps<SVGSVGElement> {
   name: IconName | string;
@@ -358,6 +359,12 @@ export function Icon({ name, ...props }: IconProps) {
           {/* Belt loops/details */}
           <path d="M8 6 H 16" />
           <path d="M12 3 V 6" />
+        </BaseIcon>
+      );
+    case "tiktok":
+      return (
+        <BaseIcon fill="currentColor" stroke="none" viewBox="0 0 24 24" {...props}>
+          <path d="M19.59 6.69a4.83 4.83 0 0 1-3.97-1.58 4.77 4.77 0 0 1-1.24-3.11h-3.98v11.46a3.67 3.67 0 1 1-3.66-3.66c.36 0 .7.05 1.02.14v-4.15a7.65 7.65 0 1 0 6.63 7.61V9.2a8.78 8.78 0 0 0 5.2 1.7v-4.2z" />
         </BaseIcon>
       );
     default:
