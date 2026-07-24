@@ -194,13 +194,13 @@ export default function TentangKamiPage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_20px_60px_rgba(8,145,178,0.15)]">
-                <Image
-                  alt="Workshop Advish Konveksi"
-                  className="object-cover"
-                  fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  src="/assets/toko.png"
+              <div className="relative aspect-video overflow-hidden rounded-2xl shadow-[0_20px_60px_rgba(8,145,178,0.15)]">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/KbYWfe19JA0"
+                  title="Video workshop Advish Konveksi"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
                 />
               </div>
 
