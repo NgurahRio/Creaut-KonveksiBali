@@ -502,7 +502,7 @@ export const galleryImages = [
   { src: "/assets/AdvishWork5.webp" },
   { src: "/assets/AdvishWork6.webp" },
   { src: "/assets/AdvishWork7.webp" },
-  { src: "/assets/AdvishWork8.webp" },
+  { src: "/assets/AdvishWork11.webp" },
   { src: "/assets/AdvishWork9.webp" },
   { src: "/assets/AdvishWork10.webp" },
 ];
